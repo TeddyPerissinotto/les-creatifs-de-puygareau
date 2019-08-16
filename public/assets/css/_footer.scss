@@ -1,0 +1,57 @@
+/*-----------------------------------------------CSS Barre de Contact---------------------------------------*/
+
+.contact{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.iconContact{
+  width: 20%;
+  height: auto;
+  text-align: center;
+}
+
+.iconImg{
+  width: 30%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/*----------------------------------------------------CSS Footer-------------------------------------------------*/
+
+.hrFooter{
+  width: 90%;
+}
+
+footer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.copyright{
+  width: 20%;
+  height: auto;
+  display: flex;
+  text-align: center;
+}
+
+.imgCopyright{
+  margin-top: 8%;
+  margin-right: 5%;
+  width: 10%;
+  height: 30%;
+}
+
+.linkFooter{
+  list-style-type: none;
+}
+
+.linkFacebook{
+  width: 15%;
+  height: auto;
+  margin: 0 auto;
+}

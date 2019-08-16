@@ -1,0 +1,25 @@
+body {
+  margin: 0 auto; }
+
+.imgFluid {
+  width: 100%;
+  height: auto; }
+
+a {
+  text-decoration: none; }
+
+@font-face {
+  font-family: "childWriting";
+  src: url("../font/ChildWriting-Regular.ttf"); }
+@font-face {
+  font-family: "schoolScript";
+  src: url("../font/ulusalokul.com_cizgili.ttf"); }
+@font-face {
+  font-family: "chalk";
+  src: url("../font/DJB Chalk It Up.ttf"); }
+
+@import "footer";
+@import "header";
+@import "FOSUserBundle";
+@import "news";
+

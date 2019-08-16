@@ -1,0 +1,131 @@
+/*-------------------------------------CSS News de la page d'accueil du site----------------------------------------*/
+
+.timeline{
+  text-align: center;
+  font-family: "childWriting";
+  font-size: 80px;
+}
+.info{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.info2{
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.info2 .imgNews{
+  width: 30%;
+  height: auto;
+  border-radius: 50%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.imgNews{
+  width: 30%;
+  height: auto;
+  border-radius: 50%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.imgFluidNews{
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  border: 1px solid black;
+  box-shadow: 10px 5px 5px darkgrey;
+}
+
+.titleNews{
+  text-align: center;
+  margin: auto;
+  font-family: "schoolScript";
+  font-size: 40px;
+  color: white;
+}
+
+.line{
+  height: 450px;
+  border: black solid 1px;
+}
+
+.article{
+  background-image: url("../img/news/board.jpg");
+  background-size: cover;
+  width: 30%;
+  height: auto;
+  margin-left: 10%;
+  border-radius: 20px;
+}
+
+.articleNews{
+  font-family: "chalk";
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+}
+
+.info2 .article{
+  width: 30%;
+  height: auto;
+  margin-right: 10%;
+}
+
+/*---------------------------------------------CSS de la page homeNews-----------------------------------------------*/
+
+.allNews{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.homeNewsInfo{
+  width: 30%;
+  height: auto;
+
+}
+.homeNews{
+  text-align: center;
+  font-family: childWriting;
+  font-size: 80px;
+}
+.homeTitleNews{
+  text-align: center;
+  font-family: "schoolScript";
+}
+
+.homeImgNews{
+  width: 100%;
+  height: auto;
+}
+
+/*---------------------------------------------CSS de la page showNews-----------------------------------------------*/
+ .showNews{
+   width: 30%;
+   height: auto;
+   margin: 0 auto;
+   padding-top: 5%;
+   padding-bottom: 5%;
+}
+
+ .imgCarrousel{
+   width: 100%;
+   height: 750px;
+ }
+
+ .titleNewsAlone{
+   text-align: center;
+ }
+

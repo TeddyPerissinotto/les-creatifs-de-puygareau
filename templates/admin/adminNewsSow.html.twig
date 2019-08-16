@@ -1,0 +1,18 @@
+{% extends 'base/index.html.twig' %}
+
+{% for showNews in news %}
+
+    <div class="info">
+
+        <span>{{ showNews.date|date("m/d/Y") }}</span>
+        <span>{{ showNews.title }}</span>
+
+        <div class="adminImgNews">
+            <img src="{{ asset(showNews.image1) }}" class="imgFluidNews">
+        </div>
+
+        <a href="{{ path('newsUpdate', {'id': showNews.id }) }}">Modifier cette News</a>
+
+    </div>
+
+{% endfor %}

@@ -1,0 +1,54 @@
+{% extends 'base/index.html.twig' %}
+
+{% block main %}
+
+    <h1>Bienvenue</h1>
+
+    <h2>Gestion des produits</h2>
+
+    <a href="#">Créer un nouveau produit</a>
+
+    <h3>Liste des produits</h3>
+
+    <h2>Gestion des news</h2>
+
+    <a href="{{ path('news_form_insert') }}">Créer une nouvelle News</a>
+
+    <h3>Liste des News</h3>
+
+    {% for allnew in allnews %}
+
+        <div class="adminNewsInfo">
+
+            <span>{{ allnew.date|date("d/m/Y") }}</span>
+            <span>{{ allnew.title }}</span>
+
+            <div class="adminImgNews">
+                <img src="{{ asset(allnew.image1) }}" class="imgFluid">
+            </div>
+
+            <div class="adminImgNews">
+                <img src="{{ asset(allnew.image2) }}" class="imgFluid">
+            </div>
+
+            <div class="adminImgNews">
+                <img src="{{ asset(allnew.image3) }}" class="imgFluid">
+            </div>
+            <div class="adminImgNews">
+                <img src="{{ asset(allnew.image4) }}" class="imgFluid">
+            </div>
+
+            <div class="adminImgNews">
+                <img src="{{ asset(allnew.image5) }}" class="imgFluid">
+            </div>
+
+
+            <a href="{{ path('news_form_update', {'id': allnew.id}) }} ">Modifier</a>
+            <a href="{{ path('news_delete', {'id': allnew.id}) }} ">Supprimer</a>
+
+        </div>
+
+    {% endfor %}
+
+
+{% endblock %}

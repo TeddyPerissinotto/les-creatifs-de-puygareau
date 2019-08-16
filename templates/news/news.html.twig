@@ -1,0 +1,32 @@
+{% extends 'base/index.html.twig' %}
+
+{% block main %}
+
+    <h1 class="timeline">Timeline</h1>
+
+    {% for lastnew in lastnews %}
+
+        <div class="{% if loop.index is odd %}info{% else %}info2{% endif %}">
+
+            <div class="imgNews">
+
+                <img src="{{ asset(lastnew.image1) }}" class="imgFluidNews">
+
+            </div>
+
+            <div class="line"></div>
+
+            <div class="article">
+
+                <h2 class="titleNews">{{ lastnew.title }}</h2>
+                <p class="articleNews">{{ lastnew.article }}</p>
+
+            </div>
+
+
+        </div>
+    {% endfor %}
+
+
+
+{% endblock %}
