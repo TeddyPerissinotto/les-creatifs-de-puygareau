@@ -4,6 +4,10 @@
 
     <h1>Bienvenue</h1>
 
+    <a href="{{ path('fos_user_security_logout') }}">
+        {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+    </a>
+
     <h2>Gestion des produits</h2>
 
     <a href="#">Créer un nouveau produit</a>
