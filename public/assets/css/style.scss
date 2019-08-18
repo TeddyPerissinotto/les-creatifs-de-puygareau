@@ -8,6 +8,12 @@ body {
 a {
   text-decoration: none; }
 
+.pageTitle{
+  text-align: center;
+  font-family: "childWriting";
+  font-size: 80px;
+}
+
 @font-face {
   font-family: "childWriting";
   src: url("../font/ChildWriting-Regular.ttf"); }

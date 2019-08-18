@@ -2,7 +2,7 @@
 
 {% block main %}
 
-    <h1 class="homeNews">Nos actualités</h1>
+    <h1 class="pageTitle">Nos actualités</h1>
 
     <div class="allNews">
 
@@ -10,7 +10,7 @@
 
             <div class="homeNewsInfo">
 
-                <h2 class="homeTitleNews">
+                <h2 class="titleNews">
 
                     <a href="{{ path('show_news', {'id': allnew.id}) }} ">
                         {{ allnew.date|date("m/d/Y") }}

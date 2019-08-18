@@ -1,5 +1,20 @@
 .connectionForm{
+  width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.loginLogout{
+  text-align: center;
+
+}
+
+.loginInfo{
+  width: 30%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

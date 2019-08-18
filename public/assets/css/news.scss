@@ -1,10 +1,5 @@
 /*-------------------------------------CSS News de la page d'accueil du site----------------------------------------*/
 
-.timeline{
-  text-align: center;
-  font-family: "childWriting";
-  font-size: 80px;
-}
 .info{
   width: 100%;
   display: flex;
@@ -42,7 +37,6 @@
   border-radius: 50%;
   width: 100%;
   height: auto;
-  border: 1px solid black;
   box-shadow: 10px 5px 5px darkgrey;
 }
 
@@ -92,7 +86,7 @@
 }
 
 .homeNewsInfo{
-  width: 30%;
+  width: 45%;
   height: auto;
 
 }
@@ -104,6 +98,7 @@
 .homeTitleNews{
   text-align: center;
   font-family: "schoolScript";
+  font-size: 40px;
 }
 
 .homeImgNews{
