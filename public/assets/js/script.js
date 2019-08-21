@@ -1,3 +1,21 @@
+/*--------------------------------------------ANIMATION DE LA NAVBAR----------------------------------------------- */
+
+$(document).ready(function() {
+
+    $("#clickMenu").click(function () {
+        $("#slideMenu").slideToggle();
+    })
+});
+
+/*--------------Affiche mes catégories d'articles----------------*/
+
+$('#clickMenu').click(function(){
+
+    $('#slideMenu').load("nav .category");
+});
+
+/* --------------------------------------------ANIMATION DU CARROUSEL----------------------------------------------- */
+
 $(document).ready(function(){
 
     var $carrousel = $('#carrousel'), // on cible le bloc du carrousel
@@ -33,3 +51,4 @@ $(document).ready(function(){
     slideImg(); // enfin, on lance la fonction une première fois
 
 });
+

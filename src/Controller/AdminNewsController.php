@@ -34,20 +34,18 @@ class AdminNewsController extends AbstractController
 
         $newsFormView = $form->createView();
 
-        // Si la méthode est POST
-        // Si le formulaire est envoyé
-        if ($request->isMethod('Post'))
-        {
+        // Le formulaire récupère les infos
+        // de la requête
+        $form->handleRequest($request);
 
-            // Le formulaire récupère les infos
-            // de la requête
-            $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid())
+            {
+                // On enregistre l'entité créée avec persist
+                // et flush
+                $entityManager->persist($news);
+                $entityManager->flush();
+            }
 
-            // On enregistre l'entité créée avec persist
-            // et flush
-            $entityManager->persist($news);
-            $entityManager->flush();
-        }
         //on appelle un fichier twig avec en premier
         //paramètre le nom du fichier twig
         return $this->render('admin/newsForm.html.twig',
@@ -59,6 +57,7 @@ class AdminNewsController extends AbstractController
                 'newsFormView'=> $newsFormView
             ]
         );
+
     }
 
     //***** ADMIN : Permet de modifier une News en BDD *****//
@@ -96,7 +95,7 @@ class AdminNewsController extends AbstractController
      * @Route("/admin/news/{id}/delete", name="news_delete")
      */
 
-    public function deleteAuthor($id, NewsRepository $newsRepository, EntityManagerInterface $entityManager)
+    public function deleteNews($id, NewsRepository $newsRepository, EntityManagerInterface $entityManager)
     {
         //je récupère le livre dans la BDD qui a l'id qui correspond a la wild car
         //ps : c'est une entité qui est récupérée
@@ -112,30 +111,6 @@ class AdminNewsController extends AbstractController
 
     }
 
-    //***** ADMIN : Permet d'afficher toutes les news enregistrées en BDD *****//
 
-    /**
-     * @Route("/admin/home", name="home_admin")
-     */
-    public function adminNewsList(NewsRepository $newsRepository)
-    {
-
-        $news = $newsRepository->findAll();
-
-        if ($this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_FULLY')) {
-
-            if ($this->container->get('security.authorization_checker')->isGranted('ROLE_ADMIN')){
-
-                return $this->render('admin/homeAdmin.html.twig',
-                    [
-                        'allnews' => $news
-                    ]);
-            }else {
-                return $this->redirectToRoute('index_news');
-            }
-        }else {
-            return $this->redirectToRoute('fos_user_security_login');
-        }
-    }
 
 }

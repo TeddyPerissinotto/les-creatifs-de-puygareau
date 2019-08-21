@@ -16,25 +16,9 @@ class NewsController extends AbstractController
 //Pour tous les controlleurs, je fais un extend de la classe AbstractController
 {
 
-    //***** Permet d'afficher les 3 dernières News sur la page d'accueil *****//
 
-    /**
-     * @Route("/", name="index_news")
-     */
-    public function newsIndex(EntityManagerInterface $entityManager)
-    {
-        $newsRepository = $entityManager->getRepository(News::class);
-
-        $news = $newsRepository->findAll();
-
-        return $this->render('news/news.html.twig',
-            [
-                'lastnews' => array_slice($news, -3, 3)
-            ]);
-    }
 
     //***** Permet d'afficher toutes News sur la page News *****//
-
 
     /**
      * @Route("/homeNews", name="home_news")

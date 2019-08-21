@@ -1,0 +1,31 @@
+{% extends 'base/index.html.twig' %}
+
+{% block main %}
+
+    <h1>Nos produits</h1>
+
+    <div class="allProducts">
+
+        {% for allnew in allnews %}
+
+            <div class="homeNewsInfo">
+
+                <h2 class="titleNews">
+
+                    <a href="{{ path('show_news', {'id': allnew.id}) }} ">
+                        {{ allnew.date|date("m/d/Y") }}
+                        {{ allnew.title }}</a>
+
+                </h2>
+
+                <div class="homeImgNews">
+                    <img src="{{ asset(allnew.image1) }}" class="imgFluid" />
+                </div>
+
+
+            </div>
+        {% endfor %}
+
+    </div>
+
+{% endblock %}

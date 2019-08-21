@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -25,6 +26,38 @@ class SousCategorie
      * @ORM\Column(type="text")
      */
     private $description;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Articles", mappedBy="souscategorie")
+     */
+    private $articles;
+
+    /**
+     * @ORM\OneToOne(targetEntity="App\Entity\Categorie", mappedBy="souscategorie")
+     */
+    private $categorie;
+
+    public function __construct()
+    {
+        $this->articles = new ArrayCollection();
+        $this->categorie = new ArrayCollection();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getArticles()
+    {
+        return $this->articles;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCategorie()
+    {
+        return $this->categorie;
+    }
 
     public function getId(): ?int
     {

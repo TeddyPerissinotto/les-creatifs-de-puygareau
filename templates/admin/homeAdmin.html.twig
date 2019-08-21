@@ -15,9 +15,42 @@
 
         <h2 class="homeTitleNews">Gestion des produits</h2>
 
-        <a href="#">Créer un nouveau produit</a>
+        <a href="{{ path('articles_form_insert') }}">Créer un nouveau produit</a>
 
         <h3>Liste des produits</h3>
+
+        {% for allarticle in allarticles %}
+
+            <span>{{ allarticle.title }}</span>
+            <span>{{ allarticle.description }}</span>
+            <span>{{ allarticle.size }}</span>
+            <span>{{ allarticle.prix }}</span>
+            <span>{{ allarticle.categorie.titre }}</span>
+
+            <div class="adminArticlesInfo">
+            <img src="{{ asset(allarticle.image1) }}" class="imgFluid">
+            </div>
+
+            <div class="adminArticlesInfo">
+                <img src="{{ asset(allarticle.image2) }}" class="imgFluid">
+            </div>
+
+            <div class="adminArticlesInfo">
+                <img src="{{ asset(allarticle.image3) }}" class="imgFluid">
+            </div>
+
+            <div class="adminArticlesInfo">
+                <img src="{{ asset(allarticle.image4) }}" class="imgFluid">
+            </div>
+
+            <div class="adminArticlesInfo">
+                <img src="{{ asset(allarticle.image5) }}" class="imgFluid">
+            </div>
+
+            <a href="{{ path('articles_form_update', {'id': allarticle.id}) }} ">Modifier</a>
+            <a href="{{ path('articles_delete', {'id': allarticle.id}) }} ">Supprimer</a>
+
+        {% endfor %}
 
         <h2 class="homeTitleNews">Gestion des actualites</h2>
 

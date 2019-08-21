@@ -1,0 +1,11 @@
+{% extends 'base/index.html.twig' %}
+
+{% block main %}
+
+{% for messages in app.flashes %}
+    {% for message in messages %}
+        {{ message }}
+    {% endfor %}
+{% endfor %}
+
+{% endblock %}

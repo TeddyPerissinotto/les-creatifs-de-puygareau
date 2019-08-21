@@ -7,8 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="icon" href="{{ asset('assets/img/logo/logo.png') }}">
-
-
     <title>LES CREATIFS DE PUYGAREAU</title>
 </head>
 <body>
@@ -43,13 +41,18 @@
 
         <ul class="ulNavbar">
 
-            <li class="linkNavbar"><a href="{{ path('index_news') }}">Accueil</a></li>
-            <li class="linkNavbar">Nos produits</li>
+            <li class="linkNavbar"><a href="{{ path('index') }}">Accueil</a></li>
+            <li class="linkNavbar" id="clickMenu">Nos produits</li>
             <li class="linkNavbar"><a href="{{ path('home_news') }}">Nos actualités</a></li>
             <li class="linkNavbar">Media</li>
             <li class="linkNavbar">Contact</li>
 
         </ul>
+    </div>
+
+    <div id="slideMenu">
+        {% block menu %}
+        {% endblock %}
     </div>
 
 </header>
