@@ -2,16 +2,22 @@
 
 $(document).ready(function() {
 
-    $("#clickMenu").click(function () {
-        $("#slideMenu").slideToggle();
+    $('#clickMenu').click(function () {
+        $('.slideMenu').slideToggle();
     })
 });
 
 /*--------------Affiche mes catégories d'articles----------------*/
+$(document).ready(function() {
+    function myNav() {
 
-$('#clickMenu').click(function(){
+    $('#clickMenu').click(function(){
 
-    $('#slideMenu').load("nav .category");
+        $('.slideMenu').load("nav .category");
+    })
+
+    }
+    myNav();
 });
 
 /* --------------------------------------------ANIMATION DU CARROUSEL----------------------------------------------- */

@@ -1,0 +1,24 @@
+{% extends 'base/index.html.twig' %}
+
+{% block main %}
+
+    <div class="allProducts">
+
+        {% for article in categorie.articles %}
+
+            <div class="homeArticlesInfo">
+
+                <h1>{{ article.title }}</h1>
+
+                <div class="homeImgArticles">
+                    <img src="{{ asset(article.image1) }}" class="imgFluid" />
+                </div>
+                
+            </div>
+
+            <a href="{{ path('article_by_id', {'id': article.id}) }}">Voir ce produit</a>
+        {% endfor %}
+
+    </div>
+
+{% endblock %}

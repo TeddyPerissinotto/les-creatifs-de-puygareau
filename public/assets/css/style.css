@@ -114,7 +114,7 @@ header {
   margin-top: 15px;
   margin-left: 10%; }
 
-#slideMenu {
+.slideMenu {
   display: none;
   width: 20%;
   height: 200px;

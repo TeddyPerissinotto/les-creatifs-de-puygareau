@@ -1,0 +1,35 @@
+{% extends 'base/index.html.twig' %}
+
+{% block main %}
+<div class="product">
+
+    <a href="{{ path('articles_by_category', {'id': article.categorie.id}) }}">{{ article.categorie.titre }}</a>
+
+    <h1>{{ article.title }}</h1> <span>{{ article.prix }}</span>
+    <span>{{ article.size }}</span>
+    <p>{{ article.description }}</p>
+
+    <div class="imgArticle">
+        <img src="{{ asset(article.image1) }}" alt="">
+    </div>
+
+    <div class="imgArticle">
+        <img src="{{ asset(article.image2) }}" alt="">
+    </div>
+
+    <div class="imgArticle">
+        <img src="{{ asset(article.image3) }}" alt="">
+    </div>
+
+    <div class="imgArticle">
+        <img src="{{ asset(article.image4) }}" alt="">
+    </div>
+
+    <div class="imgArticle">
+        <img src="{{ asset(article.image5) }}" alt="">
+    </div>
+
+
+</div>
+
+{% endblock %}

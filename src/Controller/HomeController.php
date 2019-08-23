@@ -37,7 +37,7 @@ class HomeController extends AbstractController
     {
         $categories = $categorieRepository->findAll();
 
-        return $this->render('base/_nav.html.twig',
+        return $this->render('base/nav.html.twig',
             [
                 'categories' => $categories
             ]

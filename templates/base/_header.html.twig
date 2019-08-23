@@ -46,14 +46,15 @@
             <li class="linkNavbar"><a href="{{ path('home_news') }}">Nos actualités</a></li>
             <li class="linkNavbar">Media</li>
             <li class="linkNavbar">Contact</li>
-
         </ul>
+
+        <div class="slideMenu">
+            {% block menu %}{% endblock %}
+        </div>
+
     </div>
 
-    <div id="slideMenu">
-        {% block menu %}
-        {% endblock %}
-    </div>
+
 
 </header>
 
