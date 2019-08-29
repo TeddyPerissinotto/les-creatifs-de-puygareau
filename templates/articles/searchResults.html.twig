@@ -2,22 +2,32 @@
 
 {% block main %}
 
-    <div class="allarticles">
+    <h1>Résultats de votre recherche :</h1>
 
-    {% for article in articles %}
+    {% if articles == false %}
 
-        <div class="homeArticlesInfo">
+        <p class="searchMessage">Aucun résultat pour votre recherche</p>
 
-            <h1>{{ article.title }}</h1>
+    {% else %}
 
-            <div class="homeImgArticles">
-                <img src="{{ asset('assets/img/produits') }}/{{ article.image1 }}" class="imgFluid" alt="">
+        <div class="allarticles">
+
+        {% for article in articles %}
+
+            <div class="homeArticlesInfo">
+
+                <h1>{{ article.title }}</h1>
+
+                <div class="homeImgArticles">
+                    <img src="{{ asset('assets/img/produits') }}/{{ article.image1 }}" class="imgFluid" alt="">
+                </div>
+
+                <a href="{{ path('article_by_id', {'id': article.id}) }}">Voir ce produit</a>
+
             </div>
 
-            <a href="{{ path('article_by_id', {'id': article.id}) }}">Voir ce produit</a>
+        {% endfor %}
 
-        </div>
-
-    {% endfor %}
+    {% endif %}
 
 {% endblock %}

@@ -2,7 +2,16 @@
 
 {% block main %}
 
-    <a href="{{ path('articles_by_category', {'id': article.categorie.id}) }}">Retour : {{ article.categorie.titre }}</a>
+    <a href="{{ path('articles_by_category', {'id': article.categorie.id}) }}">
+
+        <div class="linkBack">
+            <div class="arrowback">
+                <img src="{{ asset('assets/img/icon/ico.arrowleft.png') }}" class="imgFluid" alt="">
+            </div>
+            <div>Retour : {{ article.categorie.titre }}</div>
+        </div>
+
+    </a>
 
     <div class="product">
 

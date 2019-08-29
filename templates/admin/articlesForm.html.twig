@@ -7,61 +7,61 @@
     <h1>Formulaire Produits : Ajouter/Modifier</h1>
 
 
-        {{ form_start(articlesFormView, {'label_attr': {'class' : 'AdminForm'}}) }}
+        {{ form_start(articlesFormView, {'attr': {'class' : 'adminForm'}}) }}
 
         <div class="formElement">
             {{ form_label(articlesFormView.categorie, 'Catégorie', {'label_attr': {'class' : 'labelForm'}}) }}
-            {{ form_widget(articlesFormView.categorie, {'label_attr': {'class' : 'labelInput'}}) }}
+            {{ form_widget(articlesFormView.categorie, {'attr': {'class' : 'formInput'}}) }}
         </div>
 
         <div class="formElement">
             {{ form_label(articlesFormView.title, 'Titre', {'label_attr': {'class' : 'labelForm'}}) }}
-            {{ form_widget(articlesFormView.title, {'label_attr': {'class' : 'labelInput'}}) }}
+            {{ form_widget(articlesFormView.title, {'attr': {'class' : 'formInput'}}) }}
         </div>
 
         <div class="formElement">
             {{ form_label(articlesFormView.description, 'Description', {'label_attr': {'class' : 'labelForm'}}) }}
-            {{ form_widget(articlesFormView.description, {'label_attr': {'class' : 'textDescription'}}) }}
+            {{ form_widget(articlesFormView.description, {'attr': {'class' : 'formText'}}) }}
         </div>
 
         <div class="formElement">
             {{ form_label(articlesFormView.size, 'Taille', {'label_attr': {'class' : 'labelForm'}}) }}
-            {{ form_widget(articlesFormView.size, {'label_attr': {'class' : 'labelInput'}}) }}
+            {{ form_widget(articlesFormView.size, {'attr': {'class' : 'formlInput'}}) }}
         </div>
 
         <div class="formElement">
             {{ form_label(articlesFormView.prix, 'Prix', {'label_attr': {'class' : 'labelForm'}}) }}
-            {{ form_widget(articlesFormView.prix, {'label_attr': {'class' : 'labelInput'}}) }}
+            {{ form_widget(articlesFormView.prix, {'attr': {'class' : 'formInput'}}) }}
         </div>
 
         <div class="formElement">
             {{ form_label(articlesFormView.image1, 'image1', {'label_attr': {'class' : 'labelForm'}}) }}
-            {{ form_widget(articlesFormView.image1, {'label_attr': {'class' : 'labelInput'}}) }}
+            {{ form_widget(articlesFormView.image1, {'attr': {'class' : 'formInput'}}) }}
         </div>
 
         <div class="formElement">
             {{ form_label(articlesFormView.image2, 'image2', {'label_attr': {'class' : 'labelForm'}}) }}
-            {{ form_widget(articlesFormView.image2, {'label_attr': {'class' : 'labelInput'}}) }}
+            {{ form_widget(articlesFormView.image2, {'attr': {'class' : 'formInput'}}) }}
         </div>
 
         <div class="formElement">
             {{ form_label(articlesFormView.image3, 'image3', {'label_attr': {'class' : 'labelForm'}}) }}
-            {{ form_widget(articlesFormView.image3, {'label_attr': {'class' : 'labelInput'}}) }}
+            {{ form_widget(articlesFormView.image3, {'attr': {'class' : 'formInput'}}) }}
         </div>
 
         <div class="formElement">
             {{ form_label(articlesFormView.image4, 'image4', {'label_attr': {'class' : 'labelForm'}}) }}
-            {{ form_widget(articlesFormView.image4, {'label_attr': {'class' : 'labelInput'}}) }}
+            {{ form_widget(articlesFormView.image4, {'attr': {'class' : 'formInput'}}) }}
         </div>
 
         <div class="formElement">
             {{ form_label(articlesFormView.image5, 'image5', {'label_attr': {'class' : 'labelForm'}}) }}
-            {{ form_widget(articlesFormView.image5, {'label_attr': {'class' : 'labelInput'}}) }}
+            {{ form_widget(articlesFormView.image5, {'attr': {'class' : 'formInput'}}) }}
         </div>
 
         <div class="formElement">
             {{ form_label(articlesFormView.Envoyer, 'Envoyer', {'label_attr': {'class' : 'labelForm'}}) }}
-            {{ form_widget(articlesFormView.Envoyer, {'label_attr': {'class' : 'labelsubmit'}}) }}
+            {{ form_widget(articlesFormView.Envoyer, {'attr': {'class' : 'labelSubmit'}}) }}
         </div>
 
         {{ form_end(articlesFormView) }}

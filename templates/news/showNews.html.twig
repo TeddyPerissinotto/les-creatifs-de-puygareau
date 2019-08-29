@@ -9,17 +9,19 @@
 
         <p class="showNews">{{ showNews.article }}</p>
 
-    <div class="imgCarrousel">
+    <div class="carrousel">
 
-        <div id="carrousel">
-            <ul>
-                <li><img src="{{ asset('assets/img/news') }}/{{ showNews.image1 }}" class="imgFluid" alt=""></li>
-                <li><img src="{{ asset('assets/img/news') }}/{{ showNews.image2 }}" class="imgFluid" alt=""></li>
+        <div class="imgCarrousel">
+                <img src="{{ asset('assets/img/news') }}/{{ showNews.image1 }}" class="imgFluid" alt="">
+        </div>
+                <div class="imgCarrousel">
+                    <img src="{{ asset('assets/img/news') }}/{{ showNews.image2 }}" class="imgFluid" alt="">
+                </div>
                 <li><img src="{{ asset('assets/img/news') }}/{{ showNews.image3 }}" class="imgFluid" alt=""></li>
                 <li><img src="{{ asset('assets/img/news') }}/{{ showNews.image4 }}" class="imgFluid" alt=""></li>
                 <li><img src="{{ asset('assets/img/news') }}/{{ showNews.image5 }}" class="imgFluid" alt=""></li>
-            </ul>
-        </div>
+
+
 
     </div>
 

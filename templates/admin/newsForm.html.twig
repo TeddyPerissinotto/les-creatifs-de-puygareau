@@ -4,6 +4,53 @@
 
     <h1>Formulaire des Actualités : Ajouter/Modifier</h1>
 
-    {{ form(newsFormView) }}
+    {{ form_start(newsFormView, {'attr': {'class' : 'adminForm'}}) }}
+
+    <div class="formElement">
+        {{ form_label(newsFormView.title, 'Titre', {'label_attr': {'class' : ''}}) }}
+        {{ form_widget(newsFormView.title, {'attr': {'class' : 'formInput'}}) }}
+    </div>
+
+    <div class="formElement">
+        {{ form_label(newsFormView.date, 'Date', {'label_attr': {'class' : 'labelForm'}}) }}
+        {{ form_widget(newsFormView.date, {'attr': {'class' : 'formInput'}}) }}
+    </div>
+
+    <div class="formElement">
+        {{ form_label(newsFormView.article, 'Article', {'label_attr': {'class' : 'labelForm'}}) }}
+        {{ form_widget(newsFormView.article, {'attr': {'class' : 'formText'}}) }}
+    </div>
+
+    <div class="formElement">
+        {{ form_label(newsFormView.image1, 'image1', {'label_attr': {'class' : 'labelForm'}}) }}
+        {{ form_widget(newsFormView.image1, {'attr': {'class' : 'formInput'}}) }}
+    </div>
+
+    <div class="formElement">
+        {{ form_label(newsFormView.image2, 'image2', {'label_attr': {'class' : 'labelForm'}}) }}
+        {{ form_widget(newsFormView.image2, {'attr': {'class' : 'formInput'}}) }}
+    </div>
+
+    <div class="formElement">
+        {{ form_label(newsFormView.image3, 'image3', {'label_attr': {'class' : 'labelForm'}}) }}
+        {{ form_widget(newsFormView.image3, {'attr': {'class' : 'formInput'}}) }}
+    </div>
+
+    <div class="formElement">
+        {{ form_label(newsFormView.image4, 'image4', {'label_attr': {'class' : 'labelForm'}}) }}
+        {{ form_widget(newsFormView.image4, {'attr': {'class' : 'formInput'}}) }}
+    </div>
+
+    <div class="formElement">
+        {{ form_label(newsFormView.image5, 'image5', {'label_attr': {'class' : 'labelForm'}}) }}
+        {{ form_widget(newsFormView.image5, {'attr': {'class' : 'formInput'}}) }}
+    </div>
+
+    <div class="formElement">
+        {{ form_label(newsFormView.Envoyer, 'Envoyer', {'label_attr': {'class' : 'labelForm'}}) }}
+        {{ form_widget(newsFormView.Envoyer, {'attr': {'class' : 'labelSubmit'}}) }}
+    </div>
+
+    {{ form_end(newsFormView) }}
 
 {% endblock %}

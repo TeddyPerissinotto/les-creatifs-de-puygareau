@@ -28,7 +28,7 @@ class NewsType extends AbstractType
             ->add('image4')
             ->add('image5')
             ->add('article')
-            ->add('save', SubmitType::class)
+            ->add('Envoyer', SubmitType::class)
         ;
     }
 
