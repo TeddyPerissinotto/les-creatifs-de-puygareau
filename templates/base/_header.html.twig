@@ -41,19 +41,42 @@
 
         <ul class="ulNavbar">
 
-            <li class="linkNavbar"><a href="{{ path('index') }}">Accueil</a></li>
-            <li class="linkNavbar" id="clickMenu">Nos produits</li>
+            <li class="linkNavbar"><a href="{{ path('index') }}" class="">Accueil</a></li>
+            <li class="linkNavbar" id="clickMenu"><a href="#none">Nos produits</a></li>
             <li class="linkNavbar"><a href="{{ path('home_news') }}">Nos actualités</a></li>
             <li class="linkNavbar">Media</li>
-            <li class="linkNavbar">Contact</li>
+            <li class="linkNavbar"><a href="{{ path('contact') }}">Contact</a></li>
         </ul>
 
         <div class="slideMenu">
-            {% block menu %}{% endblock %}
+
+            <div class="categoryList">
+
+                {% for categorie in categories %}
+
+                    <a href="{{ path('articles_by_category', {'id': categorie.id}) }}">
+                        <div class="category">
+
+                            <div class="imgCategory">
+                                <img src="{{ asset('assets/img/icon') }}/{{ categorie.imagecategorie }}" class="imgFluid" alt="">
+                            </div>
+
+                            <h3 class="linkCategory">
+                                {{ categorie.titre }}
+                            </h3>
+
+                        </div>
+                    </a>
+
+                {% endfor %}
+
+            </div>
+
         </div>
 
     </div>
 
+    {% include 'base/searchBar.html.twig' %}
 
 
 </header>

@@ -2,7 +2,19 @@
 
 {% block main %}
 
-    <div class="allProducts">
+    <div class="categoryArticles">
+
+        <div class="imgCategory">
+            <img src="{{ asset('assets/img/icon') }}/{{ categorie.imagecategorie }}" class="imgFluid" alt="">
+        </div>
+
+        <h1>{{ categorie.titre }}</h1>
+
+    </div>
+
+    <hr class="hrFooter">
+
+    <div class="allarticles">
 
         {% for article in categorie.articles %}
 
@@ -11,12 +23,13 @@
                 <h1>{{ article.title }}</h1>
 
                 <div class="homeImgArticles">
-                    <img src="{{ asset(article.image1) }}" class="imgFluid" />
+                    <img src="{{ asset('assets/img/produits') }}/{{ article.image1 }}" class="imgFluid" alt="">
                 </div>
-                
+
+                <a href="{{ path('article_by_id', {'id': article.id}) }}">Voir ce produit</a>
+
             </div>
 
-            <a href="{{ path('article_by_id', {'id': article.id}) }}">Voir ce produit</a>
         {% endfor %}
 
     </div>

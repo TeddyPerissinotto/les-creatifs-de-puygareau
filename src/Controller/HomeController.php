@@ -17,31 +17,32 @@ class HomeController extends AbstractController
     /**
      * @Route("/", name="index")
      */
-    public function index(EntityManagerInterface $entityManager)
+    public function index(EntityManagerInterface $entityManager, CategorieRepository $categorieRepository)
     {
         $newsRepository = $entityManager->getRepository(News::class);
 
         $news = $newsRepository->findAll();
+        $categories = $categorieRepository->findAll();
 
         return $this->render('news/news.html.twig',
             [
-                'lastnews' => array_slice($news, -3, 3)
+                'lastnews' => array_slice($news, -3, 3),
+                'categories' => $categories
             ]);
 
     }
 
     /**
-     * @Route("/nav", name="nav")
+     * @Route("/contact", name="contact")
      */
-    public function navCategory(CategorieRepository $categorieRepository)
+    public function contact(CategorieRepository $categorieRepository)
     {
         $categories = $categorieRepository->findAll();
 
-        return $this->render('base/nav.html.twig',
+        return $this->render('contact/contact.html.twig',
             [
                 'categories' => $categories
-            ]
-        );
-
+            ]);
     }
+
 }

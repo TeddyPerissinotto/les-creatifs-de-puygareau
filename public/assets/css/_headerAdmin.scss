@@ -1,0 +1,41 @@
+.headerAdmin{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(206, 201, 201, 0.5);
+}
+
+.logoAdmin{
+  width: 30%;
+  height: auto;
+}
+.navButton{
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid black;
+  position: fixed;
+}
+
+.navAdmin{
+  margin-left: 50px;
+  width: 20%;
+  height: 50px;
+  position: fixed;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid black;
+  display: none;
+}
+
+.logoutButton{
+  margin: 0 auto;
+  width: 50%;
+  height: 20px;
+  background-color: #718C00;
+  border: 1px solid black;
+  border-radius: 50px;
+}
+

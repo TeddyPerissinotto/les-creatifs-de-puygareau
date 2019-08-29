@@ -15,6 +15,7 @@ class NewsType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+
         $builder
             ->add('title')
             ->add('date', DateType::class,

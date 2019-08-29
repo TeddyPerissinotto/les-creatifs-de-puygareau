@@ -6,6 +6,7 @@ namespace App\Controller;
 
 use App\Entity\News;
 use App\Form\NewsType;
+use App\Repository\CategorieRepository;
 use App\Repository\NewsRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -28,24 +29,19 @@ class AdminNewsController extends AbstractController
         //je créé une nouvelle instance de l'entité News
         //c'est cette entité qui est le miroir de la table News
         $news = new News();
-
         // Création de la view du formulaire
         $form = $this->createForm(NewsType::class, $news);
-
         $newsFormView = $form->createView();
-
         // Le formulaire récupère les infos
         // de la requête
         $form->handleRequest($request);
-
         if ($form->isSubmitted() && $form->isValid())
-            {
-                // On enregistre l'entité créée avec persist
-                // et flush
-                $entityManager->persist($news);
-                $entityManager->flush();
-            }
-
+        {
+            // On enregistre l'entité créée avec persist
+            // et flush
+            $entityManager->persist($news);
+            $entityManager->flush();
+        }
         //on appelle un fichier twig avec en premier
         //paramètre le nom du fichier twig
         return $this->render('admin/newsForm.html.twig',
@@ -57,7 +53,6 @@ class AdminNewsController extends AbstractController
                 'newsFormView'=> $newsFormView
             ]
         );
-
     }
 
     //***** ADMIN : Permet de modifier une News en BDD *****//
@@ -65,10 +60,11 @@ class AdminNewsController extends AbstractController
     /**
      * @Route("/admin/news/{id}/update", name="news_form_update")
      */
-    public function newsFormUpdate($id, Request $request, EntityManagerInterface $entityManager, NewsRepository $newsRepository)
+    public function newsFormUpdate($id, Request $request, EntityManagerInterface $entityManager, NewsRepository $newsRepository, CategorieRepository $categorieRepository)
     {
         $news = $newsRepository->find($id);
         $form = $this->createForm(NewsType::class, $news);
+        $categories = $categorieRepository->findAll();
 
         $newsFormView = $form->createView();
 
@@ -85,7 +81,8 @@ class AdminNewsController extends AbstractController
         }
         return $this->render('admin/newsForm.html.twig',
             [
-                'newsFormView' => $newsFormView
+                'newsFormView' => $newsFormView,
+                'categories' => $categories
             ]);
     }
 
@@ -95,11 +92,12 @@ class AdminNewsController extends AbstractController
      * @Route("/admin/news/{id}/delete", name="news_delete")
      */
 
-    public function deleteNews($id, NewsRepository $newsRepository, EntityManagerInterface $entityManager)
+    public function deleteNews($id, NewsRepository $newsRepository, EntityManagerInterface $entityManager, CategorieRepository $categorieRepository)
     {
         //je récupère le livre dans la BDD qui a l'id qui correspond a la wild car
         //ps : c'est une entité qui est récupérée
         $news = $newsRepository->find($id);
+        $categories = $categorieRepository->findAll();
 
         //j'utilise la méthode remove() de l'entityManager en spécifiant
         //le livre à supprimer
@@ -107,7 +105,10 @@ class AdminNewsController extends AbstractController
         $entityManager->remove($news);
         $entityManager->flush();
 
-        return $this->redirectToRoute('home_admin');
+        return $this->redirectToRoute('home_admin',
+            [
+                'catgeories' => $categories
+            ]);
 
     }
 

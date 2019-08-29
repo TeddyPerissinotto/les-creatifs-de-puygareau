@@ -32,6 +32,11 @@ class Categorie
      */
     private $articles;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $image_categorie;
+
 
     public function __construct()
     {
@@ -71,6 +76,18 @@ class Categorie
     public function setDescription(string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getImageCategorie(): ?string
+    {
+        return $this->image_categorie;
+    }
+
+    public function setImageCategorie(?string $image_categorie): self
+    {
+        $this->image_categorie = $image_categorie;
 
         return $this;
     }

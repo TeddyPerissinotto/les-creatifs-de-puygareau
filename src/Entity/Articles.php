@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -65,7 +67,6 @@ class Articles
      * @ORM\ManyToOne(targetEntity="App\Entity\Categorie", inversedBy="articles")
      */
     private $categorie;
-
 
     /**
      * @return mixed

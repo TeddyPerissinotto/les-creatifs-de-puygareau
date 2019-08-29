@@ -1,0 +1,94 @@
+{% extends 'base/baseAdmin.html.twig' %}
+
+{% block main %}
+
+    <div class="adminMenu">
+
+        <h1 class="pageTitle">Bienvenue {{ app.user.username }}</h1>
+
+
+        <h2 class="homeTitleNews">Gestion des produits</h2>
+
+        <a href="{{ path('articles_form_insert') }}">Créer un nouveau produit</a>
+
+        <h3>Liste des produits</h3>
+
+        {% for allarticle in allarticles %}
+
+            <div class="adminArticlesInfo">
+
+                <span class="artcileInfo">{{ allarticle.title }}</span>
+                <span class="artcileInfo">{{ allarticle.description }}</span>
+                <span class="artcileInfo">{{ allarticle.size }}</span>
+                <span class="artcileInfo">{{ allarticle.prix }}</span>
+                <span class="artcileInfo">{{ allarticle.categorie.titre }}</span>
+
+                <div class="adminImgArticles">
+                    <img src="{{ asset('assets/img/produits') }}/{{ allarticle.image1 }}" class="imgFluid">
+                </div>
+
+                <div class="adminImgArticles">
+                    <img src="{{ asset('assets/img/produits') }}/{{ allarticle.image2 }}" class="imgFluid">
+                </div>
+
+                <div class="adminImgArticles">
+                    <img src="{{ asset('assets/img/produits') }}/{{ allarticle.image3 }}}" class="imgFluid">
+                </div>
+
+                <div class="adminImgArticles">
+                    <img src="{{ asset('assets/img/produits') }}/{{ allarticle.image4 }}" class="imgFluid">
+                </div>
+
+                <div class="adminImgArticles">
+                    <img src="{{ asset('assets/img/produits') }}/{{ allarticle.image5 }}" class="imgFluid">
+                </div>
+
+                <a href="{{ path('articles_form_update', {'id': allarticle.id}) }} ">Modifier</a>
+                <a href="{{ path('articles_delete', {'id': allarticle.id}) }} ">Supprimer</a>
+
+            </div>
+
+        {% endfor %}
+
+        <h2 class="homeTitleNews">Gestion des actualites</h2>
+
+        <a href="{{ path('news_form_insert') }}">Créer une nouvelle News</a>
+
+        <h3>Liste des News</h3>
+
+        {% for allnew in allnews %}
+
+            <div class="adminNewsInfo">
+
+                <span>{{ allnew.date|date("d/m/Y") }}</span>
+                <span>{{ allnew.title }}</span>
+
+                <div class="adminImgNews">
+                    <img src="{{ asset('assets/img/news') }}/{{ allnew.image1 }}" class="imgFluid">
+                </div>
+
+                <div class="adminImgNews">
+                    <img src="{{ asset('assets/img/news') }}/{{ allnew.image2 }}" class="imgFluid">
+                </div>
+
+                <div class="adminImgNews">
+                    <img src="{{ asset('assets/img/news') }}/{{ allnew.image3 }}" class="imgFluid">
+                </div>
+                <div class="adminImgNews">
+                    <img src="{{ asset('assets/img/news') }}/{{ allnew.image4 }}" class="imgFluid">
+                </div>
+
+                <div class="adminImgNews">
+                    <img src="{{ asset('assets/img/news') }}/{{ allnew.image5 }}" class="imgFluid">
+                </div>
+
+
+                <a href="{{ path('news_form_update', {'id': allnew.id}) }} ">Modifier</a>
+                <a href="{{ path('news_delete', {'id': allnew.id}) }} ">Supprimer</a>
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+{% endblock %}

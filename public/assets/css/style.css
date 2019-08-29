@@ -1,27 +1,4 @@
-body {
-  margin: 0 auto; }
-
-.imgFluid {
-  width: 100%;
-  height: auto; }
-
-a {
-  text-decoration: none; }
-
-.pageTitle {
-  text-align: center;
-  font-family: "childWriting";
-  font-size: 80px; }
-
-@font-face {
-  font-family: "childWriting";
-  src: url("../font/ChildWriting-Regular.ttf"); }
-@font-face {
-  font-family: "schoolScript";
-  src: url("../font/ulusalokul.com_cizgili.ttf"); }
-@font-face {
-  font-family: "chalk";
-  src: url("../font/DJB Chalk It Up.ttf"); }
+@charset "UTF-8";
 /*-----------------------------------------------CSS Barre de Contact---------------------------------------*/
 .contact {
   display: flex;
@@ -116,18 +93,45 @@ header {
 
 .slideMenu {
   display: none;
-  width: 20%;
+  width: 100%;
   height: 200px;
-  background-color: rgba(255, 255, 255, 0.5);
-  margin-left: 25%; }
+  background-color: rgba(255, 255, 255, 0.5); }
 
-.categorylist {
-  margin: 0;
-  padding-top: 20px; }
+.categoryList {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 0; }
 
-.linkCategory {
-  list-style-type: none;
-  margin-top: 5px; }
+.category {
+  width: 150px;
+  height: 150px;
+  margin-top: 25px;
+  text-align: center; }
+
+a:hover {
+  background-color: rgba(255, 255, 255, 0.3); }
+
+.imgCategory {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto; }
+
+.imgFluidCategory {
+  width: 100%;
+  height: auto; }
+
+.searchInfo {
+  margin-top: 300px; }
+
+.searchBar {
+  width: 20%;
+  margin: 0 auto; }
+
+.formSearch {
+  text-align: center; }
 
 .connectionForm {
   width: 100%;
@@ -161,7 +165,7 @@ header {
 .info2 .imgNews {
   width: 30%;
   height: auto;
-  border-radius: 50%;
+  border-radius: 10%;
   padding-top: 5%;
   padding-bottom: 5%;
   margin-left: 10%;
@@ -170,7 +174,7 @@ header {
 .imgNews {
   width: 30%;
   height: auto;
-  border-radius: 50%;
+  border-radius: 10%;
   margin-left: 10%;
   margin-right: 10%;
   padding-top: 5%;
@@ -221,7 +225,7 @@ header {
   justify-content: space-around; }
 
 .homeNewsInfo {
-  width: 45%;
+  width: 20%;
   height: auto; }
 
 .homeNews {
@@ -247,11 +251,15 @@ header {
   padding-bottom: 5%; }
 
 .imgCarrousel {
-  width: 100%;
-  height: 750px; }
+  width: 50%;
+  height: 750px;
+  margin: 0 auto; }
 
 .titleNewsAlone {
   text-align: center; }
+
+li {
+  list-style-type: none; }
 
 .adminNewsInfo {
   display: flex;
@@ -268,12 +276,166 @@ header {
 .adminMenu {
   text-align: center; }
 
+.adminArticlesInfo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border: solid 1px black; }
+
+.adminImgArticles {
+  width: 10%;
+  height: auto; }
+
+.artcileInfo {
+  width: 5%;
+  height: auto;
+  font-size: 10px; }
+
+.headerAdmin {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(206, 201, 201, 0.5); }
+
+.logoAdmin {
+  width: 30%;
+  height: auto; }
+
+.navButton {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid black;
+  position: fixed; }
+
+.navAdmin {
+  margin-left: 50px;
+  width: 20%;
+  height: 50px;
+  position: fixed;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid black;
+  display: none; }
+
 .logoutButton {
   margin: 0 auto;
-  width: 10%;
+  width: 50%;
   height: 20px;
   background-color: #718C00;
   border: 1px solid black;
   border-radius: 50px; }
+
+/* CSS du menu des articles par cat├®gorie */
+.categoryArticles {
+  width: 30%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.allarticles {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center; }
+
+.homeArticlesInfo {
+  width: 20%;
+  height: auto;
+  text-align: center;
+  box-shadow: 10px 5px 5px gray; }
+
+.homeImgArticles {
+  width: 100%;
+  height: auto;
+  border-radius: 150px;
+  overflow: hidden; }
+
+/* CSS de l'article seul */
+.product {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px; }
+
+.allImgArticle {
+  width: 30%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; }
+
+.imgArticle {
+  width: 45%;
+  height: auto; }
+
+.infoIframe {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+.googleIframe {
+  width: 50%;
+  height: auto; }
+
+h1 {
+  text-align: center; }
+
+.formArticle form {
+  margin: 0 auto;
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #5eb5e0;
+  border-radius: 10%; }
+
+.formElement {
+  width: 50%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column; }
+
+#articles_description {
+  width: 100%;
+  height: 100px; }
+
+body {
+  margin: 0 auto; }
+
+.imgFluid {
+  width: 100%;
+  height: auto; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+.pageTitle {
+  text-align: center;
+  font-family: "childWriting";
+  font-size: 80px; }
+
+@font-face {
+  font-family: "childWriting";
+  src: url("../font/ChildWriting-Regular.ttf"); }
+@font-face {
+  font-family: "schoolScript";
+  src: url("../font/ulusalokul.com_cizgili.ttf"); }
+@font-face {
+  font-family: "chalk";
+  src: url("../font/DJB Chalk It Up.ttf"); }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,3 +1,5 @@
+
+
 .adminNewsInfo{
   display: flex;
   justify-content: space-around;
@@ -16,11 +18,23 @@
   text-align: center;
 }
 
-.logoutButton{
-  margin: 0 auto;
-  width: 10%;
-  height: 20px;
-  background-color: #718C00;
-  border: 1px solid black;
-  border-radius: 50px;
+.adminArticlesInfo{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border: solid 1px black;
 }
+
+.adminImgArticles{
+  width: 10%;
+  height: auto;
+}
+
+.artcileInfo{
+  width: 5%;
+  height: auto;
+  font-size: 10px;
+}
+

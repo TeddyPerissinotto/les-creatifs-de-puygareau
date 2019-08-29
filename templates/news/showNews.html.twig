@@ -2,6 +2,9 @@
 
 {% block main %}
 
+
+    <a href="{{ path('home_news') }}">Retour</a>
+
         <h1 class="titleNewsAlone">{{ showNews.title }}</h1>
 
         <p class="showNews">{{ showNews.article }}</p>
@@ -10,17 +13,17 @@
 
         <div id="carrousel">
             <ul>
-                <li><img src="{{ asset(showNews.image1) }}" class="imgFluid" /></li>
-                <li><img src="{{ asset(showNews.image2) }}" class="imgFluid" /></li>
-                <li><img src="{{ asset(showNews.image3) }}" class="imgFluid" /></li>
-                <li><img src="{{ asset(showNews.image4) }}" class="imgFluid" /></li>
-                <li><img src="{{ asset(showNews.image5) }}" class="imgFluid" /></li>
+                <li><img src="{{ asset('assets/img/news') }}/{{ showNews.image1 }}" class="imgFluid" alt=""></li>
+                <li><img src="{{ asset('assets/img/news') }}/{{ showNews.image2 }}" class="imgFluid" alt=""></li>
+                <li><img src="{{ asset('assets/img/news') }}/{{ showNews.image3 }}" class="imgFluid" alt=""></li>
+                <li><img src="{{ asset('assets/img/news') }}/{{ showNews.image4 }}" class="imgFluid" alt=""></li>
+                <li><img src="{{ asset('assets/img/news') }}/{{ showNews.image5 }}" class="imgFluid" alt=""></li>
             </ul>
         </div>
 
     </div>
 
 
-    <a href="{{ path('home_news') }}">Retour</a>
+
 
 {% endblock %}

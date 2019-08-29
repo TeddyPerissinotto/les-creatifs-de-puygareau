@@ -1,9 +1,71 @@
-{% extends 'base/index.html.twig' %}
+{% extends 'base/baseAdmin.html.twig' %}
 
 {% block main %}
 
-    <h1>Formulaire Articles : Ajouter/Modifier</h1>
+    <div class="formArticle">
 
-    {{ form(articlesFormView) }}
+    <h1>Formulaire Produits : Ajouter/Modifier</h1>
+
+
+        {{ form_start(articlesFormView, {'label_attr': {'class' : 'AdminForm'}}) }}
+
+        <div class="formElement">
+            {{ form_label(articlesFormView.categorie, 'Catégorie', {'label_attr': {'class' : 'labelForm'}}) }}
+            {{ form_widget(articlesFormView.categorie, {'label_attr': {'class' : 'labelInput'}}) }}
+        </div>
+
+        <div class="formElement">
+            {{ form_label(articlesFormView.title, 'Titre', {'label_attr': {'class' : 'labelForm'}}) }}
+            {{ form_widget(articlesFormView.title, {'label_attr': {'class' : 'labelInput'}}) }}
+        </div>
+
+        <div class="formElement">
+            {{ form_label(articlesFormView.description, 'Description', {'label_attr': {'class' : 'labelForm'}}) }}
+            {{ form_widget(articlesFormView.description, {'label_attr': {'class' : 'textDescription'}}) }}
+        </div>
+
+        <div class="formElement">
+            {{ form_label(articlesFormView.size, 'Taille', {'label_attr': {'class' : 'labelForm'}}) }}
+            {{ form_widget(articlesFormView.size, {'label_attr': {'class' : 'labelInput'}}) }}
+        </div>
+
+        <div class="formElement">
+            {{ form_label(articlesFormView.prix, 'Prix', {'label_attr': {'class' : 'labelForm'}}) }}
+            {{ form_widget(articlesFormView.prix, {'label_attr': {'class' : 'labelInput'}}) }}
+        </div>
+
+        <div class="formElement">
+            {{ form_label(articlesFormView.image1, 'image1', {'label_attr': {'class' : 'labelForm'}}) }}
+            {{ form_widget(articlesFormView.image1, {'label_attr': {'class' : 'labelInput'}}) }}
+        </div>
+
+        <div class="formElement">
+            {{ form_label(articlesFormView.image2, 'image2', {'label_attr': {'class' : 'labelForm'}}) }}
+            {{ form_widget(articlesFormView.image2, {'label_attr': {'class' : 'labelInput'}}) }}
+        </div>
+
+        <div class="formElement">
+            {{ form_label(articlesFormView.image3, 'image3', {'label_attr': {'class' : 'labelForm'}}) }}
+            {{ form_widget(articlesFormView.image3, {'label_attr': {'class' : 'labelInput'}}) }}
+        </div>
+
+        <div class="formElement">
+            {{ form_label(articlesFormView.image4, 'image4', {'label_attr': {'class' : 'labelForm'}}) }}
+            {{ form_widget(articlesFormView.image4, {'label_attr': {'class' : 'labelInput'}}) }}
+        </div>
+
+        <div class="formElement">
+            {{ form_label(articlesFormView.image5, 'image5', {'label_attr': {'class' : 'labelForm'}}) }}
+            {{ form_widget(articlesFormView.image5, {'label_attr': {'class' : 'labelInput'}}) }}
+        </div>
+
+        <div class="formElement">
+            {{ form_label(articlesFormView.Envoyer, 'Envoyer', {'label_attr': {'class' : 'labelForm'}}) }}
+            {{ form_widget(articlesFormView.Envoyer, {'label_attr': {'class' : 'labelsubmit'}}) }}
+        </div>
+
+        {{ form_end(articlesFormView) }}
+
+    </div>
 
 {% endblock %}

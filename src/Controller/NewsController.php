@@ -6,6 +6,7 @@ namespace App\Controller;
 
 use App\Entity\News;
 use App\Form\NewsType;
+use App\Repository\CategorieRepository;
 use App\Repository\NewsRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -23,15 +24,17 @@ class NewsController extends AbstractController
     /**
      * @Route("/homeNews", name="home_news")
      */
-    public function homeNews(EntityManagerInterface $entityManager)
+    public function homeNews(EntityManagerInterface $entityManager, CategorieRepository $categorieRepository)
     {
         $newsRepository = $entityManager->getRepository(News::class);
 
         $news = $newsRepository->findAll();
+        $categories = $categorieRepository->findAll();
 
         return $this->render('news/homeNews.html.twig',
             [
-                'allnews' => $news
+                'allnews' => $news,
+                'categories' => $categories
             ]);
 
     }
@@ -39,15 +42,17 @@ class NewsController extends AbstractController
     /**
      * @Route("/showNews/{id}", name="show_news")
      */
-    public function showNews($id, EntityManagerInterface $entityManager)
+    public function showNews($id, EntityManagerInterface $entityManager, CategorieRepository $categorieRepository)
     {
         $newsRepository = $entityManager->getRepository(News::class);
 
         $news = $newsRepository->find($id);
+        $categories = $categorieRepository->findAll();
 
         return $this->render('news/showNews.html.twig',
             [
-                'showNews' => $news
+                'showNews' => $news,
+                'categories' => $categories
             ]);
 
     }

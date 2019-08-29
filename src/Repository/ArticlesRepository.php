@@ -14,6 +14,21 @@ use Symfony\Bridge\Doctrine\RegistryInterface;
  */
 class ArticlesRepository extends ServiceEntityRepository
 {
+    public function findbyTitle($word)
+    {
+        $qb = $this->createQueryBuilder('a');
+
+        $query = $qb->select('a')
+
+            ->where('a.title LIKE :word')
+            ->setParameter('word', '%'.$word.'%')
+            ->getQuery();
+
+        $result = $query->getArrayResult();
+
+        return $result;
+    }
+
     public function __construct(RegistryInterface $registry)
     {
         parent::__construct($registry, Articles::class);

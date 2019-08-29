@@ -1,3 +1,13 @@
+@import "footer";
+@import "header";
+@import "FOSUserBundle";
+@import "news";
+@import "homeAdmin";
+@import "headerAdmin";
+@import "articles";
+@import "contact";
+@import "formulaire";
+
 body {
   margin: 0 auto; }
 
@@ -6,7 +16,8 @@ body {
   height: auto; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: black;}
 
 .pageTitle{
   text-align: center;
@@ -24,9 +35,5 @@ a {
   font-family: "chalk";
   src: url("../font/DJB Chalk It Up.ttf"); }
 
-@import "footer";
-@import "header";
-@import "FOSUserBundle";
-@import "news";
-@import "homeAdmin";
+
 

@@ -7,17 +7,28 @@ $(document).ready(function() {
     })
 });
 
-/*--------------Affiche mes catégories d'articles----------------*/
-$(document).ready(function() {
-    function myNav() {
+/*------------------------------------------ANIMATION DE LA NAVBAR ADMIN--------------------------------------------- */
 
-    $('#clickMenu').click(function(){
-
-        $('.slideMenu').load("nav .category");
+$(document).ready(function () {
+    $('#clickButtonAdmin').click(function () {
+        $('.navAdmin').toggle();
     })
+});
 
+/*------------------------------------------SECURITE BARRE DE RECHERCHE---------------------------------------------- */
+
+
+
+//Je clique sur un élément avec la classe de mon bouton
+$('.searchSubmit').click(function(){
+    //Je fais mpon traitement sur mes valeurs de formulaire
+    var texte = $('.searchBar').val();
+    var characterReg = /^\s*[a-zA-Z0-9,\s]+\s*$/;
+    //Je lance ma condition qui retourne false si un caractère spécial a été soumis dans mon formulaire
+    if(!characterReg.test(texte)) {
+        alert("Caractères spéciaux interdits : " + texte);
+        return false;
     }
-    myNav();
 });
 
 /* --------------------------------------------ANIMATION DU CARROUSEL----------------------------------------------- */

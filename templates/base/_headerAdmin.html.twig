@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Les Créatifs de Puygareau - Admin</title>
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="icon" href="{{ asset('assets/img/logo/logo.png') }}">
+</head>
+
+<body>
+
+<div class="headerAdmin">
+
+
+    <div class="logoAdmin">
+        <img class="imgFluid" src="{{ asset('assets/img/logo/logo.png') }}" alt="">
+    </div>
+    <h1>Espace Administrateur</h1>
+
+</div>
+
+
+<main>
+
+    {% if is_granted('ROLE_ADMIN') == true %}
+
+    <a href="#none" class="navButton" id="clickButtonAdmin">
+        <img src="{{ asset('assets/img/icon/ico.woodHouse.png') }}" alt="icone maison en bois" class="imgFluid">
+    </a>
+
+    <div class="navAdmin">
+
+        <a href="{{ path('admin_home') }}" class="linkHomeAdmin">Menu administrateur</a>
+
+        <div class="logoutButton">
+            <a href="{{ path('fos_user_security_logout') }}">
+                {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+            </a>
+        </div>
+
+    </div>
+
+{% endif %}
