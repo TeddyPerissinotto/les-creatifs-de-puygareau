@@ -57,8 +57,7 @@ $('.searchSubmit').click(function(){
 /**********************************************************************************************************************/
 
 $(document).ready(function(){
-
-    //quand on clique sur une image
+    //quand on clique sur une image//
     $(".imgPop").on('click', function(){
         //affichage de la modal en modifiant le css de la modal
         $(".modalArticle").css("display", "block");
