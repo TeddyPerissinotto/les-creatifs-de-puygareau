@@ -1,4 +1,6 @@
-/*--------------------------------------------ANIMATION DE LA NAVBAR----------------------------------------------- */
+/**********************************************************************************************************************/
+/*                                          ANIMATION DE LA NAVBAR                                                    */
+/**********************************************************************************************************************/
 
 $(document).ready(function() {
 
@@ -7,7 +9,9 @@ $(document).ready(function() {
     })
 });
 
-/*------------------------------------------ANIMATION DE LA NAVBAR ADMIN--------------------------------------------- */
+/**********************************************************************************************************************/
+/*                                        ANIMATION DE LA NAVBAR ADMIN                                                */
+/**********************************************************************************************************************/
 
 $(document).ready(function () {
     $('#clickButtonAdmin').click(function () {
@@ -15,7 +19,24 @@ $(document).ready(function () {
     })
 });
 
-/*------------------------------------------SECURITE BARRE DE RECHERCHE---------------------------------------------- */
+/**********************************************************************************************************************/
+/*                                        ANIMATION BOUTON RETOUR EN HAUT                                             */
+/**********************************************************************************************************************/
+
+$(document).ready(function () {
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() < 800) {
+            $("#clickButtonTop").fadeOut();
+        } else {
+            $("#clickButtonTop").fadeIn();
+        }
+    })
+});
+
+/**********************************************************************************************************************/
+/*                                       SECURITE FRONT BARRE DE RECHERCHE                                            */
+/**********************************************************************************************************************/
 
 
 
@@ -31,7 +52,9 @@ $('.searchSubmit').click(function(){
     }
 });
 
-/* --------------------------------------------ANIMATION DU CARROUSEL----------------------------------------------- */
+/**********************************************************************************************************************/
+/*                                          ANIMATION DU CARROUSEL                                                    */
+/**********************************************************************************************************************/
 
 $(document).ready(function(){
 
@@ -69,3 +92,21 @@ $(document).ready(function(){
 
 });
 
+$(document).ready(function(){
+
+    //quand on clique sur une image
+    $(".imgPopUp").on('click', function(){
+        //affichage de la modal en modifiant le css de la modal
+        $(".modalArticle").css("display", "block");
+
+        //ajout de la source de l'image dans le contenu de la modal en fonction de la source de l'image cliquée
+        //le $(this) fait reference a l'img qui a été cliquée
+        $("#imgSelected").attr("src", $(this).attr("src"));
+    });
+
+    //si on clique sur le bouton, on ferme la modal en modifiant le css
+    $(".closeModal").on("click", function(){
+        $(".modalArticle").css("display", "none");
+    });
+
+});

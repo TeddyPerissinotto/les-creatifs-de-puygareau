@@ -1,3 +1,7 @@
+/**********************************************************************************************************************/
+/*                                          IMPORT DES FICHIERS PARTIELS                                              */
+/**********************************************************************************************************************/
+
 @import "footer";
 @import "header";
 @import "FOSUserBundle";
@@ -8,37 +12,10 @@
 @import "contact";
 @import "formulaire";
 
-body {
-  margin: 0 auto;
-}
 
-.imgFluid {
-  width: 100%;
-  height: auto;
-}
-
-.linkBack{
-  width: 20%;
-  height: auto;
-  display: flex;
-  align-items: center;
-}
-
-.arrowback{
-  width: 50px;
-  height: 50px;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-.pageTitle{
-  text-align: center;
-  font-family: "childWriting";
-  font-size: 80px;
-}
+/**********************************************************************************************************************/
+/*                                                IMPORT DES FONTS                                                    */
+/**********************************************************************************************************************/
 
 @font-face {
   font-family: "childWriting";
@@ -49,6 +26,47 @@ a {
 @font-face {
   font-family: "chalk";
   src: url("../font/DJB Chalk It Up.ttf"); }
+
+/**********************************************************************************************************************/
+/*                                                CLASS CSS GENERAL                                                   */
+/**********************************************************************************************************************/
+
+body {
+  margin: 0 auto;
+  font-family: Helvetica;
+  font-size: small;
+}
+
+.imgFluid {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover{
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+h2{
+  font-family: "schoolScript";
+  font-size: 30px;
+}
+
+.pageTitle{
+  text-align: center;
+  font-family: "childWriting";
+  font-size: 80px;
+}
+
+h1{
+  text-align: center;
+}
+
+
 
 
 

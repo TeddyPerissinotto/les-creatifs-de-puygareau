@@ -1,5 +1,9 @@
-@charset "UTF-8";
-/*-----------------------------------------------CSS Barre de Contact---------------------------------------*/
+/**********************************************************************************************************************/
+/*                                          IMPORT DES FICHIERS PARTIELS                                              */
+/**********************************************************************************************************************/
+/**********************************************************************************************************************/
+/*                                              CSS BARRE DE CONTACT                                                  */
+/**********************************************************************************************************************/
 .contact {
   display: flex;
   justify-content: space-around;
@@ -17,11 +21,19 @@
   height: auto;
   margin: 0 auto; }
 
-/*----------------------------------------------------CSS Footer-------------------------------------------------*/
+/**********************************************************************************************************************/
+/*                                                  CSS FOOTER                                                        */
+/**********************************************************************************************************************/
 .hrFooter {
   width: 90%; }
 
 footer {
+  background-image: url("../img/index/ford1921.jpg");
+  background-size: cover; }
+
+.bandeauFooter {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center; }
@@ -33,7 +45,7 @@ footer {
   text-align: center; }
 
 .imgCopyright {
-  margin-top: 8%;
+  margin-top: 5%;
   margin-right: 5%;
   width: 10%;
   height: 30%; }
@@ -46,18 +58,18 @@ footer {
   height: auto;
   margin: 0 auto; }
 
-/*-----------------------------------------------CSS GENERAL DU HEADER------------------------------------------------*/
+/**********************************************************************************************************************/
+/*                                            CSS GENERAL DU HEADER                                                   */
+/**********************************************************************************************************************/
 header {
   background-image: url("../img/index/ford1921.jpg");
   width: 100%;
   height: 800px;
   background-size: cover; }
 
-.imgFluid {
-  width: 100%;
-  height: auto; }
-
-/*-----------------------------------------------CSS DU BANDEAU AVEC LOGO---------------------------------------------*/
+/**********************************************************************************************************************/
+/*                                             CSS BANDEAU AVEC LOGO                                                  */
+/**********************************************************************************************************************/
 .headbandLogo {
   width: 100%;
   height: 200px;
@@ -74,7 +86,9 @@ header {
   width: 20%;
   height: auto; }
 
-/*--------------------------------------------------CSS DE LA NAVBAR--------------------------------------------------*/
+/**********************************************************************************************************************/
+/*                                                  CSS DE LA NAVBAR                                                  */
+/**********************************************************************************************************************/
 .navbar {
   margin-top: 4px;
   width: 100%;
@@ -103,7 +117,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-top: 0; }
+  margin-top: 20px; }
 
 .category {
   width: 150px;
@@ -111,7 +125,10 @@ header {
   margin-top: 25px;
   text-align: center; }
 
-a:hover {
+.linkCategory {
+  margin-top: 35px; }
+
+.navbar a:hover {
   background-color: rgba(255, 255, 255, 0.3); }
 
 .imgCategory {
@@ -123,16 +140,45 @@ a:hover {
   width: 100%;
   height: auto; }
 
+/**********************************************************************************************************************/
+/*                                          CSS DE LA BARRE DE RECHERCHE                                              */
+/**********************************************************************************************************************/
 .searchInfo {
-  margin-top: 300px; }
-
-.searchBar {
-  width: 20%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-top: 200px;
+  width: 60%;
+  height: 20%; }
 
 .formSearch {
-  text-align: center; }
+  margin: 0 auto;
+  width: 60%;
+  height: 30%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px; }
 
+.searchBar {
+  margin: 6px;
+  width: 80%;
+  height: 60%; }
+
+/**********************************************************************************************************************/
+/*                                        CSS BOUTON RETOUR VERS LE HAUT                                              */
+/**********************************************************************************************************************/
+.buttonBackToTop {
+  margin-top: 300px;
+  margin-left: 1280px;
+  width: 5%;
+  height: auto;
+  position: fixed;
+  border-radius: 10%; }
+
+.buttonBackToTop:hover {
+  background-color: rgba(0, 0, 0, 0.5); }
+
+/**********************************************************************************************************************/
+/*                                           CSS DU BUNDLE FOSUser                                                    */
+/**********************************************************************************************************************/
 .connectionForm {
   width: 100%;
   display: flex;
@@ -150,7 +196,9 @@ a:hover {
   flex-direction: column;
   align-items: center; }
 
-/*-------------------------------------CSS News de la page d'accueil du site----------------------------------------*/
+/**********************************************************************************************************************/
+/*                                   CSS DES NEWS DE LA PAGE D'ACCUEIL DU SITE                                        */
+/**********************************************************************************************************************/
 .info {
   width: 100%;
   display: flex;
@@ -174,17 +222,16 @@ a:hover {
 .imgNews {
   width: 30%;
   height: auto;
-  border-radius: 10%;
   margin-left: 10%;
   margin-right: 10%;
   padding-top: 5%;
   padding-bottom: 5%; }
 
 .imgFluidNews {
-  border-radius: 50%;
+  border-radius: 10%;
   width: 100%;
   height: auto;
-  box-shadow: 10px 5px 5px darkgrey; }
+  overflow: hidden; }
 
 .titleNews {
   text-align: center;
@@ -216,7 +263,9 @@ a:hover {
   height: auto;
   margin-right: 10%; }
 
-/*---------------------------------------------CSS de la page homeNews-----------------------------------------------*/
+/**********************************************************************************************************************/
+/*                                             CSS DE LA PAGE homeNews                                                */
+/**********************************************************************************************************************/
 .allNews {
   width: 100%;
   height: auto;
@@ -242,7 +291,9 @@ a:hover {
   width: 100%;
   height: auto; }
 
-/*---------------------------------------------CSS de la page showNews-----------------------------------------------*/
+/**********************************************************************************************************************/
+/*                                             CSS DE LA PAGE showNews                                                */
+/**********************************************************************************************************************/
 .showNews {
   width: 30%;
   height: auto;
@@ -261,6 +312,9 @@ a:hover {
 li {
   list-style-type: none; }
 
+/**********************************************************************************************************************/
+/*                                           CSS DU MENU ADMINISTRATEUR                                               */
+/**********************************************************************************************************************/
 .adminNewsInfo {
   display: flex;
   justify-content: space-around;
@@ -293,6 +347,9 @@ li {
   height: auto;
   font-size: 10px; }
 
+/**********************************************************************************************************************/
+/*                                    CSS DU HEADER DE L'ESPACE ADMINISTRATEUR                                        */
+/**********************************************************************************************************************/
 .headerAdmin {
   width: 100%;
   height: auto;
@@ -305,6 +362,9 @@ li {
   width: 30%;
   height: auto; }
 
+/**********************************************************************************************************************/
+/*                                          CSS DU BOUTON DE NAVIGATION                                               */
+/**********************************************************************************************************************/
 .navButton {
   width: 50px;
   height: 50px;
@@ -330,7 +390,9 @@ li {
   border: 1px solid black;
   border-radius: 50px; }
 
-/* CSS du menu des articles par cat├®gorie */
+/**********************************************************************************************************************/
+/*                                      CSS MENU ARTICLES PAR CATEGORIE                                               */
+/**********************************************************************************************************************/
 .categoryArticles {
   width: 30%;
   height: 150px;
@@ -350,39 +412,105 @@ li {
   width: 20%;
   height: auto;
   text-align: center;
-  box-shadow: 10px 5px 5px gray; }
+  border-radius: 10px;
+  box-shadow: 5px 2px 2px rgba(0, 0, 0, 0.2); }
 
 .homeImgArticles {
   width: 100%;
-  height: auto;
-  border-radius: 150px;
-  overflow: hidden; }
+  height: auto; }
 
-/* CSS de l'article seul */
+/**********************************************************************************************************************/
+/*                                             CSS DE L'ARTICLE SEUL                                                  */
+/**********************************************************************************************************************/
 .product {
-  width: 100%;
-  height: auto;
+  width: 80%;
+  height: 500px;
+  margin-left: 10%;
+  margin-right: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 100px;
-  padding-bottom: 100px; }
+  border-radius: 10px;
+  box-shadow: 8px 0 8px -10px #000000,-8px 0 8px -10px #000000; }
 
 .allImgArticle {
   width: 30%;
   height: auto;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center; }
 
-.imgArticle {
+.boxPrice {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 25px;
+  background-color: #5eb5e0;
+  text-align: center; }
+
+.price {
+  padding-top: 10px; }
+
+/**********************************************************************************************************************/
+/*                                           CSS DU POPUP DES IMAGES                                                  */
+/**********************************************************************************************************************/
+.imgPopUp {
   width: 45%;
   height: auto; }
 
+.modalArticle {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  margin-top: 50px;
+  width: 90%;
+  height: auto;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px; }
+
+#imgSelected {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 800px; }
+
+.closeModal {
+  margin-left: 20px;
+  font-size: 20px; }
+
+/**********************************************************************************************************************/
+/*                                         CSS BOUTON RETOUR EN ARRIERE                                               */
+/**********************************************************************************************************************/
+.linkBack {
+  width: 10%;
+  height: 50px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center; }
+
+.linkBack p {
+  margin-top: 25px; }
+
+.linkBack:hover {
+  background-color: rgba(0, 0, 0, 0.2); }
+
+.arrowback {
+  width: 50px;
+  height: 50px; }
+
+/**********************************************************************************************************************/
+/*                                       CSS MESSAGE RESULTAT DE RECHERCHE                                            */
+/**********************************************************************************************************************/
 .searchMessage {
   text-align: center;
   font-size: 20px; }
 
+/**********************************************************************************************************************/
+/*                                          CSS DE LA PAGE CONTACT                                                    */
+/**********************************************************************************************************************/
 .infoIframe {
   display: flex;
   justify-content: space-around;
@@ -392,10 +520,9 @@ li {
   width: 50%;
   height: auto; }
 
-h1 {
-  text-align: center; }
-
-/*------------------------------------------------CSS FORMULAIRES-----------------------------------------------------*/
+/**********************************************************************************************************************/
+/*                                                CSS DES FORMULAIRES                                                 */
+/**********************************************************************************************************************/
 .adminForm {
   margin: 0 auto;
   width: 50%;
@@ -423,32 +550,9 @@ h1 {
   width: 30%;
   margin: 0 auto; }
 
-body {
-  margin: 0 auto; }
-
-.imgFluid {
-  width: 100%;
-  height: auto; }
-
-.linkBack {
-  width: 20%;
-  height: auto;
-  display: flex;
-  align-items: center; }
-
-.arrowback {
-  width: 50px;
-  height: 50px; }
-
-a {
-  text-decoration: none;
-  color: black; }
-
-.pageTitle {
-  text-align: center;
-  font-family: "childWriting";
-  font-size: 80px; }
-
+/**********************************************************************************************************************/
+/*                                                IMPORT DES FONTS                                                    */
+/**********************************************************************************************************************/
 @font-face {
   font-family: "childWriting";
   src: url("../font/ChildWriting-Regular.ttf"); }
@@ -458,5 +562,35 @@ a {
 @font-face {
   font-family: "chalk";
   src: url("../font/DJB Chalk It Up.ttf"); }
+/**********************************************************************************************************************/
+/*                                                CLASS CSS GENERAL                                                   */
+/**********************************************************************************************************************/
+body {
+  margin: 0 auto;
+  font-family: Helvetica;
+  font-size: small; }
+
+.imgFluid {
+  width: 100%;
+  height: auto; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+a:hover {
+  background-color: rgba(0, 0, 0, 0.2); }
+
+h2 {
+  font-family: "schoolScript";
+  font-size: 30px; }
+
+.pageTitle {
+  text-align: center;
+  font-family: "childWriting";
+  font-size: 80px; }
+
+h1 {
+  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

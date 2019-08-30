@@ -8,7 +8,7 @@
                 {% for categorie in categories %}
 
                         <li class="linkCategory">
-                            <a href="{{ path('articles_by_category', {'id': categorie.id}) }}">{{ categorie.titre }}</a>
+                            <a href="{{ path('articles_by_category', {'id': categorie.id}) }}" id="aHeaderStyle">{{ categorie.titre }}</a>
                         </li>
 
                 {% endfor %}
