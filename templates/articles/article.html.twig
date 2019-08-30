@@ -5,10 +5,7 @@
     <a href="{{ path('articles_by_category', {'id': article.categorie.id}) }}">
 
         <div class="linkBack">
-            <div class="arrowback">
-                <img src="{{ asset('assets/img/icon/ico.arrowleft.png') }}" class="imgFluid" alt="">
-            </div>
-            <p>{{ article.categorie.titre }}</p>
+            <p>< {{ article.categorie.titre }}</p>
         </div>
 
     </a>
@@ -23,8 +20,8 @@
             {#####BOUTON POUR FERMER LA MODAL#####}
             <span class="closeModal">X Fermer</span>
             {#####IMAGE DANS LA MODAL#####}
-            <div class="imgModal" id="imgSelected">
-                <img src="{{ asset('assets/img/produits') }}/{{ article.image1 }}" class="imgFluid" alt="">
+            <div class="imgModal" >
+                <img src="{{ asset('assets/img/produits') }}/{{ article.image1 }}" class="imgFluid" id="imgSelected" alt="">
             </div>
         </div>
 
@@ -34,23 +31,23 @@
         <div class="allImgArticle">
             {#####ID IMAGE UNIQUE#####}
             <div class="imgPopUp">
-                <img src="{{ asset('assets/img/produits') }}/{{ article.image1 }}" class="imgFluid" id="img1" alt="">
+                <img src="{{ asset('assets/img/produits') }}/{{ article.image1 }}" class="imgFluid imgPop" id="img1" alt="">
             </div>
             {#####ID IMAGE UNIQUE#####}
             <div class="imgPopUp">
-                <img src="{{ asset('assets/img/produits') }}/{{ article.image2 }}" class="imgFluid" id="img2" alt="">
+                <img src="{{ asset('assets/img/produits') }}/{{ article.image2 }}" class="imgFluid imgPop" id="img2" alt="">
             </div>
             {#####ID IMAGE UNIQUE#####}
             <div class="imgPopUp">
-                <img src="{{ asset('assets/img/produits') }}/{{ article.image3 }}" class="imgFluid" id="img3" alt="">
+                <img src="{{ asset('assets/img/produits') }}/{{ article.image3 }}" class="imgFluid imgPop" id="img3" alt="">
             </div>
             {#####ID IMAGE UNIQUE#####}
             <div class="imgPopUp">
-                <img src="{{ asset('assets/img/produits') }}/{{ article.image4 }}" class="imgFluid" id="img4"  alt="">
+                <img src="{{ asset('assets/img/produits') }}/{{ article.image4 }}" class="imgFluid imgPop" id="img4"  alt="">
             </div>
             {#####ID IMAGE UNIQUE#####}
             <div class="imgPopUp">
-                <img src="{{ asset('assets/img/produits') }}/{{ article.image5 }}" class="imgFluid"  id="img5" alt="">
+                <img src="{{ asset('assets/img/produits') }}/{{ article.image5 }}" class="imgFluid imgPop"  id="img5" alt="">
             </div>
 
         </div>
@@ -58,7 +55,7 @@
         <div class="articleInfo">
             <h2>{{ article.title }}</h2>
             <p>Dimensions : {{ article.size }}</p>
-            <p>{{ article.description }}</p>
+            <p class="articleDescription">{{ article.description }}</p>
             <div class="boxPrice">
                 <p class="price">{{ article.prix }}</p>
             </div>

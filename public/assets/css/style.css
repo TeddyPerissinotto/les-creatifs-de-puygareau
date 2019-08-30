@@ -434,7 +434,7 @@ li {
   box-shadow: 8px 0 8px -10px #000000,-8px 0 8px -10px #000000; }
 
 .allImgArticle {
-  width: 30%;
+  width: 40%;
   height: auto;
   display: flex;
   flex-wrap: wrap;
@@ -452,6 +452,9 @@ li {
 .price {
   padding-top: 10px; }
 
+.articleInfo {
+  width: 45%; }
+
 /**********************************************************************************************************************/
 /*                                           CSS DU POPUP DES IMAGES                                                  */
 /**********************************************************************************************************************/
@@ -465,21 +468,23 @@ li {
   z-index: 1;
   top: 0;
   margin-top: 50px;
-  width: 90%;
+  width: 60%;
   height: auto;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px; }
 
-#imgSelected {
+.imgModal {
   margin: auto;
   display: block;
   width: 80%;
-  max-width: 800px; }
+  max-width: 500px;
+  max-height: 700px; }
 
 .closeModal {
   margin-left: 20px;
-  font-size: 20px; }
+  font-size: 20px;
+  color: white; }
 
 /**********************************************************************************************************************/
 /*                                         CSS BOUTON RETOUR EN ARRIERE                                               */
@@ -583,7 +588,8 @@ a:hover {
 
 h2 {
   font-family: "schoolScript";
-  font-size: 30px; }
+  font-size: 30px;
+  text-align: center; }
 
 .pageTitle {
   text-align: center;
