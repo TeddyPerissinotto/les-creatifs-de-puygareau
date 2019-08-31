@@ -1,0 +1,31 @@
+{% extends 'base/baseAdmin.html.twig' %}
+
+{% block main %}
+
+    <h1>Formulaire Media : Ajouter/Modifier</h1>
+
+    {{ form_start(mediaFormView, {'attr': {'class' : 'adminForm'}}) }}
+
+    <div class="formElement">
+        {{ form_label(mediaFormView.title, 'Titre', {'label_attr': {'class' : ''}}) }}
+        {{ form_widget(mediaFormView.title, {'attr': {'class' : 'formInput'}}) }}
+    </div>
+
+    <div class="formElement">
+        {{ form_label(mediaFormView.resume, 'Resume', {'label_attr': {'class' : 'labelForm'}}) }}
+        {{ form_widget(mediaFormView.resume, {'attr': {'class' : 'formText'}}) }}
+    </div>
+
+    <div class="formElement">
+        {{ form_label(mediaFormView.link, 'Lien vers article', {'label_attr': {'class' : 'labelForm'}}) }}
+        {{ form_widget(mediaFormView.link, {'attr': {'class' : 'formInput'}}) }}
+    </div>
+
+    <div class="formElement">
+        {{ form_label(mediaFormView.Envoyer, 'Envoyer', {'label_attr': {'class' : 'labelForm'}}) }}
+        {{ form_widget(mediaFormView.Envoyer, {'attr': {'class' : 'labelSubmit'}}) }}
+    </div>
+
+
+
+{% endblock %}

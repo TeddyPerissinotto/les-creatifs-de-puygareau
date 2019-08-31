@@ -50,7 +50,7 @@
 
 .allImgArticle{
   width: 40%;
-  height: auto;
+  height: 90%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -58,6 +58,7 @@
 }
 
 .boxPrice {
+  margin: 0 auto;
   width: 50px;
   height: 50px;
   border-radius: 50px;
@@ -79,8 +80,10 @@
 /**********************************************************************************************************************/
 
 .imgPopUp{
-  width: 45%;
-  height: auto;
+  margin: 20px;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
 }
 
 .modalArticle{
@@ -88,10 +91,10 @@
   position: fixed;
   z-index: 1;
   top: 0;
-  margin-top: 50px;
-  width: 60%;
+  width: 50%;
   height: auto;
   overflow: auto;
+  margin-top: 20px;
   background-color: rgba(0,0,0, 0.2);
   border-radius: 10px;
 }
@@ -100,8 +103,8 @@
   margin: auto;
   display: block;
   width: 80%;
-  max-width: 500px;
-  max-height: 700px;
+  max-width: 400px;
+  max-height: 600px;
 }
 
 .closeModal{

@@ -21,40 +21,39 @@
             <span class="closeModal">X Fermer</span>
             {#####IMAGE DANS LA MODAL#####}
             <div class="imgModal" >
-                <img src="{{ asset('assets/img/produits') }}/{{ article.image1 }}" class="imgFluid" id="imgSelected" alt="">
+                <img src="{{ asset('assets/img/produits') }}/{{ article.image1 }}" class="imgFluid" id="imgSelected" alt="image Produit">
             </div>
         </div>
 
         {##############################################################################################################}
         {#                                          DEBUT DU BLOC IMAGES                                              #}
         {##############################################################################################################}
+
+
         <div class="allImgArticle">
             {#####ID IMAGE UNIQUE#####}
             <div class="imgPopUp">
-                <img src="{{ asset('assets/img/produits') }}/{{ article.image1 }}" class="imgFluid imgPop" id="img1" alt="">
+                <img src="{{ asset('assets/img/produits') }}/{{ article.image1 }}" class="imgFluid imgPop" id="img1" alt="image Produit">
             </div>
             {#####ID IMAGE UNIQUE#####}
             <div class="imgPopUp">
-                <img src="{{ asset('assets/img/produits') }}/{{ article.image2 }}" class="imgFluid imgPop" id="img2" alt="">
+                <img src="{{ asset('assets/img/produits') }}/{{ article.image2 }}" class="imgFluid imgPop" id="img2" alt="image Produit">
             </div>
             {#####ID IMAGE UNIQUE#####}
             <div class="imgPopUp">
-                <img src="{{ asset('assets/img/produits') }}/{{ article.image3 }}" class="imgFluid imgPop" id="img3" alt="">
+                <img src="{{ asset('assets/img/produits') }}/{{ article.image3 }}" class="imgFluid imgPop" id="img3" alt="image Produit">
             </div>
             {#####ID IMAGE UNIQUE#####}
             <div class="imgPopUp">
-                <img src="{{ asset('assets/img/produits') }}/{{ article.image4 }}" class="imgFluid imgPop" id="img4"  alt="">
+                <img src="{{ asset('assets/img/produits') }}/{{ article.image4 }}" class="imgFluid imgPop" id="img4"  alt="image Produit">
             </div>
-            {#####ID IMAGE UNIQUE#####}
-            <div class="imgPopUp">
-                <img src="{{ asset('assets/img/produits') }}/{{ article.image5 }}" class="imgFluid imgPop"  id="img5" alt="">
-            </div>
-
         </div>
 
         <div class="articleInfo">
             <h2>{{ article.title }}</h2>
-            <p>Dimensions : {{ article.size }}</p>
+            <h3>Dimensions</h3>
+            <p>{{ article.size }}</p>
+            <h3>Description</h3>
             <p class="articleDescription">{{ article.description }}</p>
             <div class="boxPrice">
                 <p class="price">{{ article.prix }}</p>

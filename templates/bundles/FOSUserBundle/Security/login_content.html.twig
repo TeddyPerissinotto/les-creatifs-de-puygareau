@@ -19,9 +19,10 @@
         <input type="password" id="password" name="_password" required="required" autocomplete="current-password" />
     </div>
 
-
-    <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
-    <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+    <div class="rememberCheck">
+        <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+        <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+    </div>
 
     <div class="loginSubmit">
         <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
