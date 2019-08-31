@@ -1,0 +1,30 @@
+{% extends 'base/baseAdmin.html.twig' %}
+
+{% block main %}
+
+    <a href="{{ path('articles_form_insert') }}">Créer un produit</a>
+
+    {% for article in articles %}
+
+        <div class="adminArticlesInfo">
+
+            <span class="artcileInfo">{{ article.title }}</span>
+            <span class="artcileInfo">{{ article.description }}</span>
+            <span class="artcileInfo">{{ article.size }}</span>
+            <span class="artcileInfo">{{ article.prix }}</span>
+            <span class="artcileInfo">{{ article.categorie.titre }}</span>
+
+            {% for image in article.images %}
+                <div class="adminImgArticles">
+                    <img src="{{ asset('assets/img/upload') }}/{{ image.title }}" class="imgFluid">
+                </div>
+            {% endfor %}
+
+            <a href="{{ path('articles_form_update', {'id': article.id}) }} ">Modifier</a>
+            <a href="{{ path('articles_delete', {'id': article.id}) }} ">Supprimer</a>
+
+        </div>
+
+    {% endfor %}
+
+{% endblock %}

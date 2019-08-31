@@ -16,6 +16,9 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class AdminImagesController extends AbstractController
 {
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //                            ADMIN : Permet d'uploader une image en BDD                                          //
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /**
      * @Route("/admin/images/insert", name="images_form_insert")
      */
@@ -59,6 +62,7 @@ class AdminImagesController extends AbstractController
                 // persist + flush est l'équivalent de commit + push de Git.
                 $entityManager->persist($images);
                 $entityManager->flush();
+
                 return $this->redirectToRoute('admin_home');
             }
         }
@@ -67,5 +71,4 @@ class AdminImagesController extends AbstractController
             'imagesFormView' => $imagesFormView
         ]);
     }
-
 }

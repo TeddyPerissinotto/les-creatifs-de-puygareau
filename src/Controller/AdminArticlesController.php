@@ -8,6 +8,7 @@ use App\Form\ArticlesType;
 use App\Entity\Articles;
 use App\Repository\ArticlesRepository;
 use App\Repository\CategorieRepository;
+use App\Repository\ImagesRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -15,6 +16,26 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class AdminArticlesController extends AbstractController
 {
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //                      ADMIN : AFFICHE LA LISTE DES PRODUITS SUR LE MENU ADMIN ARTICLES                          //
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    /**
+     * @Route("/admin/menu/articles", name="admin_menu_articles")
+     */
+    public function adminArticlesMenu(ArticlesRepository $articlesRepository, CategorieRepository $categorieRepository, ImagesRepository $imagesRepository)
+    {
+        $articles = $articlesRepository->findAll();
+        $categories = $categorieRepository->findAll();
+        $images =$imagesRepository->findAll();
+
+        return $this->render('admin/adminArticlesMenu.html.twig',
+        [
+            'articles' => $articles,
+            'categories' => $categories,
+            'images' => $images
+        ]);
+    }
 
     //*************************************ADMIN : AJOUTE UN PRODUIT EN BDD***************************************//
     /**
@@ -36,7 +57,7 @@ class AdminArticlesController extends AbstractController
             $entityManager->persist($articles);
             $entityManager->flush();
 
-            return $this->redirectToRoute('admin_home');
+            return $this->redirectToRoute('images_form_insert');
         }
 
         return $this->render('admin/articlesForm.html.twig',
