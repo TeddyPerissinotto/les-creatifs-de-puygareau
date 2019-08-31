@@ -19,7 +19,7 @@ class AdminImagesController extends AbstractController
     /**
      * @Route("/admin/images/insert", name="images_form_insert")
      */
-    public function insertImages(Request $request, EntityManagerInterface $entityManager, ImagesRepository $imagesRepository)
+    public function insertImages(Request $request, EntityManagerInterface $entityManager)
     {
         $images = new Images();
 
@@ -49,7 +49,7 @@ class AdminImagesController extends AbstractController
                     // ... handle exception if something happens during file upload
                 }
                 // Met à jour l'image pour stocker le nouveau nom de la image
-                $images->setNom($newFilename);
+                $images->setTitle($newFilename);
             }
             // Si le formulaire est envoyé et qu'il est valide (si les champs obligatoires sont remplis...)
             // si ce n'est pas le cas, cette étape est sautée pour arriver directement au return

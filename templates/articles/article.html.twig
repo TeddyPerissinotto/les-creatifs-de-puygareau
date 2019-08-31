@@ -21,8 +21,9 @@
             <span class="closeModal">X Fermer</span>
             {#####IMAGE DANS LA MODAL#####}
             <div class="imgModal" >
-                <img src="{{ asset('assets/img/produits') }}/{{ article.image1 }}" class="imgFluid" id="imgSelected" alt="image Produit">
+                <img src="{#LA SRC DEVIENDRA CELUI DE L'IMAGE CIQUEE#}" class="imgFluid" id="imgSelected" alt="image Produit">
             </div>
+
         </div>
 
         {##############################################################################################################}
@@ -31,22 +32,13 @@
 
 
         <div class="allImgArticle">
-            {#####ID IMAGE UNIQUE#####}
+            {#####JE PENSE A RECUPERER L'ID IMAGE UNIQUE#####}
+            {% for images in article.images %}
             <div class="imgPopUp">
-                <img src="{{ asset('assets/img/produits') }}/{{ article.image1 }}" class="imgFluid imgPop" id="img1" alt="image Produit">
+                <img src="{{ asset('assets/img/upload') }}/{{ images.title }}" class="imgFluid imgPop" id="{{ images.id }}" alt="image Produit">
             </div>
-            {#####ID IMAGE UNIQUE#####}
-            <div class="imgPopUp">
-                <img src="{{ asset('assets/img/produits') }}/{{ article.image2 }}" class="imgFluid imgPop" id="img2" alt="image Produit">
-            </div>
-            {#####ID IMAGE UNIQUE#####}
-            <div class="imgPopUp">
-                <img src="{{ asset('assets/img/produits') }}/{{ article.image3 }}" class="imgFluid imgPop" id="img3" alt="image Produit">
-            </div>
-            {#####ID IMAGE UNIQUE#####}
-            <div class="imgPopUp">
-                <img src="{{ asset('assets/img/produits') }}/{{ article.image4 }}" class="imgFluid imgPop" id="img4"  alt="image Produit">
-            </div>
+            {% endfor %}
+
         </div>
 
         <div class="articleInfo">

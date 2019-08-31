@@ -15,16 +15,22 @@
     <hr class="hrFooter">
 
     <div class="allarticles">
-
+        {#Je veux faire apparaitre mes articles qui sont liés à une catégorie#}
         {% for article in categorie.articles %}
 
             <div class="homeArticlesInfo">
 
                 <h2>{{ article.title }}</h2>
-
+                {#Je veux faire appel aux images liées à mon article#}
+                {% for image in article.images %}
+                    {#Je sélectionne la première image qui passe dans la boucle uniquement#}
+                    {% if loop.first %}
                 <div class="homeImgArticles">
-                    <img src="{{ asset('assets/img/produits') }}/{{ article.image1 }}" class="imgFluid" alt="">
+                    <img src="{{ asset('assets/img/upload') }}/{{ image.title }}" class="imgFluid" alt="">
                 </div>
+                    {% endif %}
+
+                {% endfor %}
 
                 <a href="{{ path('article_by_id', {'id': article.id}) }}">Voir ce produit</a>
 

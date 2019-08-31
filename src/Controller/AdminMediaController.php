@@ -29,6 +29,8 @@ class AdminMediaController extends AbstractController
         {
             $entityManager->persist($media);
             $entityManager->flush();
+
+            return $this->redirectToRoute('admin_home');
         }
         return $this->render('admin/adminFormMedia.html.twig',
             [

@@ -2,6 +2,24 @@
 
 {% block main %}
 
+    {% for media in medias %}
+
+        <div class="media">
+
+            {{ media.title }}
+            {{ media.link }}
+        </div>
+
+        {% for images in media.images %}
+
+        <div class="img">
+            <img src="{{ asset('assets/img/upload') }}/{{ images.title }}" class="imgFluid" alt="">
+        </div>
+            {% endfor %}
+
+
+    {% endfor %}
+
 
 
 {% endblock %}

@@ -69,6 +69,16 @@ class Articles
     private $categorie;
 
     /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Images", mappedBy="articles")
+     */
+    private $images;
+
+    public function __construct()
+    {
+        $this->images = new ArrayCollection();
+    }
+
+    /**
      * @return mixed
      */
     public function getCategorie()
@@ -193,6 +203,37 @@ class Articles
     public function setPrix(string $prix): self
     {
         $this->prix = $prix;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Images[]
+     */
+    public function getImages(): Collection
+    {
+        return $this->images;
+    }
+
+    public function addImage(Images $image): self
+    {
+        if (!$this->images->contains($image)) {
+            $this->images[] = $image;
+            $image->setArticles($this);
+        }
+
+        return $this;
+    }
+
+    public function removeImage(Images $image): self
+    {
+        if ($this->images->contains($image)) {
+            $this->images->removeElement($image);
+            // set the owning side to null (unless already changed)
+            if ($image->getArticles() === $this) {
+                $image->setArticles(null);
+            }
+        }
 
         return $this;
     }
