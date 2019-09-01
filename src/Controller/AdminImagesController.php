@@ -16,9 +16,19 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class AdminImagesController extends AbstractController
 {
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //                            ADMIN : Permet d'uploader une image en BDD                                          //
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /**
+     * @Route("/admin/menu/images", name="admin_menu_images")
+     */
+    public function adminImagesMenu(ImagesRepository $imagesRepository)
+    {
+        $images = $imagesRepository->findAll();
+
+        return $this->render('admin/adminImagesMenu.html.twig',
+            [
+                'images' => $images
+            ]);
+    }
+
     /**
      * @Route("/admin/images/insert", name="images_form_insert")
      */

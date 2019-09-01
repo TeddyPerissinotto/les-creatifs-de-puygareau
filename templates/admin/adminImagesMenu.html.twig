@@ -1,0 +1,17 @@
+{% extends 'base/baseAdmin.html.twig' %}
+
+{% block main %}
+
+    <a href="{{ path('images_form_insert') }}">Créer une nouvelle News</a>
+
+    <h3>Liste des Images</h3>
+
+    {% for image in images %}
+
+        <div class="imagesMenu">
+            <img src="{{ asset('assets/img/upload') }}/{{ image.title }}" class="imgFluid">
+        </div>
+
+    {% endfor %}
+
+{% endblock %}
