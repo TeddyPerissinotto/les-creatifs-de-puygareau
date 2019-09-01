@@ -2,30 +2,20 @@
 
 namespace App\Form;
 
-use App\Entity\News;
+use App\Entity\Media;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class NewsType extends AbstractType
+class MediaType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-
         $builder
             ->add('title')
-            ->add('date', DateType::class,
-                [
-                    'widget' => 'single_text'
-                ])
-            ->add('image1')
-            ->add('image2')
-            ->add('image3')
-            ->add('image4')
-            ->add('image5')
-            ->add('article')
+            ->add('resume')
+            ->add('link')
             ->add('Envoyer', SubmitType::class)
         ;
     }
@@ -33,7 +23,7 @@ class NewsType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => News::class,
+            'data_class' => Media::class,
         ]);
     }
 }

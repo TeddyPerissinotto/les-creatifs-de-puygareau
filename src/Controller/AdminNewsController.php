@@ -15,6 +15,12 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class AdminNewsController extends AbstractController
 {
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //                      ADMIN : AFFICHE LA LISTE DES PRODUITS SUR LE MENU ADMIN ARTICLES                          //
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
     //***** ADMIN : Permet d'entrer en BDD une nouvelle actualité *****//
 
     //Création de ma route. url+/admin/news/insert
