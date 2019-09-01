@@ -10,47 +10,11 @@
         <h2 class="homeTitleNews">Gestion du site</h2>
 
         <a href="{{ path('admin_menu_articles') }}">Gestion des Produits</a>
+        <a href="{{ path('admin_menu_news') }}">Gestion des Actualités</a>
 
 
         <h2 class="homeTitleNews">Gestion des actualites</h2>
 
-        <a href="{{ path('news_form_insert') }}">Créer une nouvelle News</a>
-
-        <h3>Liste des News</h3>
-
-        {% for allnew in allnews %}
-
-            <div class="adminNewsInfo">
-
-                <span>{{ allnew.date|date("d/m/Y") }}</span>
-                <span>{{ allnew.title }}</span>
-
-                <div class="adminImgNews">
-                    <img src="{{ asset('assets/img/news') }}/{{ allnew.image1 }}" class="imgFluid">
-                </div>
-
-                <div class="adminImgNews">
-                    <img src="{{ asset('assets/img/news') }}/{{ allnew.image2 }}" class="imgFluid">
-                </div>
-
-                <div class="adminImgNews">
-                    <img src="{{ asset('assets/img/news') }}/{{ allnew.image3 }}" class="imgFluid">
-                </div>
-                <div class="adminImgNews">
-                    <img src="{{ asset('assets/img/news') }}/{{ allnew.image4 }}" class="imgFluid">
-                </div>
-
-                <div class="adminImgNews">
-                    <img src="{{ asset('assets/img/news') }}/{{ allnew.image5 }}" class="imgFluid">
-                </div>
-
-
-                <a href="{{ path('news_form_update', {'id': allnew.id}) }} ">Modifier</a>
-                <a href="{{ path('news_delete', {'id': allnew.id}) }} ">Supprimer</a>
-
-            </div>
-
-        {% endfor %}
 
     </div>
 {% endblock %}

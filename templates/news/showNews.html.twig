@@ -9,21 +9,11 @@
 
         <p class="showNews">{{ showNews.article }}</p>
 
-    <div class="carrousel">
-
-        <div class="imgCarrousel">
-                <img src="{{ asset('assets/img/news') }}/{{ showNews.image1 }}" class="imgFluid" alt="">
+    {% for image in showNews.images %}
+        <div class="homeImgNews">
+            <img src="{{ asset('assets/img/upload') }}/{{ image.title }}" class="imgFluid" />
         </div>
-                <div class="imgCarrousel">
-                    <img src="{{ asset('assets/img/news') }}/{{ showNews.image2 }}" class="imgFluid" alt="">
-                </div>
-                <li><img src="{{ asset('assets/img/news') }}/{{ showNews.image3 }}" class="imgFluid" alt=""></li>
-                <li><img src="{{ asset('assets/img/news') }}/{{ showNews.image4 }}" class="imgFluid" alt=""></li>
-                <li><img src="{{ asset('assets/img/news') }}/{{ showNews.image5 }}" class="imgFluid" alt=""></li>
-
-
-
-    </div>
+    {% endfor %}
 
 
 

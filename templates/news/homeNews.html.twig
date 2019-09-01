@@ -18,10 +18,11 @@
 
                 </h2>
 
-
+                {% for image in allnew.images %}
                 <div class="homeImgNews">
-                    <img src="{{ asset('assets/img/news') }}/{{ allnew.image1 }}" class="imgFluid" />
+                    <img src="{{ asset('assets/img/upload') }}/{{ image.title }}" class="imgFluid" />
                 </div>
+                {% endfor %}
 
 
 

@@ -20,11 +20,6 @@ class NewsType extends AbstractType
                 [
                     'widget' => 'single_text'
                 ])
-            ->add('image1')
-            ->add('image2')
-            ->add('image3')
-            ->add('image4')
-            ->add('image5')
             ->add('article')
             ->add('Envoyer', SubmitType::class)
         ;

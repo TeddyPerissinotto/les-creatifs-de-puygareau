@@ -29,31 +29,6 @@ class News
     private $date;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $image1;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $image2;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $image3;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $image4;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $image5;
-
-    /**
      * @ORM\Column(type="text")
      */
     private $article;
@@ -94,66 +69,6 @@ class News
     public function setDate(\DateTimeInterface $date): self
     {
         $this->date = $date;
-
-        return $this;
-    }
-
-    public function getImage1(): ?string
-    {
-        return $this->image1;
-    }
-
-    public function setImage1(string $image1): self
-    {
-        $this->image1 = $image1;
-
-        return $this;
-    }
-
-    public function getImage2(): ?string
-    {
-        return $this->image2;
-    }
-
-    public function setImage2(?string $image2): self
-    {
-        $this->image2 = $image2;
-
-        return $this;
-    }
-
-    public function getImage3(): ?string
-    {
-        return $this->image3;
-    }
-
-    public function setImage3(?string $image3): self
-    {
-        $this->image3 = $image3;
-
-        return $this;
-    }
-
-    public function getImage4(): ?string
-    {
-        return $this->image4;
-    }
-
-    public function setImage4(?string $image4): self
-    {
-        $this->image4 = $image4;
-
-        return $this;
-    }
-
-    public function getImage5(): ?string
-    {
-        return $this->image5;
-    }
-
-    public function setImage5(?string $image5): self
-    {
-        $this->image5 = $image5;
 
         return $this;
     }

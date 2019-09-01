@@ -12,11 +12,11 @@
 
                 <div class="imgNews">
 
+                    {% for images in lastnew.images %}
                     <div class="imgFluidNews">
-
-                        <img src="{{ asset('assets/img/news') }}/{{ lastnew.image1 }}" class="imgFluid">
-
+                        <img src="{{ asset('assets/img/news') }}/{{ images.title }}" class="imgFluid">
                     </div>
+                    {% endfor %}
 
                 </div>
 

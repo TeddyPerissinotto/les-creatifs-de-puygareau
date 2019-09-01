@@ -7,6 +7,7 @@ namespace App\Controller;
 use App\Entity\News;
 use App\Form\NewsType;
 use App\Repository\CategorieRepository;
+use App\Repository\ImagesRepository;
 use App\Repository\NewsRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -16,9 +17,24 @@ use Symfony\Component\Routing\Annotation\Route;
 class AdminNewsController extends AbstractController
 {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //                      ADMIN : AFFICHE LA LISTE DES PRODUITS SUR LE MENU ADMIN ARTICLES                          //
+    //                      ADMIN : AFFICHE LA LISTE DES ACTUALITES SUR LE MENU ADMIN NEWS                            //
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    /**
+     * @Route("/admin/menu/news", name="admin_menu_news")
+     */
+    public function adminNewsMenu(NewsRepository $newsRepository, ImagesRepository $imagesRepository)
+    {
+        $news = $newsRepository->findAll();
+        $images = $imagesRepository->findAll();
+
+        return $this->render('admin/adminNewsMenu.html.twig',
+            [
+                'news' => $news,
+                'images' => $images
+            ]);
+
+    }
 
 
     //***** ADMIN : Permet d'entrer en BDD une nouvelle actualité *****//
@@ -47,6 +63,8 @@ class AdminNewsController extends AbstractController
             // et flush
             $entityManager->persist($news);
             $entityManager->flush();
+
+            return $this->redirectToRoute('images_form_insert');
         }
         //on appelle un fichier twig avec en premier
         //paramètre le nom du fichier twig
