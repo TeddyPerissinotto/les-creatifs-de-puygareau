@@ -19,9 +19,11 @@
                 </h2>
 
                 {% for image in allnew.images %}
+                    {% if loop.first %}
                 <div class="homeImgNews">
                     <img src="{{ asset('assets/img/upload') }}/{{ image.title }}" class="imgFluid" />
                 </div>
+                    {% endif %}
                 {% endfor %}
 
 

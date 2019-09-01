@@ -13,9 +13,13 @@
                 <div class="imgNews">
 
                     {% for images in lastnew.images %}
+
+                        {% if loop.first %}
                     <div class="imgFluidNews">
-                        <img src="{{ asset('assets/img/news') }}/{{ images.title }}" class="imgFluid">
+                        <img src="{{ asset('assets/img/upload') }}/{{ images.title }}" class="imgFluid">
                     </div>
+                        {% endif %}
+
                     {% endfor %}
 
                 </div>
