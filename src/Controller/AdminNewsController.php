@@ -25,6 +25,8 @@ class AdminNewsController extends AbstractController
      */
     public function adminNewsMenu(NewsRepository $newsRepository, ImagesRepository $imagesRepository)
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $news = $newsRepository->findAll();
         $images = $imagesRepository->findAll();
 
@@ -48,6 +50,7 @@ class AdminNewsController extends AbstractController
     //car c'est l'outil qui me permet de gérer mes entités
     public function newsFormInsert(Request $request, EntityManagerInterface $entityManager)
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
         //je créé une nouvelle instance de l'entité News
         //c'est cette entité qui est le miroir de la table News
         $news = new News();
@@ -86,6 +89,8 @@ class AdminNewsController extends AbstractController
      */
     public function newsFormUpdate($id, Request $request, EntityManagerInterface $entityManager, NewsRepository $newsRepository)
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $news = $newsRepository->find($id);
 
         $form = $this->createForm(NewsType::class, $news);
@@ -114,6 +119,7 @@ class AdminNewsController extends AbstractController
      */
     public function deleteNews($id, NewsRepository $newsRepository, EntityManagerInterface $entityManager)
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
         //je récupère le livre dans la BDD qui a l'id qui correspond a la wild car
         //ps : c'est une entité qui est récupérée
         $news = $newsRepository->find($id);

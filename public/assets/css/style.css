@@ -608,7 +608,8 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center; }
+  align-items: center;
+  overflow: scroll; }
 
 .boxPrice {
   margin: 0 auto;
@@ -631,8 +632,7 @@ header {
 .imgPopUp {
   margin: 20px;
   width: 150px;
-  height: 150px;
-  overflow: hidden; }
+  height: auto; }
 
 .modalArticle {
   display: none;

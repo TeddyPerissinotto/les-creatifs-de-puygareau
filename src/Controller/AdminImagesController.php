@@ -21,6 +21,8 @@ class AdminImagesController extends AbstractController
      */
     public function adminImagesMenu(ImagesRepository $imagesRepository)
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $images = $imagesRepository->findAll();
 
         return $this->render('admin/adminImagesMenu.html.twig',
@@ -34,6 +36,8 @@ class AdminImagesController extends AbstractController
      */
     public function insertImages(Request $request, EntityManagerInterface $entityManager)
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $images = new Images();
 
         $form = $this->createForm(ImagesType::class, $images);
@@ -87,6 +91,8 @@ class AdminImagesController extends AbstractController
      */
     public function imagesDelete($id, ImagesRepository $imagesRepository, EntityManagerInterface $entityManager)
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $images = $imagesRepository->find($id);
 
         $entityManager->remove($images);

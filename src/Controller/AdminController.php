@@ -25,6 +25,7 @@ class AdminController extends AbstractController
      */
     public function adminAllList(NewsRepository $newsRepository, ArticlesRepository $articlesRepository, CategorieRepository $categorieRepository)
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
 
         $news = $newsRepository->findAll();
         $articles = $articlesRepository->findAll();

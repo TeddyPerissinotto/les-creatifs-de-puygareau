@@ -55,6 +55,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  overflow: scroll;
 }
 
 .boxPrice {
@@ -82,8 +83,7 @@
 .imgPopUp{
   margin: 20px;
   width: 150px;
-  height: 150px;
-  overflow: hidden;
+  height: auto;
 }
 
 .modalArticle{

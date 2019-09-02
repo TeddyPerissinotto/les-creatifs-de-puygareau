@@ -18,6 +18,8 @@ class AdminMediaController extends AbstractController
      */
     public function mediaFormInsert(Request $request, EntityManagerInterface $entityManager)
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $media = new Media();
 
         $form = $this->createForm(MediaType::class, $media);

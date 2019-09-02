@@ -25,6 +25,8 @@ class AdminArticlesController extends AbstractController
      */
     public function adminArticlesMenu(ArticlesRepository $articlesRepository, CategorieRepository $categorieRepository, ImagesRepository $imagesRepository)
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $articles = $articlesRepository->findAll();
         $categories = $categorieRepository->findAll();
         $images =$imagesRepository->findAll();
@@ -43,6 +45,9 @@ class AdminArticlesController extends AbstractController
      */
     public function articlesFormInsert(Request $request, EntityManagerInterface $entityManager, CategorieRepository $categorieRepository)
     {
+
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $articles = new Articles();
 
         $form = $this->createForm(ArticlesType::class, $articles);
@@ -76,6 +81,8 @@ class AdminArticlesController extends AbstractController
      */
     public function articlesFormUpdate($id, Request $request, EntityManagerInterface $entityManager, ArticlesRepository $articlesRepository)
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $articles = $articlesRepository->find($id);
 
         $form = $this->createForm(ArticlesType::class, $articles);
@@ -103,6 +110,7 @@ class AdminArticlesController extends AbstractController
 
     public function deleteArticles($id, ArticlesRepository $articlesRepository, EntityManagerInterface $entityManager, CategorieRepository $categorieRepository )
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
         //je récupère le produit dans la BDD qui a l'id qui correspond a la wild card
         //ps : c'est une entité qui est récupérée
         $articles = $articlesRepository->find($id);
