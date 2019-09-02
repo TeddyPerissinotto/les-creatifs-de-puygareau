@@ -74,29 +74,24 @@ class AdminArticlesController extends AbstractController
     /**
      * @Route("/admin/articles/{id}/update", name="articles_form_update")
      */
-    public function articlesFormUpdate($id, Request $request, EntityManagerInterface $entityManager, ArticlesRepository $articlesRepository, CategorieRepository $categorieRepository)
+    public function articlesFormUpdate($id, Request $request, EntityManagerInterface $entityManager, ArticlesRepository $articlesRepository)
     {
-        $categories = $categorieRepository->findAll();
         $articles = $articlesRepository->find($id);
+
         $form = $this->createForm(ArticlesType::class, $articles);
 
-        $articlesFormView = $form->createView();
+        $form->handleRequest($request);
 
         if ($request->isMethod('Post'))
         {
-            $form->handleRequest($request);
-
-            if ($form->isValid())
-            {
                 $entityManager->persist($articles);
                 $entityManager->flush();
-            }
-            $this->redirectToRoute('admin_home');
+
+            $this->redirectToRoute('admin_menu_articles');
         }
         return $this->render('admin/articlesForm.html.twig',
             [
-                'articlesFormView' => $articlesFormView,
-                'categories' => $categories
+                'articlesFormView' => $form->createView()
             ]);
     }
 

@@ -18,11 +18,6 @@
 
                 <h1>{{ article.title }}</h1>
 
-        {% for images in article.images %}
-                <div class="homeImgArticles">
-                    <img src="{{ asset('assets/img/upload') }}/{{ image.title }}" class="imgFluid" alt="">
-                </div>
-        {% endfor %}
 
                 <a href="{{ path('article_by_id', {'id': article.id}) }}">Voir ce produit</a>
 

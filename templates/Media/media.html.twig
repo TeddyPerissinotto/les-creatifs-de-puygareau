@@ -7,7 +7,7 @@
         <div class="media">
 
             {{ media.title }}
-            {{ media.link }}
+            <a href="{{ media.link }}" target="_blank">Lien vers l'article</a>
         </div>
 
         {% for images in media.images %}

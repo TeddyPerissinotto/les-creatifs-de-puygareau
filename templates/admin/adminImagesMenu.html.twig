@@ -2,16 +2,29 @@
 
 {% block main %}
 
-    <a href="{{ path('images_form_insert') }}">Créer une nouvelle News</a>
+    <h2>Portfolio des Images</h2>
 
-    <h3>Liste des Images</h3>
-
-    {% for image in images %}
-
-        <div class="imagesMenu">
-            <img src="{{ asset('assets/img/upload') }}/{{ image.title }}" class="imgFluid">
+    <a href="{{ path('images_form_insert') }}">
+        <div class="buttonCreate">
+            <p>Ajouter une nouvelle image</p>
         </div>
+    </a>
 
-    {% endfor %}
+    <div class="adminTableImages">
+
+        {% for image in images %}
+
+            <div class="adminImgMenu">
+
+                <div class="adminImage">
+                    <img src="{{ asset('assets/img/upload') }}/{{ image.title }}" class="imgFluid">
+                </div>
+
+                <a href="{{ path('images_delete', {'id': image.id}) }}" class="buttonDeleteImage">Supprimer</a>
+
+            </div>
+        {% endfor %}
+
+    </div>
 
 {% endblock %}

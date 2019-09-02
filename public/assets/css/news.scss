@@ -113,25 +113,66 @@
 /*                                             CSS DE LA PAGE showNews                                                */
 /**********************************************************************************************************************/
 
- .showNews{
-   width: 30%;
-   height: auto;
-   margin: 0 auto;
-   padding-top: 5%;
-   padding-bottom: 5%;
+.boxNews{
+  width: 80%;
+  height: 500px;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow:8px 0 8px -10px #000000,-8px 0 8px -10px #000000;
 }
 
- .imgCarrousel{
-   width: 50%;
-   height: 750px;
-   margin: 0 auto;
- }
+.allImgNews{
+  width: 40%;
+  height: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  overflow: scroll;
+}
 
- .titleNewsAlone{
-   text-align: center;
- }
+.newsInfo{
+  width: 45%;
+}
 
- li{
-   list-style-type: none;
- }
+/**********************************************************************************************************************/
+/*                                           CSS DU POPUP DES IMAGES ACTUALITES                                                  */
+/**********************************************************************************************************************/
 
+.imgPopUpNews{
+  margin: 20px;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+}
+
+.modalNews{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 50%;
+  height: auto;
+  overflow: auto;
+  margin-top: 20px;
+  background-color: rgba(0,0,0, 0.2);
+  border-radius: 10px;
+}
+
+.imgModalNews{
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 400px;
+  max-height: 600px;
+}
+
+.closeModalNews{
+  margin-left: 20px;
+  font-size: 20px;
+  color: white;
+}

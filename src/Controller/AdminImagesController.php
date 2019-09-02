@@ -73,12 +73,29 @@ class AdminImagesController extends AbstractController
                 $entityManager->persist($images);
                 $entityManager->flush();
 
-                return $this->redirectToRoute('admin_home');
+                return $this->redirectToRoute('admin_menu_images');
             }
         }
         return $this->render('admin/adminImagesForm.html.twig', [
             // formView retourne tout le code html correspondant au formulaire
             'imagesFormView' => $imagesFormView
         ]);
+    }
+
+    /**
+     * @Route("/admin/images/{id}/delete", name="images_delete")
+     */
+    public function imagesDelete($id, ImagesRepository $imagesRepository, EntityManagerInterface $entityManager)
+    {
+        $images = $imagesRepository->find($id);
+
+        $entityManager->remove($images);
+        $entityManager->flush();
+
+        return $this->redirectToRoute('admin_menu_images',
+            [
+                'images' => $images
+            ]);
+
     }
 }

@@ -5,16 +5,36 @@
 
     <a href="{{ path('home_news') }}">Retour</a>
 
-        <h1 class="titleNewsAlone">{{ showNews.title }}</h1>
+    <div class="boxNews">
 
-        <p class="showNews">{{ showNews.article }}</p>
-
-    {% for image in showNews.images %}
-        <div class="homeImgNews">
-            <img src="{{ asset('assets/img/upload') }}/{{ image.title }}" class="imgFluid" />
+        <div class="modalNews">
+            {#####BOUTON POUR FERMER LA MODAL#####}
+            <span class="closeModalNews">X Fermer</span>
+            {#####IMAGE DANS LA MODAL#####}
+            <div class="imgModalNews" >
+                <img src="{#LA SRC DEVIENDRA CELUI DE L'IMAGE CIQUEE#}" class="imgFluid" id="imgSelected" alt="image Actualité">
+            </div>
         </div>
-    {% endfor %}
 
+        <div class="allImgNews">
+
+            {% for image in showNews.images %}
+                <div class="imgPopUpNews">
+                    <img src="{{ asset('assets/img/upload') }}/{{ image.title }}" class="imgFluid imgPopNews" id="{{ image.id }}" alt="image Produit" />
+                </div>
+            {% endfor %}
+
+        </div>
+
+        <div class="newsInfo">
+
+            <h2>{{ showNews.title }}</h2>
+
+            <p>{{ showNews.article }}</p>
+
+        </div>
+
+    </div>
 
 
 

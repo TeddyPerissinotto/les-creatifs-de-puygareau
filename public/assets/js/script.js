@@ -73,3 +73,22 @@ $(document).ready(function(){
     });
 
 });
+
+
+$(document).ready(function(){
+    //quand on clique sur une image//
+    $(".imgPopNews").on('click', function(){
+        //affichage de la modal en modifiant le css de la modal
+        $(".modalNews").css("display", "block");
+
+        //ajout de la source de l'image dans le contenu de la modal en fonction de la source de l'image cliquée
+        //le $(this) fait reference a l'img qui a été cliquée
+        $("#imgSelected").attr("src", $(this).attr("src"));
+    });
+
+    //si on clique sur le bouton, on ferme la modal en modifiant le css
+    $(".closeModalNews").on("click", function(){
+        $(".modalNews").css("display", "none");
+    });
+
+});

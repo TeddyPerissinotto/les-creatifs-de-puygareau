@@ -84,29 +84,26 @@ class AdminNewsController extends AbstractController
     /**
      * @Route("/admin/news/{id}/update", name="news_form_update")
      */
-    public function newsFormUpdate($id, Request $request, EntityManagerInterface $entityManager, NewsRepository $newsRepository, CategorieRepository $categorieRepository)
+    public function newsFormUpdate($id, Request $request, EntityManagerInterface $entityManager, NewsRepository $newsRepository)
     {
         $news = $newsRepository->find($id);
-        $form = $this->createForm(NewsType::class, $news);
-        $categories = $categorieRepository->findAll();
 
-        $newsFormView = $form->createView();
+        $form = $this->createForm(NewsType::class, $news);
+
+        $form->handleRequest($request);
+
 
         if ($request->isMethod('Post'))
         {
-            $form->handleRequest($request);
 
-            if ($form->isValid())
-            {
                 $entityManager->persist($news);
                 $entityManager->flush();
-            }
-            $this->redirectToRoute('home_admin');
+
+            $this->redirectToRoute('admin_home');
         }
         return $this->render('admin/newsForm.html.twig',
             [
-                'newsFormView' => $newsFormView,
-                'categories' => $categories
+                'newsFormView' => $form->createView()
             ]);
     }
 
@@ -115,13 +112,12 @@ class AdminNewsController extends AbstractController
     /**
      * @Route("/admin/news/{id}/delete", name="news_delete")
      */
-
-    public function deleteNews($id, NewsRepository $newsRepository, EntityManagerInterface $entityManager, CategorieRepository $categorieRepository)
+    public function deleteNews($id, NewsRepository $newsRepository, EntityManagerInterface $entityManager)
     {
         //je récupère le livre dans la BDD qui a l'id qui correspond a la wild car
         //ps : c'est une entité qui est récupérée
         $news = $newsRepository->find($id);
-        $categories = $categorieRepository->findAll();
+
 
         //j'utilise la méthode remove() de l'entityManager en spécifiant
         //le livre à supprimer
@@ -129,11 +125,7 @@ class AdminNewsController extends AbstractController
         $entityManager->remove($news);
         $entityManager->flush();
 
-        return $this->redirectToRoute('home_admin',
-            [
-                'catgeories' => $categories
-            ]);
-
+        return $this->redirectToRoute('admin_home');
     }
 
 

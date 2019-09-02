@@ -2,20 +2,30 @@
 
 {% block main %}
 
-    <div class="adminMenu">
-
-        <h1 class="pageTitle">Bienvenue {{ app.user.username }}</h1>
+    <h1 class="pageTitle">Bienvenue {{ app.user.username }}</h1>
 
 
-        <h2 class="homeTitleNews">Gestion du site</h2>
+    <h2 class="homeTitleNews">Gestion du site</h2>
 
-        <a href="{{ path('admin_menu_articles') }}">Gestion des Produits</a>
-        <a href="{{ path('admin_menu_news') }}">Gestion des Actualités</a>
-        <a href="{{ path('admin') }}"></a>
+    <div class="buttonMenu">
 
+        <a href="{{ path('admin_menu_articles') }}">
+            <div class="buttonAdmin">
+                <p>Gestion des Produits</p>
+            </div>
+        </a>
 
-        <h2 class="homeTitleNews">Gestion des actualites</h2>
+        <a href="{{ path('admin_menu_news') }}">
+            <div class="buttonAdmin">
+                <p>Gestion des Actualites</p>
+            </div>
+        </a>
 
+        <a href="{{ path('admin_menu_images') }}">
+            <div class="buttonAdmin">
+                <p>Gestion des images</p>
+            </div>
+        </a>
 
     </div>
 {% endblock %}

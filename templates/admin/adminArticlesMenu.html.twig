@@ -2,29 +2,38 @@
 
 {% block main %}
 
-    <a href="{{ path('articles_form_insert') }}">Créer un produit</a>
+    <h2>Liste des Produits</h2>
 
+    <a href="{{ path('articles_form_insert') }}">
+        <div class="buttonCreate">
+            <p>Créer un produit</p>
+        </div>
+    </a>
+
+    <div class="adminTable">
     {% for article in articles %}
 
-        <div class="adminArticlesInfo">
+        <div class="adminTableInfo">
 
-            <span class="artcileInfo">{{ article.title }}</span>
-            <span class="artcileInfo">{{ article.description }}</span>
-            <span class="artcileInfo">{{ article.size }}</span>
-            <span class="artcileInfo">{{ article.prix }}</span>
-            <span class="artcileInfo">{{ article.categorie.titre }}</span>
+            <div class="infoBox">
+                <p>{{ article.title }}</p>
+            </div>
 
+            <div class="imagesBox">
             {% for image in article.images %}
-                <div class="adminImgArticles">
+                <div class="adminImg">
                     <img src="{{ asset('assets/img/upload') }}/{{ image.title }}" class="imgFluid">
                 </div>
             {% endfor %}
+            </div>
 
-            <a href="{{ path('articles_form_update', {'id': article.id}) }} ">Modifier</a>
-            <a href="{{ path('articles_delete', {'id': article.id}) }} ">Supprimer</a>
-
+            <div class="buttonBox">
+            <a href="{{ path('admin_menu_images') }}" class="buttonAdd">Ajouter une images</a>
+            <a href="{{ path('articles_form_update', {'id': article.id}) }} " class="buttonUpdate">Modifier</a>
+            <a href="{{ path('articles_delete', {'id': article.id}) }} " class="buttonDelete">Supprimer</a>
+            </div>
         </div>
 
     {% endfor %}
-
+    </div>
 {% endblock %}

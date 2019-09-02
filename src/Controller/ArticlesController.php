@@ -60,22 +60,26 @@ class ArticlesController extends AbstractController
             ]);
     }
 
-    //****************************************** BARRE DE RECHERCHE *************************************************//
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //                                            Barre de recherche                                                  //
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     /**
      * @Route("/searchResults", name="search_results")
      */
-    public function articleByTitle(ArticlesRepository $articlesRepository, Request $request, CategorieRepository $categorieRepository)
+    public function articleByTitle(ArticlesRepository $articlesRepository, Request $request, CategorieRepository $categorieRepository, ImagesRepository $imagesrepository)
     {
         $word = $request->query->get('word');
 
         $articles = $articlesRepository->findbyTitle($word);
         $categories = $categorieRepository->findAll();
+        $images = $imagesrepository->findAll();
 
         return $this->render('articles/searchResults.html.twig',
             [
                 'articles' => $articles,
-                'categories' => $categories
+                'categories' => $categories,
+                'images' => $images
             ]);
     }
 
