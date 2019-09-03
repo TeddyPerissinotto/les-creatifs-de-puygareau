@@ -36,7 +36,7 @@ class Articles
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $prix;
+    private $price;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Categorie", inversedBy="articles")
@@ -110,14 +110,14 @@ class Articles
         return $this;
     }
 
-    public function getPrix(): ?string
+    public function getPrice(): ?string
     {
-        return $this->prix;
+        return $this->price;
     }
 
-    public function setPrix(string $prix): self
+    public function setPrice(string $price): self
     {
-        $this->prix = $prix;
+        $this->price = $price;
 
         return $this;
     }

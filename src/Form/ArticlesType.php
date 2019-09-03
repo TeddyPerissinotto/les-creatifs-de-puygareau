@@ -19,12 +19,12 @@ class ArticlesType extends AbstractType
             ->add('categorie', EntityType::class,
         [
             'class' => Categorie::class,
-            'choice_label' => 'titre'
+            'choice_label' => 'title'
         ])
             ->add('title')
             ->add('description')
             ->add('size')
-            ->add('prix')
+            ->add('price')
             ->add('Envoyer', SubmitType::class)
         ;
     }

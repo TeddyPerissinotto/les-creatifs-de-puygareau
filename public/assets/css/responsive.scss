@@ -1,0 +1,46 @@
+@media screen and (max-width:750px) {
+
+  /***************************************************/
+  /*                       Header                    */
+  /***************************************************/
+
+  .buttonBackToTop{
+    display: none;
+  }
+
+  .headbandLogo{
+    width: 100%;
+    height: auto;
+  }
+
+  .ico{
+    display: none;
+  }
+
+  .navbar{
+    width: 100%;
+    height: auto;
+  }
+
+  .ulNavbar{
+    list-style-type: none;
+    text-align: center;
+    display: inline;
+  }
+
+  .imgCategory img{
+    display: none;
+  }
+
+  .categoryList{
+    width: 80%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+
+  .formSearch{
+    text-align: center;
+  }
+
+}

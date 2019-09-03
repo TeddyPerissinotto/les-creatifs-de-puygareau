@@ -55,8 +55,8 @@ class ArticlesController extends AbstractController
             [
                 'article' => $article,
                 'categories' => $categories,
-                'images' => $images,
-                'image' => $image
+                'imagesz' => $images,
+                'imagez' => $image
             ]);
     }
 
@@ -67,13 +67,13 @@ class ArticlesController extends AbstractController
     /**
      * @Route("/searchResults", name="search_results")
      */
-    public function articleByTitle(ArticlesRepository $articlesRepository, Request $request, CategorieRepository $categorieRepository, ImagesRepository $imagesrepository)
+    public function articleByTitle(ArticlesRepository $articlesRepository, Request $request, CategorieRepository $categorieRepository, ImagesRepository $imagesRepository)
     {
         $word = $request->query->get('word');
 
         $articles = $articlesRepository->findbyTitle($word);
         $categories = $categorieRepository->findAll();
-        $images = $imagesrepository->findAll();
+        $images = $imagesRepository->findAll();
 
         return $this->render('articles/searchResults.html.twig',
             [

@@ -59,124 +59,127 @@ footer {
   height: auto;
   margin: 0 auto; }
 
-/**********************************************************************************************************************/
-/*                                            CSS GENERAL DU HEADER                                                   */
-/**********************************************************************************************************************/
-header {
-  background-image: url("../img/index/ford1921.jpg");
-  width: 100%;
-  height: 800px;
-  background-size: cover; }
+@media screen and (min-width: 750px) {
+  /**********************************************************************************************************************/
+  /*                                            CSS GENERAL DU HEADER                                                   */
+  /**********************************************************************************************************************/
+  header {
+    background-image: url("../img/index/ford1921.jpg");
+    width: 100%;
+    height: 800px;
+    background-size: cover; }
 
-/**********************************************************************************************************************/
-/*                                             CSS BANDEAU AVEC LOGO                                                  */
-/**********************************************************************************************************************/
-.headbandLogo {
-  width: 100%;
-  height: 200px;
-  background-color: rgba(255, 255, 255, 0.5);
-  display: flex;
-  justify-content: space-around;
-  align-items: center; }
+  /**********************************************************************************************************************/
+  /*                                             CSS BANDEAU AVEC LOGO                                                  */
+  /**********************************************************************************************************************/
+  .headbandLogo {
+    width: 100%;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
 
-.ico {
-  width: 50px;
-  height: 50px; }
+  .ico {
+    width: 50px;
+    height: 50px; }
 
-.logo {
-  width: 20%;
-  height: auto; }
+  .logo {
+    width: 20%;
+    height: auto; }
 
-/**********************************************************************************************************************/
-/*                                                  CSS DE LA NAVBAR                                                  */
-/**********************************************************************************************************************/
-.navbar {
-  margin-top: 4px;
-  width: 100%;
-  height: 50px;
-  background-color: rgba(255, 255, 255, 0.5); }
+  /**********************************************************************************************************************/
+  /*                                                  CSS DE LA NAVBAR                                                  */
+  /**********************************************************************************************************************/
+  .navbar {
+    margin-top: 4px;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.5); }
 
-.ulNavbar {
-  list-style-type: none;
-  margin-top: 2px; }
+  .ulNavbar {
+    list-style-type: none;
+    margin-top: 2px; }
 
-.linkNavbar {
-  display: inline-block;
-  width: 9%;
-  margin-top: 15px;
-  margin-left: 10%; }
+  .linkNavbar {
+    display: inline-block;
+    width: 9%;
+    margin-top: 15px;
+    margin-left: 10%; }
 
-.slideMenu {
-  display: none;
-  width: 100%;
-  height: 200px;
-  background-color: rgba(255, 255, 255, 0.5); }
+  .slideMenu {
+    display: none;
+    width: 100%;
+    height: 220px;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    margin-top: 20px;
+    margin-left: -40px; }
 
-.categoryList {
-  width: 100%;
-  height: 200px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin-top: 20px; }
+  .categoryList {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px; }
 
-.category {
-  width: 150px;
-  height: 150px;
-  margin-top: 25px;
-  text-align: center; }
+  .category {
+    width: 150px;
+    height: 150px;
+    margin-top: 25px;
+    text-align: center; }
 
-.linkCategory {
-  margin-top: 35px; }
+  .linkCategory {
+    margin-top: 35px; }
 
-.navbar a:hover {
-  background-color: rgba(255, 255, 255, 0.3); }
+  .navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.3); }
 
-.imgCategory {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto; }
+  .imgCategory {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto; }
 
-.imgFluidCategory {
-  width: 100%;
-  height: auto; }
+  .imgFluidCategory {
+    width: 100%;
+    height: auto; }
 
-/**********************************************************************************************************************/
-/*                                          CSS DE LA BARRE DE RECHERCHE                                              */
-/**********************************************************************************************************************/
-.searchInfo {
-  margin: 0 auto;
-  padding-top: 200px;
-  width: 60%;
-  height: 20%; }
+  /**********************************************************************************************************************/
+  /*                                          CSS DE LA BARRE DE RECHERCHE                                              */
+  /**********************************************************************************************************************/
+  .searchInfo {
+    margin: 0 auto;
+    padding-top: 300px;
+    width: 60%;
+    height: 20%; }
 
-.formSearch {
-  margin: 0 auto;
-  width: 60%;
-  height: 30%;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 5px; }
+  .formSearch {
+    margin: 0 auto;
+    width: 60%;
+    height: 50px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px; }
 
-.searchBar {
-  margin: 6px;
-  width: 80%;
-  height: 60%; }
+  .searchBar {
+    margin: 6px;
+    width: 80%;
+    height: 60%; }
 
-/**********************************************************************************************************************/
-/*                                        CSS BOUTON RETOUR VERS LE HAUT                                              */
-/**********************************************************************************************************************/
-.buttonBackToTop {
-  margin-top: 300px;
-  margin-left: 1280px;
-  width: 5%;
-  height: auto;
-  position: fixed;
-  border-radius: 10%; }
+  /**********************************************************************************************************************/
+  /*                                        CSS BOUTON RETOUR VERS LE HAUT                                              */
+  /**********************************************************************************************************************/
+  .buttonBackToTop {
+    margin-top: 300px;
+    margin-left: 1280px;
+    width: 5%;
+    height: auto;
+    position: fixed;
+    border-radius: 10%; }
 
-.buttonBackToTop:hover {
-  background-color: rgba(0, 0, 0, 0.5); }
-
+  .buttonBackToTop:hover {
+    background-color: rgba(0, 0, 0, 0.5); } }
 /**********************************************************************************************************************/
 /*                                           CSS DU BUNDLE FOSUser                                                    */
 /**********************************************************************************************************************/
@@ -727,6 +730,40 @@ header {
   width: 30%;
   margin: 0 auto; }
 
+@media screen and (max-width: 750px) {
+  /***************************************************/
+  /*                       Header                    */
+  /***************************************************/
+  .buttonBackToTop {
+    display: none; }
+
+  .headbandLogo {
+    width: 100%;
+    height: auto; }
+
+  .ico {
+    display: none; }
+
+  .navbar {
+    width: 100%;
+    height: auto; }
+
+  .ulNavbar {
+    list-style-type: none;
+    text-align: center;
+    display: inline; }
+
+  .imgCategory img {
+    display: none; }
+
+  .categoryList {
+    width: 80%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px; }
+
+  .formSearch {
+    text-align: center; } }
 /**********************************************************************************************************************/
 /*                                                IMPORT DES FONTS                                                    */
 /**********************************************************************************************************************/

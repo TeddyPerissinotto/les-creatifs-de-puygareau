@@ -18,6 +18,17 @@
 
                 <h1>{{ article.title }}</h1>
 
+                {% for image in article.images %}
+
+                    {#Je sélectionne la première image qui passe dans la boucle uniquement#}
+                    {% if loop.first %}
+                        <div class="homeImgArticles">
+                            <img src="{{ asset('assets/img/upload') }}/{{ image.title }}" class="imgFluid" alt="">
+                        </div>
+                    {% endif %}
+
+                {% endfor %}
+
 
                 <a href="{{ path('article_by_id', {'id': article.id}) }}">Voir ce produit</a>
 
