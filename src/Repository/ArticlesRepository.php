@@ -14,19 +14,18 @@ use Symfony\Bridge\Doctrine\RegistryInterface;
  */
 class ArticlesRepository extends ServiceEntityRepository
 {
-    public function findbyTitle($word)
+    public function findByTitle($word)
     {
-        $qb = $this->createQueryBuilder('a');
+        return $this->createQueryBuilder('a')
+// Jointure avec la table Images
+            ->leftJoin('a.images', 'img')
+// Rajoute les images au résultat de requête
+            ->addSelect('img')
 
-        $query = $qb->select('a')
-
-            ->where('a.title LIKE :word')
+            ->where('img.title LIKE :word' )
             ->setParameter('word', '%'.$word.'%')
-            ->getQuery();
-
-        $result = $query->getArrayResult();
-
-        return $result;
+            ->getQuery()
+            ->getArrayResult();
     }
 
     public function __construct(RegistryInterface $registry)

@@ -2,63 +2,63 @@
 /**********************************************************************************************************************/
 /*                                          IMPORT DES FICHIERS PARTIELS                                              */
 /**********************************************************************************************************************/
-/**********************************************************************************************************************/
-/*                                              CSS BARRE DE CONTACT                                                  */
-/**********************************************************************************************************************/
-.contact {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-top: 10%;
-  padding-bottom: 10%; }
+@media screen and (min-width: 750px) {
+  /**********************************************************************************************************************/
+  /*                                              CSS BARRE DE CONTACT                                                  */
+  /**********************************************************************************************************************/
+  .contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10%;
+    padding-bottom: 10%; }
 
-.iconContact {
-  width: 20%;
-  height: auto;
-  text-align: center; }
+  .iconContact {
+    width: 20%;
+    height: auto;
+    text-align: center; }
 
-.iconImg {
-  width: 30%;
-  height: auto;
-  margin: 0 auto; }
+  .iconImg {
+    width: 30%;
+    height: auto;
+    margin: 0 auto; }
 
-/**********************************************************************************************************************/
-/*                                                  CSS FOOTER                                                        */
-/**********************************************************************************************************************/
-.hrFooter {
-  width: 90%; }
+  /**********************************************************************************************************************/
+  /*                                                  CSS FOOTER                                                        */
+  /**********************************************************************************************************************/
+  .hrFooter {
+    width: 90%; }
 
-footer {
-  background-image: url("../img/index/ford1921.jpg");
-  background-size: cover; }
+  footer {
+    background-image: url("../img/index/ford1921.jpg");
+    background-size: cover; }
 
-.bandeauFooter {
-  background-color: rgba(255, 255, 255, 0.5);
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center; }
+  .bandeauFooter {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
 
-.copyright {
-  width: 20%;
-  height: auto;
-  display: flex;
-  text-align: center; }
+  .copyright {
+    width: 20%;
+    height: auto;
+    display: flex;
+    text-align: center; }
 
-.imgCopyright {
-  margin-top: 5%;
-  margin-right: 5%;
-  width: 10%;
-  height: 30%; }
+  .imgCopyright {
+    margin-top: 5%;
+    margin-right: 5%;
+    width: 10%;
+    height: 30%; }
 
-.linkFooter {
-  list-style-type: none; }
+  .linkFooter {
+    list-style-type: none; }
 
-.linkFacebook {
-  width: 15%;
-  height: auto;
-  margin: 0 auto; }
-
+  .linkFacebook {
+    width: 15%;
+    height: auto;
+    margin: 0 auto; } }
 @media screen and (min-width: 750px) {
   /**********************************************************************************************************************/
   /*                                            CSS GENERAL DU HEADER                                                   */
@@ -214,160 +214,160 @@ footer {
   width: 100%;
   height: 30px; }
 
-/**********************************************************************************************************************/
-/*                                   CSS DES NEWS DE LA PAGE D'ACCUEIL DU SITE                                        */
-/**********************************************************************************************************************/
-.info {
-  width: 100%;
-  display: flex;
-  align-items: center; }
+@media screen and (min-width: 750px) {
+  /**********************************************************************************************************************/
+  /*                                   CSS DES NEWS DE LA PAGE D'ACCUEIL DU SITE                                        */
+  /**********************************************************************************************************************/
+  .info {
+    width: 100%;
+    display: flex;
+    align-items: center; }
 
-.info2 {
-  width: 100%;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center; }
+  .info2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center; }
 
-.info2 .imgNews {
-  width: 30%;
-  height: auto;
-  border-radius: 10%;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  margin-left: 10%;
-  margin-right: 10%; }
+  .info2 .imgNews {
+    width: 30%;
+    height: auto;
+    border-radius: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-left: 10%;
+    margin-right: 10%; }
 
-.imgNews {
-  width: 30%;
-  height: auto;
-  margin-left: 10%;
-  margin-right: 10%;
-  padding-top: 5%;
-  padding-bottom: 5%; }
+  .imgNews {
+    width: 30%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%; }
 
-.imgFluidNews {
-  border-radius: 10%;
-  width: 100%;
-  height: auto;
-  overflow: hidden; }
+  .imgFluidNews {
+    border-radius: 10%;
+    width: 100%;
+    height: auto;
+    overflow: hidden; }
 
-.titleNews {
-  text-align: center;
-  margin: auto;
-  font-family: "schoolScript";
-  font-size: 40px;
-  color: white; }
+  .titleNews {
+    text-align: center;
+    margin: auto;
+    font-family: "schoolScript";
+    font-size: 40px;
+    color: white; }
 
-.line {
-  height: 450px;
-  border: black solid 1px; }
+  .line {
+    height: 450px;
+    border: black solid 1px; }
 
-.article {
-  background-image: url("../img/news/board.jpg");
-  background-size: cover;
-  width: 30%;
-  height: auto;
-  margin-left: 10%;
-  border-radius: 20px; }
+  .article {
+    background-image: url("../img/news/board.jpg");
+    background-size: cover;
+    width: 30%;
+    height: auto;
+    margin-left: 10%;
+    border-radius: 20px; }
 
-.articleNews {
-  font-family: "chalk";
-  font-size: 20px;
-  color: white;
-  padding: 10px; }
+  .articleNews {
+    font-family: "chalk";
+    font-size: 20px;
+    color: white;
+    padding: 10px; }
 
-.info2 .article {
-  width: 30%;
-  height: auto;
-  margin-right: 10%; }
+  .info2 .article {
+    width: 30%;
+    height: auto;
+    margin-right: 10%; }
 
-/**********************************************************************************************************************/
-/*                                             CSS DE LA PAGE homeNews                                                */
-/**********************************************************************************************************************/
-.allNews {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around; }
+  /**********************************************************************************************************************/
+  /*                                             CSS DE LA PAGE homeNews                                                */
+  /**********************************************************************************************************************/
+  .allNews {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
 
-.homeNewsInfo {
-  width: 20%;
-  height: auto; }
+  .homeNewsInfo {
+    width: 20%;
+    height: auto; }
 
-.homeNews {
-  text-align: center;
-  font-family: childWriting;
-  font-size: 80px; }
+  .homeNews {
+    text-align: center;
+    font-family: childWriting;
+    font-size: 80px; }
 
-.homeTitleNews {
-  text-align: center;
-  font-family: "schoolScript";
-  font-size: 40px; }
+  .homeTitleNews {
+    text-align: center;
+    font-family: "schoolScript";
+    font-size: 40px; }
 
-.homeImgNews {
-  width: 100%;
-  height: auto; }
+  .homeImgNews {
+    width: 100%;
+    height: auto; }
 
-/**********************************************************************************************************************/
-/*                                             CSS DE LA PAGE showNews                                                */
-/**********************************************************************************************************************/
-.boxNews {
-  width: 80%;
-  height: 500px;
-  margin-left: 10%;
-  margin-right: 10%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  box-shadow: 8px 0 8px -10px #000000,-8px 0 8px -10px #000000; }
+  /**********************************************************************************************************************/
+  /*                                             CSS DE LA PAGE showNews                                                */
+  /**********************************************************************************************************************/
+  .boxNews {
+    width: 80%;
+    height: 500px;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 8px 0 8px -10px #000000, -8px 0 8px -10px #000000; }
 
-.allImgNews {
-  width: 40%;
-  height: 90%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  overflow: scroll; }
+  .allImgNews {
+    width: 40%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    overflow: scroll; }
 
-.newsInfo {
-  width: 45%; }
+  .newsInfo {
+    width: 45%; }
 
-/**********************************************************************************************************************/
-/*                                           CSS DU POPUP DES IMAGES ACTUALITES                                                  */
-/**********************************************************************************************************************/
-.imgPopUpNews {
-  margin: 20px;
-  width: 150px;
-  height: 150px;
-  overflow: hidden; }
+  /**********************************************************************************************************************/
+  /*                                           CSS DU POPUP DES IMAGES ACTUALITES                                                  */
+  /**********************************************************************************************************************/
+  .imgPopUpNews {
+    margin: 20px;
+    width: 150px;
+    height: 150px;
+    overflow: hidden; }
 
-.modalNews {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  width: 50%;
-  height: auto;
-  overflow: auto;
-  margin-top: 20px;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 10px; }
+  .modalNews {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 50%;
+    height: auto;
+    overflow: auto;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px; }
 
-.imgModalNews {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 400px;
-  max-height: 600px; }
+  .imgModalNews {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 400px;
+    max-height: 600px; }
 
-.closeModalNews {
-  margin-left: 20px;
-  font-size: 20px;
-  color: white; }
-
+  .closeModalNews {
+    margin-left: 20px;
+    font-size: 20px;
+    color: white; } }
 /**********************************************************************************************************************/
 /*                                           CSS DU MENU ADMINISTRATEUR                                               */
 /**********************************************************************************************************************/
@@ -562,144 +562,144 @@ footer {
   border: 1px solid black;
   border-radius: 50px; }
 
-/**********************************************************************************************************************/
-/*                                      CSS MENU ARTICLES PAR CATEGORIE                                               */
-/**********************************************************************************************************************/
-.categoryArticles {
-  width: 30%;
-  height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+@media screen and (min-width: 750px) {
+  /**********************************************************************************************************************/
+  /*                                      CSS MENU ARTICLES PAR CATEGORIE                                               */
+  /**********************************************************************************************************************/
+  .categoryArticles {
+    width: 30%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
 
-.allarticles {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center; }
+  .allarticles {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center; }
 
-.homeArticlesInfo {
-  width: 20%;
-  height: auto;
-  text-align: center;
-  border-radius: 10px;
-  box-shadow: 5px 2px 2px rgba(0, 0, 0, 0.2); }
+  .homeArticlesInfo {
+    width: 20%;
+    height: auto;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 5px 2px 2px rgba(0, 0, 0, 0.2); }
 
-.homeImgArticles {
-  width: 100%;
-  height: auto; }
+  .homeImgArticles {
+    width: 100%;
+    height: auto; }
 
-/**********************************************************************************************************************/
-/*                                             CSS DE L'ARTICLE SEUL                                                  */
-/**********************************************************************************************************************/
-.product {
-  width: 80%;
-  height: 500px;
-  margin-left: 10%;
-  margin-right: 10%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  box-shadow: 8px 0 8px -10px #000000,-8px 0 8px -10px #000000; }
+  /**********************************************************************************************************************/
+  /*                                             CSS DE L'ARTICLE SEUL                                                  */
+  /**********************************************************************************************************************/
+  .product {
+    width: 80%;
+    height: 500px;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 8px 0 8px -10px #000000, -8px 0 8px -10px #000000; }
 
-.allImgArticle {
-  width: 40%;
-  height: 90%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  overflow: scroll; }
+  .allImgArticle {
+    width: 40%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    overflow: scroll; }
 
-.boxPrice {
-  margin: 0 auto;
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-  font-size: 25px;
-  background-color: #5eb5e0;
-  text-align: center; }
+  .boxPrice {
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 25px;
+    background-color: #5eb5e0;
+    text-align: center; }
 
-.price {
-  padding-top: 10px; }
+  .price {
+    padding-top: 10px; }
 
-.articleInfo {
-  width: 45%; }
+  .articleInfo {
+    width: 45%; }
 
-/**********************************************************************************************************************/
-/*                                           CSS DU POPUP DES IMAGES                                                  */
-/**********************************************************************************************************************/
-.imgPopUp {
-  margin: 20px;
-  width: 150px;
-  height: auto; }
+  /**********************************************************************************************************************/
+  /*                                           CSS DU POPUP DES IMAGES                                                  */
+  /**********************************************************************************************************************/
+  .imgPopUp {
+    margin: 20px;
+    width: 150px;
+    height: auto; }
 
-.modalArticle {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  width: 50%;
-  height: auto;
-  overflow: auto;
-  margin-top: 20px;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 10px; }
+  .modalArticle {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 50%;
+    height: auto;
+    overflow: auto;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px; }
 
-.imgModal {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 400px;
-  max-height: 600px; }
+  .imgModal {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 400px;
+    max-height: 600px; }
 
-.closeModal {
-  margin-left: 20px;
-  font-size: 20px;
-  color: white; }
+  .closeModal {
+    margin-left: 20px;
+    font-size: 20px;
+    color: white; }
 
-/**********************************************************************************************************************/
-/*                                         CSS BOUTON RETOUR EN ARRIERE                                               */
-/**********************************************************************************************************************/
-.linkBack {
-  width: 10%;
-  height: 50px;
-  margin-top: 10px;
-  display: flex;
-  align-items: center; }
+  /**********************************************************************************************************************/
+  /*                                         CSS BOUTON RETOUR EN ARRIERE                                               */
+  /**********************************************************************************************************************/
+  .linkBack {
+    width: 10%;
+    height: 50px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center; }
 
-.linkBack p {
-  margin-top: 25px; }
+  .linkBack p {
+    margin-top: 25px; }
 
-.linkBack:hover {
-  background-color: rgba(0, 0, 0, 0.2); }
+  .linkBack:hover {
+    background-color: rgba(0, 0, 0, 0.2); }
 
-.arrowback {
-  width: 50px;
-  height: 50px; }
+  .arrowback {
+    width: 50px;
+    height: 50px; }
 
-/**********************************************************************************************************************/
-/*                                       CSS MESSAGE RESULTAT DE RECHERCHE                                            */
-/**********************************************************************************************************************/
-.searchMessage {
-  text-align: center;
-  font-size: 20px; }
+  /**********************************************************************************************************************/
+  /*                                       CSS MESSAGE RESULTAT DE RECHERCHE                                            */
+  /**********************************************************************************************************************/
+  .searchMessage {
+    text-align: center;
+    font-size: 20px; } }
+@media screen and (min-width: 750px) {
+  /**********************************************************************************************************************/
+  /*                                          CSS DE LA PAGE CONTACT                                                    */
+  /**********************************************************************************************************************/
+  .infoIframe {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
 
-/**********************************************************************************************************************/
-/*                                          CSS DE LA PAGE CONTACT                                                    */
-/**********************************************************************************************************************/
-.infoIframe {
-  display: flex;
-  justify-content: space-around;
-  align-items: center; }
-
-.googleIframe {
-  width: 50%;
-  height: auto; }
-
+  .googleIframe {
+    width: 50%;
+    height: auto; } }
 /**********************************************************************************************************************/
 /*                                                CSS DES FORMULAIRES                                                 */
 /**********************************************************************************************************************/
@@ -763,7 +763,59 @@ footer {
     border-radius: 10px; }
 
   .formSearch {
-    text-align: center; } }
+    text-align: center; }
+
+  /***************************************************/
+  /*                      FOOTER                     */
+  /***************************************************/
+  .bandeauFooter {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+
+  .linkFooter {
+    display: none; }
+
+  footer a {
+    display: none; }
+
+  .contact {
+    display: none; }
+
+  .copyright {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
+  .imgCopyright {
+    width: 10%; }
+
+  .Author {
+    width: 30%; }
+
+  /***************************************************/
+  /*                News page d'accueil              */
+  /***************************************************/
+  .info {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column-reverse; }
+
+  .imgFluidNews {
+    border-radius: 50px;
+    overflow: hidden; }
+
+  .articleNews {
+    text-align: center; }
+
+  .info2 {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column-reverse; } }
 /**********************************************************************************************************************/
 /*                                                IMPORT DES FONTS                                                    */
 /**********************************************************************************************************************/

@@ -74,7 +74,6 @@ $(document).ready(function(){
 
 });
 
-
 $(document).ready(function(){
     //quand on clique sur une image//
     $(".imgPopNews").on('click', function(){

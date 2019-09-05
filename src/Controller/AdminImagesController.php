@@ -102,6 +102,5 @@ class AdminImagesController extends AbstractController
             [
                 'images' => $images
             ]);
-
     }
 }

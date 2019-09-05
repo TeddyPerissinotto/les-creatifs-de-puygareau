@@ -1,149 +1,153 @@
-/**********************************************************************************************************************/
-/*                                      CSS MENU ARTICLES PAR CATEGORIE                                               */
-/**********************************************************************************************************************/
+@media screen and (min-width:750px) {
 
-.categoryArticles{
-  width: 30%;
-  height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  /**********************************************************************************************************************/
+  /*                                      CSS MENU ARTICLES PAR CATEGORIE                                               */
+  /**********************************************************************************************************************/
 
-.allarticles{
-  padding-top: 100px;
-  padding-bottom: 100px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-}
+  .categoryArticles {
+    width: 30%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.homeArticlesInfo{
-  width: 20%;
-  height: auto;
-  text-align: center;
-  border-radius: 10px;
-  box-shadow: 5px 2px 2px rgba(0, 0, 0, .2);
-}
+  .allarticles {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
 
-.homeImgArticles{
-  width: 100%;
-  height: auto;
-}
+  .homeArticlesInfo {
+    width: 20%;
+    height: auto;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 5px 2px 2px rgba(0, 0, 0, .2);
+  }
 
-/**********************************************************************************************************************/
-/*                                             CSS DE L'ARTICLE SEUL                                                  */
-/**********************************************************************************************************************/
+  .homeImgArticles {
+    width: 100%;
+    height: auto;
+  }
 
-.product{
-  width: 80%;
-  height: 500px;
-  margin-left: 10%;
-  margin-right: 10%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  box-shadow:8px 0 8px -10px #000000,-8px 0 8px -10px #000000;
-}
+  /**********************************************************************************************************************/
+  /*                                             CSS DE L'ARTICLE SEUL                                                  */
+  /**********************************************************************************************************************/
 
-.allImgArticle{
-  width: 40%;
-  height: 90%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  overflow: scroll;
-}
+  .product {
+    width: 80%;
+    height: 500px;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 8px 0 8px -10px #000000, -8px 0 8px -10px #000000;
+  }
 
-.boxPrice {
-  margin: 0 auto;
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-  font-size: 25px;
-  background-color: #5eb5e0;
-  text-align: center;
-}
+  .allImgArticle {
+    width: 40%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    overflow: scroll;
+  }
 
-.price{
-  padding-top: 10px;
-}
+  .boxPrice {
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 25px;
+    background-color: #5eb5e0;
+    text-align: center;
+  }
 
-.articleInfo{
-  width: 45%;
-}
+  .price {
+    padding-top: 10px;
+  }
 
-/**********************************************************************************************************************/
-/*                                           CSS DU POPUP DES IMAGES                                                  */
-/**********************************************************************************************************************/
+  .articleInfo {
+    width: 45%;
+  }
 
-.imgPopUp{
-  margin: 20px;
-  width: 150px;
-  height: auto;
-}
+  /**********************************************************************************************************************/
+  /*                                           CSS DU POPUP DES IMAGES                                                  */
+  /**********************************************************************************************************************/
 
-.modalArticle{
-  display: none;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  width: 50%;
-  height: auto;
-  overflow: auto;
-  margin-top: 20px;
-  background-color: rgba(0,0,0, 0.2);
-  border-radius: 10px;
-}
+  .imgPopUp {
+    margin: 20px;
+    width: 150px;
+    height: auto;
+  }
 
-.imgModal{
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 400px;
-  max-height: 600px;
-}
+  .modalArticle {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 50%;
+    height: auto;
+    overflow: auto;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
 
-.closeModal{
-  margin-left: 20px;
-  font-size: 20px;
-  color: white;
-}
-/**********************************************************************************************************************/
-/*                                         CSS BOUTON RETOUR EN ARRIERE                                               */
-/**********************************************************************************************************************/
+  .imgModal {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 400px;
+    max-height: 600px;
+  }
 
-.linkBack{
-  width: 10%;
-  height: 50px;
-  margin-top: 10px;
-  display: flex;
-  align-items: center;
-}
+  .closeModal {
+    margin-left: 20px;
+    font-size: 20px;
+    color: white;
+  }
+  /**********************************************************************************************************************/
+  /*                                         CSS BOUTON RETOUR EN ARRIERE                                               */
+  /**********************************************************************************************************************/
 
-.linkBack p{
-  margin-top: 25px;
-}
+  .linkBack {
+    width: 10%;
+    height: 50px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+  }
 
-.linkBack:hover{
-  background-color: rgba(0, 0, 0, 0.2);
-}
+  .linkBack p {
+    margin-top: 25px;
+  }
 
-.arrowback{
-  width: 50px;
-  height: 50px;
-}
+  .linkBack:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
 
-/**********************************************************************************************************************/
-/*                                       CSS MESSAGE RESULTAT DE RECHERCHE                                            */
-/**********************************************************************************************************************/
+  .arrowback {
+    width: 50px;
+    height: 50px;
+  }
 
-.searchMessage{
-  text-align: center;
-  font-size: 20px;
+  /**********************************************************************************************************************/
+  /*                                       CSS MESSAGE RESULTAT DE RECHERCHE                                            */
+  /**********************************************************************************************************************/
+
+  .searchMessage {
+    text-align: center;
+    font-size: 20px;
+  }
+
 }
 
 

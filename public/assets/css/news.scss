@@ -1,178 +1,182 @@
-/**********************************************************************************************************************/
-/*                                   CSS DES NEWS DE LA PAGE D'ACCUEIL DU SITE                                        */
-/**********************************************************************************************************************/
+@media screen and (min-width:750px) {
 
-.info{
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
+  /**********************************************************************************************************************/
+  /*                                   CSS DES NEWS DE LA PAGE D'ACCUEIL DU SITE                                        */
+  /**********************************************************************************************************************/
 
-.info2{
-  width: 100%;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-}
+  .info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
 
-.info2 .imgNews{
-  width: 30%;
-  height: auto;
-  border-radius: 10%;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  margin-left: 10%;
-  margin-right: 10%;
-}
+  .info2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
 
-.imgNews{
-  width: 30%;
-  height: auto;
-  margin-left: 10%;
-  margin-right: 10%;
-  padding-top: 5%;
-  padding-bottom: 5%;
-}
+  .info2 .imgNews {
+    width: 30%;
+    height: auto;
+    border-radius: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
 
-.imgFluidNews{
-  border-radius: 10%;
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-}
+  .imgNews {
+    width: 30%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
 
-.titleNews{
-  text-align: center;
-  margin: auto;
-  font-family: "schoolScript";
-  font-size: 40px;
-  color: white;
-}
+  .imgFluidNews {
+    border-radius: 10%;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
 
-.line{
-  height: 450px;
-  border: black solid 1px;
-}
+  .titleNews {
+    text-align: center;
+    margin: auto;
+    font-family: "schoolScript";
+    font-size: 40px;
+    color: white;
+  }
 
-.article{
-  background-image: url("../img/news/board.jpg");
-  background-size: cover;
-  width: 30%;
-  height: auto;
-  margin-left: 10%;
-  border-radius: 20px;
-}
+  .line {
+    height: 450px;
+    border: black solid 1px;
+  }
 
-.articleNews{
-  font-family: "chalk";
-  font-size: 20px;
-  color: white;
-  padding: 10px;
-}
+  .article {
+    background-image: url("../img/news/board.jpg");
+    background-size: cover;
+    width: 30%;
+    height: auto;
+    margin-left: 10%;
+    border-radius: 20px;
+  }
 
-.info2 .article{
-  width: 30%;
-  height: auto;
-  margin-right: 10%;
-}
+  .articleNews {
+    font-family: "chalk";
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+  }
 
-/**********************************************************************************************************************/
-/*                                             CSS DE LA PAGE homeNews                                                */
-/**********************************************************************************************************************/
+  .info2 .article {
+    width: 30%;
+    height: auto;
+    margin-right: 10%;
+  }
 
-.allNews{
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
+  /**********************************************************************************************************************/
+  /*                                             CSS DE LA PAGE homeNews                                                */
+  /**********************************************************************************************************************/
 
-.homeNewsInfo{
-  width: 20%;
-  height: auto;
+  .allNews {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 
-}
-.homeNews{
-  text-align: center;
-  font-family: childWriting;
-  font-size: 80px;
-}
-.homeTitleNews{
-  text-align: center;
-  font-family: "schoolScript";
-  font-size: 40px;
-}
+  .homeNewsInfo {
+    width: 20%;
+    height: auto;
 
-.homeImgNews{
-  width: 100%;
-  height: auto;
-}
+  }
+  .homeNews {
+    text-align: center;
+    font-family: childWriting;
+    font-size: 80px;
+  }
+  .homeTitleNews {
+    text-align: center;
+    font-family: "schoolScript";
+    font-size: 40px;
+  }
 
-/**********************************************************************************************************************/
-/*                                             CSS DE LA PAGE showNews                                                */
-/**********************************************************************************************************************/
+  .homeImgNews {
+    width: 100%;
+    height: auto;
+  }
 
-.boxNews{
-  width: 80%;
-  height: 500px;
-  margin-left: 10%;
-  margin-right: 10%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  box-shadow:8px 0 8px -10px #000000,-8px 0 8px -10px #000000;
-}
+  /**********************************************************************************************************************/
+  /*                                             CSS DE LA PAGE showNews                                                */
+  /**********************************************************************************************************************/
 
-.allImgNews{
-  width: 40%;
-  height: 90%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  overflow: scroll;
-}
+  .boxNews {
+    width: 80%;
+    height: 500px;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 8px 0 8px -10px #000000, -8px 0 8px -10px #000000;
+  }
 
-.newsInfo{
-  width: 45%;
-}
+  .allImgNews {
+    width: 40%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    overflow: scroll;
+  }
 
-/**********************************************************************************************************************/
-/*                                           CSS DU POPUP DES IMAGES ACTUALITES                                                  */
-/**********************************************************************************************************************/
+  .newsInfo {
+    width: 45%;
+  }
 
-.imgPopUpNews{
-  margin: 20px;
-  width: 150px;
-  height: 150px;
-  overflow: hidden;
-}
+  /**********************************************************************************************************************/
+  /*                                           CSS DU POPUP DES IMAGES ACTUALITES                                                  */
+  /**********************************************************************************************************************/
 
-.modalNews{
-  display: none;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  width: 50%;
-  height: auto;
-  overflow: auto;
-  margin-top: 20px;
-  background-color: rgba(0,0,0, 0.2);
-  border-radius: 10px;
-}
+  .imgPopUpNews {
+    margin: 20px;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+  }
 
-.imgModalNews{
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 400px;
-  max-height: 600px;
-}
+  .modalNews {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 50%;
+    height: auto;
+    overflow: auto;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
 
-.closeModalNews{
-  margin-left: 20px;
-  font-size: 20px;
-  color: white;
+  .imgModalNews {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 400px;
+    max-height: 600px;
+  }
+
+  .closeModalNews {
+    margin-left: 20px;
+    font-size: 20px;
+    color: white;
+  }
+
 }
