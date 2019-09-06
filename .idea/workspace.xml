@@ -2,7 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6293bfa1-f3b4-4fdf-91b9-f1f74bdd62d7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/assets/img/upload/acrobat2-5d6f8d4f21ba5.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/upload/acrobat3-5d6f8d5ecab0d.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/upload/acrobat4-5d6f8d6df1264.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/upload/acrobat5-5d6f8d7702fb4.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/upload/doll_scot3-5d6f8ea483567.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/upload/dollshighchair-5d6f8e3779bf5.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/upload/dollshighchair-5d6f8e582ce15.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/upload/dollshighchair-5d6f8e83a9f7c.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/upload/dollshighchair-5d6f8e87408a6.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/upload/dollshighchair4-5d6f8e26f3d54.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/upload/dollshighchair4-5d6f8e7855cb4.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/upload/dollshighchair4-5d6f8ee000c6b.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Contact.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190905155802.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/ContactRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ArticlesRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ArticlesRepository.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -256,7 +272,7 @@
       <workItem from="1567521334714" duration="207000" />
       <workItem from="1567584655933" duration="18652000" />
       <workItem from="1567671656333" duration="14239000" />
-      <workItem from="1567769574847" duration="4982000" />
+      <workItem from="1567769574847" duration="8919000" />
     </task>
     <task id="LOCAL-00001" summary="21/08/2019">
       <created>1566403448311</created>
@@ -384,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567699781963</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="05/09/2019">
+      <created>1567775164308</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1567775164308</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView">

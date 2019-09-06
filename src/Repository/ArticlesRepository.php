@@ -14,6 +14,17 @@ use Symfony\Bridge\Doctrine\RegistryInterface;
  */
 class ArticlesRepository extends ServiceEntityRepository
 {
+
+    public function imageRelation()
+    {
+        return $this->createQueryBuilder('a')
+            ->select('a as articles', 'i.title as images' )
+            ->leftJoin('a.images', 'i')
+            ->getQuery()
+            ->execute();
+    }
+
+
     public function findByTitle($word)
     {
         return $this->createQueryBuilder('a')
