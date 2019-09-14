@@ -34,6 +34,7 @@
     background-size: cover; }
 
   .bandeauFooter {
+    margin-top: 50px;
     background-color: rgba(255, 255, 255, 0.5);
     width: 100%;
     display: flex;
@@ -717,7 +718,7 @@
   padding-bottom: 10px; }
 
 .formElement {
-  width: 50%;
+  width: 60%;
   margin-top: 20px;
   display: flex;
   flex-direction: column; }
@@ -729,6 +730,9 @@
 .labelSubmit {
   width: 30%;
   margin: 0 auto; }
+
+.formInput {
+  height: 30px; }
 
 @media screen and (max-width: 750px) {
   /***************************************************/
@@ -816,6 +820,20 @@
     width: 80%;
     display: flex;
     flex-direction: column-reverse; } }
+.media {
+  margin-top: 20px;
+  margin-left: 25%;
+  width: 50%;
+  height: auto;
+  text-align: center;
+  border: solid 1px black;
+  background-color: #5eb5e0; }
+
+.imgMedia {
+  margin: 0 auto;
+  width: 80%;
+  height: auto; }
+
 /**********************************************************************************************************************/
 /*                                                IMPORT DES FONTS                                                    */
 /**********************************************************************************************************************/
@@ -834,7 +852,8 @@
 body {
   margin: 0 auto;
   font-family: Helvetica;
-  font-size: small; }
+  font-size: small;
+  /*background-color: #f1f1f1;*/ }
 
 .imgFluid {
   width: 100%;

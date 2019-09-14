@@ -6,20 +6,20 @@
 
         <div class="media">
 
-            {{ media.title }}
-            <a href="{{ media.link }}" target="_blank">Lien vers l'article</a>
-        </div>
+            <h2>{{ media.title }}</h2>
 
-        {% for images in media.images %}
+            {% for images in media.images %}
 
-        <div class="img">
-            <img src="{{ asset('assets/img/upload') }}/{{ images.title }}" class="imgFluid" alt="">
-        </div>
+                <div class="imgMedia">
+                    <img src="{{ asset('assets/img/upload') }}/{{ images.title }}" class="imgFluid" alt="">
+                </div>
+
             {% endfor %}
 
+            <a href="{{ media.link }}" target="_blank">Lien vers l'article</a>
+
+        </div>
 
     {% endfor %}
-
-
 
 {% endblock %}

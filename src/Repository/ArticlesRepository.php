@@ -28,16 +28,20 @@ class ArticlesRepository extends ServiceEntityRepository
     public function findByTitle($word)
     {
         return $this->createQueryBuilder('a')
-// Jointure avec la table Images
+            //Je cible un 'word' dans  le champs "title"
+            ->where('a.title LIKE :word' )
+            // Jointure avec la table Images
             ->leftJoin('a.images', 'img')
-// Rajoute les images au résultat de requête
+            // Rajoute les images au résultat de requête
             ->addSelect('img')
-
-            ->where('img.title LIKE :word' )
+            //setParameter est une méthode qui sécurise ma variable $word passée
             ->setParameter('word', '%'.$word.'%')
             ->getQuery()
             ->getArrayResult();
     }
+    //Requête SQL :
+    //SELECT * FROM articles LEFT JOIN images ON articles.id = images.articles_id WHERE articles.title LIKE '%word%'
+
 
     public function __construct(RegistryInterface $registry)
     {

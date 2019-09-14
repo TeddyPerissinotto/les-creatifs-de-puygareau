@@ -23,24 +23,18 @@ class AdminController extends AbstractController
     /**
      * @Route("/admin/home", name="admin_home")
      */
-    public function adminAllList(NewsRepository $newsRepository, ArticlesRepository $articlesRepository, CategorieRepository $categorieRepository)
+    public function adminHome(CategorieRepository $categorieRepository)
     {
+        $categories = $categorieRepository->findAll();
+
         $this->denyAccessUnlessGranted('ROLE_ADMIN');
 
-        $news = $newsRepository->findAll();
-        $articles = $articlesRepository->findAll();
-        $categories = $categorieRepository->findAll();
 
         if ($this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_FULLY')) {
 
             if ($this->container->get('security.authorization_checker')->isGranted('ROLE_ADMIN')){
 
-                return $this->render('admin/adminHome.html.twig',
-                    [
-                        'allnews' => $news,
-                        'allarticles' => $articles,
-                        'categories' => $categories
-                    ]);
+                return $this->render('admin/adminHome.html.twig');
             }else {
                 return $this->redirectToRoute('index_news',
                     [
@@ -48,10 +42,7 @@ class AdminController extends AbstractController
                     ]);
             }
         }else {
-            return $this->redirectToRoute('fos_user_security_login',
-                [
-                    'categories' => $categories
-                ]);
+            return $this->redirectToRoute('fos_user_security_login');
         }
     }
 

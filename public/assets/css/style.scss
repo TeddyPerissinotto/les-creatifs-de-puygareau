@@ -12,7 +12,7 @@
 @import "contact";
 @import "formulaire";
 @import "responsive";
-
+@import "media";
 
 /**********************************************************************************************************************/
 /*                                                IMPORT DES FONTS                                                    */
@@ -36,6 +36,8 @@ body {
   margin: 0 auto;
   font-family: Helvetica;
   font-size: small;
+  /*background-color: #f1f1f1;*/
+
 }
 
 .imgFluid {

@@ -4,6 +4,34 @@
 
     <h1>Formulaire Images : Ajouter</h1>
 
-    {{ form(imagesFormView) }}
+    {{ form_start(imagesFormView, {'attr': {'class' : 'adminForm'}}) }}
+
+    <div class="formElement">
+        {{ form_label(imagesFormView.media, 'Média', {'label_attr': {'class' : 'labelForm'}}) }}
+        {{ form_widget(imagesFormView.media, {'attr': {'class' : 'formInput'}}) }}
+    </div>
+
+    <div class="formElement">
+        {{ form_label(imagesFormView.articles, 'Articles', {'label_attr': {'class' : 'labelForm'}}) }}
+        {{ form_widget(imagesFormView.articles, {'attr': {'class' : 'formInput'}}) }}
+    </div>
+
+    <div class="formElement">
+        {{ form_label(imagesFormView.news, 'Actualités', {'label_attr': {'class' : 'labelForm'}}) }}
+        {{ form_widget(imagesFormView.news, {'attr': {'class' : 'formInput'}}) }}
+    </div>
+
+    <div class="formElement">
+        {{ form_label(imagesFormView.title, 'Image', {'label_attr': {'class' : 'labelForm'}}) }}
+        {{ form_widget(imagesFormView.title, {'attr': {'class' : 'formInput'}}) }}
+    </div>
+
+    <div class="formElement">
+        {{ form_label(imagesFormView.Envoyer, 'Envoyer', {'label_attr': {'class' : 'labelForm'}}) }}
+        {{ form_widget(imagesFormView.Envoyer, {'attr': {'class' : 'labelSubmit'}}) }}
+    </div>
+
+    {{ form_end(imagesFormView) }}
+
 
 {% endblock %}

@@ -13,6 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class AdminMediaController extends AbstractController
 {
+    //Création de ma route. url+/admin/media/insert
     /**
      * @Route("/admin/media/insert", name="media_form_insert")
      */
