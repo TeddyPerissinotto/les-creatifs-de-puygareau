@@ -14,6 +14,15 @@ use Symfony\Bridge\Doctrine\RegistryInterface;
  */
 class NewsRepository extends ServiceEntityRepository
 {
+    public function imageNewsRelation()
+    {
+        return $this->createQueryBuilder('n')
+            ->select('n as news', 'i.title as images' )
+            ->leftJoin('n.images', 'i')
+            ->getQuery()
+            ->execute();
+    }
+
     public function __construct(RegistryInterface $registry)
     {
         parent::__construct($registry, News::class);

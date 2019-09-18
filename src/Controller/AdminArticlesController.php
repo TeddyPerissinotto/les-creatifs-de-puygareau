@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Controller;
-
 
 use App\Form\ArticlesType;
 use App\Entity\Articles;
@@ -87,7 +85,6 @@ class AdminArticlesController extends AbstractController
             [
                 // Création de la view du formulaire
                 'articlesFormView' => $form->createView()
-
             ]
         );
     }
@@ -116,7 +113,7 @@ class AdminArticlesController extends AbstractController
                 $entityManager->persist($articles);
                 $entityManager->flush();
 
-            $this->redirectToRoute('admin_menu_articles');
+           return $this->redirectToRoute('admin_menu_articles');
         }
         return $this->render('admin/articlesForm.html.twig',
             [

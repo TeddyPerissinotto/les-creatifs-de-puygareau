@@ -104,7 +104,7 @@ class AdminNewsController extends AbstractController
                 $entityManager->persist($news);
                 $entityManager->flush();
 
-            $this->redirectToRoute('admin_home');
+            return $this->redirectToRoute('admin_menu_news');
         }
         return $this->render('admin/newsForm.html.twig',
             [
@@ -131,7 +131,7 @@ class AdminNewsController extends AbstractController
         $entityManager->remove($news);
         $entityManager->flush();
 
-        return $this->redirectToRoute('admin_home');
+        return $this->redirectToRoute('admin_menu_news');
     }
 
 

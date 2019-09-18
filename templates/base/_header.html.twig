@@ -16,7 +16,7 @@
 <header>
 
     <div class="buttonBackToTop" id="clickButtonTop">
-        <a href="#top">
+        <a href="">
         <img src="{{ asset('assets/img/icon/ico.arrowtop.png') }}" alt="flèche vers le haut" class="imgFluid">
         </a>
     </div>
@@ -46,7 +46,6 @@
     </div>
 
     <div class="navbar">
-
         <ul class="ulNavbar">
 
             <li class="linkNavbar"><a href="{{ path('index') }}" class="">Accueil</a></li>
@@ -67,12 +66,9 @@
                                 <h3 class="linkCategory">
                                     {{ categorie.title }}
                                 </h3>
-
                             </div>
                         </a>
-
                     {% endfor %}
-
                 </div>
 
             </div>
