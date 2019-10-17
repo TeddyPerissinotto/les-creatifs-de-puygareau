@@ -2,6 +2,12 @@
 
 {% block main %}
 
+    <div class="messageFlashFail">
+        {% for message in app.flashes('Fail') %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    </div>
+
     <div class="formArticle">
 
     <h1>Formulaire Produits : Ajouter/Modifier</h1>

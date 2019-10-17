@@ -2,6 +2,12 @@
 
 {% block main %}
 
+    <div class="messageFlash">
+        {% for message in app.flashes('Success') %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    </div>
+
     <h2>Portfolio des Images</h2>
 
     <a href="{{ path('images_form_insert') }}">

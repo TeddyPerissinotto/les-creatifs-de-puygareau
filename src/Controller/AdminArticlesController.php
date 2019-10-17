@@ -72,8 +72,14 @@ class AdminArticlesController extends AbstractController
             $entityManager->persist($articles);
             $entityManager->flush();
 
+            $this->addFlash('Success', 'Votre produit a bien été ajouté en base de données');
+
         //Redirection vers le formulaire d'ajout d'images
             return $this->redirectToRoute('images_form_insert');
+
+        } else {
+
+            $this->addFlash('Fail', 'Une erreur vient de se produire');
         }
         //on appelle un fichier twig avec en premier
         //paramètre le nom du fichier twig
@@ -140,7 +146,7 @@ class AdminArticlesController extends AbstractController
         $entityManager->remove($articles);
         $entityManager->flush();
 
-        return $this->redirectToRoute('admin_home');
+        return $this->redirectToRoute('admin_menu_articles');
     }
 
 }

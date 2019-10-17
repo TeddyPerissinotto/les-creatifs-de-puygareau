@@ -77,7 +77,12 @@ class AdminImagesController extends AbstractController
                 $entityManager->persist($images);
                 $entityManager->flush();
 
+                $this->addFlash('Success', 'Votre image a bien été ajouté en base de données');
+
                 return $this->redirectToRoute('admin_menu_images');
+            }else {
+
+                $this->addFlash('Fail', 'Une erreur vient de se produire');
             }
         }
         return $this->render('admin/adminImagesForm.html.twig', [

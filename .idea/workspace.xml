@@ -1,30 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6293bfa1-f3b4-4fdf-91b9-f1f74bdd62d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/css/.sass-cache/d590a6dd2fa471bf029ec319c195e8cdf8bf2606/media.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/upload/20190914_15h15_49-5d7ce84f21422.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/upload/20190914_15h15_49-5d7ce8fb9c96c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/upload/20190914_15h15_49-5d7cea956061e.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/upload/batmobile1-5d7cdaad34ac4.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/upload/cubplane-5d725aa961959.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/upload/cubplane-5d7c7f5551fb2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/upload/dollshighchair4-5d7a65ad009be.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/upload/dollshighchair4-5d7a665a56840.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/jquery.js" afterDir="false" />
+    <list default="true" id="6293bfa1-f3b4-4fdf-91b9-f1f74bdd62d7" name="Default Changelist" comment="18/09/2019">
+      <change afterPath="$PROJECT_DIR$/public/assets/img/upload/1921modeltford2-5d7dd57b560fa.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/upload/c8pvdgclegostarwarswallpaper-5d809f1d3a11c.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/.sass-cache/d590a6dd2fa471bf029ec319c195e8cdf8bf2606/_header.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/.sass-cache/d590a6dd2fa471bf029ec319c195e8cdf8bf2606/_header.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/.sass-cache/d590a6dd2fa471bf029ec319c195e8cdf8bf2606/articles.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/.sass-cache/d590a6dd2fa471bf029ec319c195e8cdf8bf2606/articles.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/.sass-cache/d590a6dd2fa471bf029ec319c195e8cdf8bf2606/formulaire.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/.sass-cache/d590a6dd2fa471bf029ec319c195e8cdf8bf2606/formulaire.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/.sass-cache/d590a6dd2fa471bf029ec319c195e8cdf8bf2606/homeAdmin.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/.sass-cache/d590a6dd2fa471bf029ec319c195e8cdf8bf2606/homeAdmin.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/.sass-cache/d590a6dd2fa471bf029ec319c195e8cdf8bf2606/media.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/.sass-cache/d590a6dd2fa471bf029ec319c195e8cdf8bf2606/media.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/.sass-cache/d590a6dd2fa471bf029ec319c195e8cdf8bf2606/news.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/.sass-cache/d590a6dd2fa471bf029ec319c195e8cdf8bf2606/news.scssc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/css/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/_header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/articles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/articles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/formulaire.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/formulaire.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/homeAdmin.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/homeAdmin.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/media.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/media.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/news.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/news.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/AdminArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminArticlesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AdminNewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminNewsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Articles.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Articles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/News.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/News.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ImagesType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ImagesType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdminImagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminImagesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/ArticlesRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ArticlesRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/NewsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/NewsRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base/_footer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/_footer.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base/_footerAdmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/_footerAdmin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Media/media.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Media/media.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/adminArticlesMenu.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/adminArticlesMenu.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/adminImagesForm.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/adminImagesForm.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/adminImagesMenu.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/adminImagesMenu.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/articlesForm.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/articlesForm.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base/_header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/_header.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/news/showNews.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/news/showNews.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -175,7 +180,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../teddy_perissinotto" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -184,6 +189,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -298,6 +304,29 @@
       <workItem from="1568734092498" duration="163000" />
       <workItem from="1568807132674" duration="2642000" />
       <workItem from="1568834093981" duration="1885000" />
+      <workItem from="1568836763151" duration="90000" />
+      <workItem from="1568881171712" duration="1368000" />
+      <workItem from="1568886081458" duration="3337000" />
+      <workItem from="1568965565582" duration="1907000" />
+      <workItem from="1569044288180" duration="5376000" />
+      <workItem from="1569129721662" duration="4547000" />
+      <workItem from="1569144257437" duration="4215000" />
+      <workItem from="1569227107360" duration="13294000" />
+      <workItem from="1569262230192" duration="760000" />
+      <workItem from="1569312332096" duration="1645000" />
+      <workItem from="1569388949041" duration="7948000" />
+      <workItem from="1569483913725" duration="4130000" />
+      <workItem from="1569528050595" duration="18000" />
+      <workItem from="1569872109375" duration="757000" />
+      <workItem from="1569932452307" duration="1017000" />
+      <workItem from="1569941069673" duration="37000" />
+      <workItem from="1570019537217" duration="735000" />
+      <workItem from="1570260390897" duration="20000" />
+      <workItem from="1570421098897" duration="2092000" />
+      <workItem from="1570616430344" duration="1207000" />
+      <workItem from="1570700819054" duration="2290000" />
+      <workItem from="1571231803613" duration="1300000" />
+      <workItem from="1571301152759" duration="7898000" />
     </task>
     <task id="LOCAL-00001" summary="21/08/2019">
       <created>1566403448311</created>
@@ -446,7 +475,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568471420128</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="18/09/2019">
+      <created>1568836803883</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1568836803883</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TodoView">
@@ -487,6 +523,7 @@
     <MESSAGE value="02/09/2019" />
     <MESSAGE value="05/09/2019" />
     <MESSAGE value="14/09/2019" />
-    <option name="LAST_COMMIT_MESSAGE" value="14/09/2019" />
+    <MESSAGE value="18/09/2019" />
+    <option name="LAST_COMMIT_MESSAGE" value="18/09/2019" />
   </component>
 </project>

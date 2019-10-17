@@ -26,25 +26,28 @@ $(document).ready(function () {
 $(document).ready(function () {
 
     $(window).scroll(function () {
-        if ($(this).scrollTop() < 800) {
-            $("#clickButtonTop").fadeOut();
-        } else {
+        if ($(this).scrollTop() > 800) {
             $("#clickButtonTop").fadeIn();
+        } else {
+            $("#clickButtonTop").fadeOut();
         }
-    })
+    });
+
+    $(function(){
+        $("#clickButtonTop").click(function(event){
+            $("html, body").animate({scrollTop: 0},"fast");
+            return false;
+        });
+
+    });
+
 });
 
-$(function(){
-    $("#clickButtonTop").click(function(){
-        $("html, body").animate({scrollTop: 0},"fast");
-    });
-});
+
 
 /**********************************************************************************************************************/
 /*                                       SECURITE FRONT BARRE DE RECHERCHE                                            */
 /**********************************************************************************************************************/
-
-
 
 //Je clique sur un élément avec la classe de mon bouton
 $('.searchSubmit').click(function(){
@@ -96,4 +99,61 @@ $(document).ready(function(){
         $(".modalNews").css("display", "none");
     });
 
+});
+
+/**********************************************************************************************************************/
+/*                                         ANIMATION MODAL SUPPRESSION                                                */
+/**********************************************************************************************************************/
+
+$(document).ready(function(){
+    $('.deleteSecurity').on('click', function() {
+        $('.deleteSecurityModal').fadeIn();
+    });
+    $('.closeModalSecurity').on('click', function() {
+        $('.deleteSecurityModal').fadeOut();
+    });
+});
+
+/**********************************************************************************************************************/
+/*                                                 SCROLL PAGE                                                        */
+/**********************************************************************************************************************/
+$(document).ready(function(){
+
+window.addEventListener('load',function() {
+
+    if(document.URL === "http://localhost/lesCreatifsDePuygareau/public/") {
+
+        window.scrollTo(0, 0);
+
+    } else {
+
+        window.scrollTo(800, 800);
+    }
+
+}, false);
+
+});
+
+/**********************************************************************************************************************/
+/*                                                 STICKY MENU                                                        */
+/**********************************************************************************************************************/
+
+$(document).ready(function() {
+
+    var stickyNavTop = $('.navbar').offset().top;
+
+    var stickyNav = function(){
+        var scrollTop = $(window).scrollTop();
+
+        if (scrollTop > stickyNavTop) {
+            $('.navbar').addClass('sticky');
+        } else {
+            $('.navbar').removeClass('sticky');
+        }
+    };
+    stickyNav();
+
+    $(window).scroll(function() {
+        stickyNav();
+    });
 });

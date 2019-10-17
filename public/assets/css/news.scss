@@ -93,8 +93,19 @@
   .homeNewsInfo {
     width: 20%;
     height: auto;
-
   }
+
+  .homeNewsInfo:hover{
+    box-shadow: 10px 5px 5px black;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    overflow: hidden;
+  }
+
+  .homeNewsInfo .titleNews a:hover{
+    background-color: rgba(0, 0, 0, 0);
+  }
+
   .homeNews {
     text-align: center;
     font-family: childWriting;
@@ -138,7 +149,8 @@
   }
 
   .newsInfo {
-    width: 45%;
+    width: 30%;
+    margin-left: 10%;
   }
 
   /**********************************************************************************************************************/
@@ -155,7 +167,7 @@
   .modalNews {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     width: 50%;
     height: auto;

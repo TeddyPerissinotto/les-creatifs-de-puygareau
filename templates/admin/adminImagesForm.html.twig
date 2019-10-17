@@ -2,6 +2,12 @@
 
 {% block main %}
 
+    <div class="messageFlashSuccess">
+        {% for message in app.flashes('Success') %}
+                <p>{{ message }}</p>
+        {% endfor %}
+    </div>
+
     <h1>Formulaire Images : Ajouter</h1>
 
     {{ form_start(imagesFormView, {'attr': {'class' : 'adminForm'}}) }}

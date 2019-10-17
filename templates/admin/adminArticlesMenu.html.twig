@@ -11,29 +11,38 @@
     </a>
 
     <div class="adminTable">
-    {% for article in articles %}
+        {% for article in articles %}
 
-        <div class="adminTableInfo">
+            <div class="adminTableInfo">
 
-            <div class="infoBox">
-                <p>{{ article.title }}</p>
-            </div>
-
-            <div class="imagesBox">
-            {% for image in article.images %}
-                <div class="adminImg">
-                    <img src="{{ asset('assets/img/upload') }}/{{ image.title }}" class="imgFluid">
+                <div class="infoBox">
+                    <p>{{ article.title }}</p>
                 </div>
-            {% endfor %}
+
+                <div class="imagesBox">
+                    {% for image in article.images %}
+                        <div class="adminImg">
+                            <img src="{{ asset('assets/img/upload') }}/{{ image.title }}" class="imgFluid">
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <div class="buttonBox">
+                    <a href="{{ path('admin_menu_images') }}" class="buttonAdd">Ajouter une images</a>
+                    <a href="{{ path('articles_form_update', {'id': article.id}) }} " class="buttonUpdate">Modifier</a>
+                    <div class="buttonDelete deleteSecurity">Supprimer</div>
+                </div>
             </div>
 
-            <div class="buttonBox">
-            <a href="{{ path('admin_menu_images') }}" class="buttonAdd">Ajouter une images</a>
-            <a href="{{ path('articles_form_update', {'id': article.id}) }} " class="buttonUpdate">Modifier</a>
-            <a href="{{ path('articles_delete', {'id': article.id}) }} " class="buttonDelete">Supprimer</a>
-            </div>
-        </div>
+            <div class="deleteSecurityModal">
+                <p>Voulez-vous supprimer ?</p>
 
-    {% endfor %}
+                <div class="choicheButton">
+                    <a href="{{ path('articles_delete', {'id': article.id}) }} " class="delete">Oui</a>
+                    <p class="closeModalSecurity">Non</p>
+                </div>
+            </div>
+
+        {% endfor %}
     </div>
 {% endblock %}

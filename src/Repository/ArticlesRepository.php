@@ -40,7 +40,7 @@ class ArticlesRepository extends ServiceEntityRepository
             ->getArrayResult();
     }
     //Requête SQL :
-    //SELECT * FROM articles LEFT JOIN images ON articles.id = images.articles_id WHERE articles.title LIKE '%word%'
+    //SELECT * FROM articles LEFT JOIN images ON articles.id = images.articles_id WHERE articles.title LIKE :word
 
 
     public function __construct(RegistryInterface $registry)

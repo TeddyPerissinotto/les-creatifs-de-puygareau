@@ -129,6 +129,7 @@
   border-radius: 10px;
   border: 1px solid black;
   text-align: center;
+  cursor: pointer;
 }
 
 .buttonDelete p{
@@ -173,4 +174,46 @@
   text-align: center;
   margin-left: 40%;
   margin-top: 2px;
+}
+
+.messageFlashSuccess{
+  margin-left: 33%;
+  color: green;
+  font-size: 20px;
+}
+
+.messageFlashFail{
+  margin-left: 33%;
+  color: red;
+  font-size: 20px;
+}
+
+.deleteSecurityModal {
+  margin-top: 16px;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 20%;
+  border: 2px solid red;
+  background-color: white;
+  text-align: center;
+  color: black;
+}
+
+.choicheButton{
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.closeModalSecurity:hover{
+  cursor: pointer;
+  background-color: #868686;
+}
+
+.delete{
+  margin-top: 15px;
 }

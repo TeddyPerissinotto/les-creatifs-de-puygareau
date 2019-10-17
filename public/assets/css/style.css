@@ -96,7 +96,16 @@
     margin-top: 4px;
     width: 100%;
     height: 50px;
-    background-color: rgba(255, 255, 255, 0.5); }
+    background-color: rgba(255, 255, 255, 0.5);
+    position: -webkit-sticky; }
+
+  .sticky {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    border-top: 0; }
 
   .ulNavbar {
     list-style-type: none;
@@ -297,6 +306,15 @@
     width: 20%;
     height: auto; }
 
+  .homeNewsInfo:hover {
+    box-shadow: 10px 5px 5px black;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    overflow: hidden; }
+
+  .homeNewsInfo .titleNews a:hover {
+    background-color: rgba(0, 0, 0, 0); }
+
   .homeNews {
     text-align: center;
     font-family: childWriting;
@@ -335,7 +353,8 @@
     overflow: scroll; }
 
   .newsInfo {
-    width: 45%; }
+    width: 30%;
+    margin-left: 10%; }
 
   /**********************************************************************************************************************/
   /*                                           CSS DU POPUP DES IMAGES ACTUALITES                                                  */
@@ -349,7 +368,7 @@
   .modalNews {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     width: 50%;
     height: auto;
@@ -480,7 +499,8 @@
   background: #AA3333;
   border-radius: 10px;
   border: 1px solid black;
-  text-align: center; }
+  text-align: center;
+  cursor: pointer; }
 
 .buttonDelete p {
   margin-top: 8px; }
@@ -519,6 +539,41 @@
   text-align: center;
   margin-left: 40%;
   margin-top: 2px; }
+
+.messageFlashSuccess {
+  margin-left: 33%;
+  color: green;
+  font-size: 20px; }
+
+.messageFlashFail {
+  margin-left: 33%;
+  color: red;
+  font-size: 20px; }
+
+.deleteSecurityModal {
+  margin-top: 16px;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 20%;
+  border: 2px solid red;
+  background-color: white;
+  text-align: center;
+  color: black; }
+
+.choicheButton {
+  display: flex;
+  justify-content: space-around; }
+
+.closeModalSecurity:hover {
+  cursor: pointer;
+  background-color: #868686; }
+
+.delete {
+  margin-top: 15px; }
 
 /**********************************************************************************************************************/
 /*                                    CSS DU HEADER DE L'ESPACE ADMINISTRATEUR                                        */
@@ -629,7 +684,8 @@
     padding-top: 10px; }
 
   .articleInfo {
-    width: 45%; }
+    width: 30%;
+    margin-left: 10%; }
 
   /**********************************************************************************************************************/
   /*                                           CSS DU POPUP DES IMAGES                                                  */
@@ -825,9 +881,7 @@
   margin-left: 25%;
   width: 50%;
   height: auto;
-  text-align: center;
-  border: solid 1px black;
-  background-color: #5eb5e0; }
+  text-align: center; }
 
 .imgMedia {
   margin: 0 auto;
