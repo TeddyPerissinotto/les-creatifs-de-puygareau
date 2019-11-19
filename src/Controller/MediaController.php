@@ -21,7 +21,7 @@ class MediaController extends AbstractController
         $images = $imagesRepository->findAll();
         $categories = $categorieRepository->findAll();
 
-        return $this->render('media/media.html.twig',
+        return $this->render('Media/media.html.twig',
             [
                 'medias' => $medias,
                 'images' => $images,

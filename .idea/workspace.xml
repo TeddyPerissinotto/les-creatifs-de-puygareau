@@ -3,8 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="6293bfa1-f3b4-4fdf-91b9-f1f74bdd62d7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/framework.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/MediaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MediaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base/_header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/_header.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base/_headerAdmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/_headerAdmin.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -306,7 +311,10 @@
       <workItem from="1571721547311" duration="688000" />
       <workItem from="1571979843004" duration="1428000" />
       <workItem from="1573146808793" duration="618000" />
-      <workItem from="1574140556867" duration="2236000" />
+      <workItem from="1574140556867" duration="2866000" />
+      <workItem from="1574170065276" duration="1028000" />
+      <workItem from="1574171508785" duration="2425000" />
+      <workItem from="1574174791071" duration="3121000" />
     </task>
     <task id="LOCAL-00001" summary="21/08/2019">
       <created>1566403448311</created>
@@ -483,7 +491,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574141418668</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="19/11/2019">
+      <created>1574142908047</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1574142908047</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TodoView">
