@@ -36,7 +36,7 @@ class HomeController extends AbstractController
 
     }
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //                         Permet d'afficher les 3 dernières News sur la page d'accueil                           //
+    //                                            Affiche la page Contact                                             //
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     /**
@@ -47,6 +47,40 @@ class HomeController extends AbstractController
         $categories = $categorieRepository->findAll();
 
         return $this->render('contact/contact.html.twig',
+            [
+                'categories' => $categories
+            ]);
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //                                           Affiche la page Mediamap                                             //
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    /**
+     * @Route("/sitemap", name="sitemap")
+     */
+    public function sitemap(CategorieRepository $categorieRepository)
+    {
+        $categories = $categorieRepository->findAll();
+
+        return $this->render('sitemap/sitemap.html.twig',
+            [
+                'categories' => $categories
+            ]);
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //                                     Affiche la page Qui sommes-nous ?                                          //
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    /**
+     * @Route("/aboutus", name="aboutus")
+     */
+    public function aboutus(CategorieRepository $categorieRepository)
+    {
+        $categories = $categorieRepository->findAll();
+
+        return $this->render('sitemap/sitemap.html.twig',
             [
                 'categories' => $categories
             ]);

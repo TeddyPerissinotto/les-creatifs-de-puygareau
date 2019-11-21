@@ -1,0 +1,25 @@
+{% extends 'base/index.html.twig' %}
+
+{% block main %}
+    <h1 class="pageTitle">Plan du site</h1>
+    <section>
+        <article>
+            <ul>
+                <li><a href="{{ path('index') }}">Page d'accueil</a></li>
+                <li>Nos produits
+                    <ul>
+                        {% for categorie in categories %}
+                            <li><a href="{{ path('articles_by_category', {'id': categorie.id}) }}">{{ categorie.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <li><a href="{{ path('home_news') }}">Nos actualités</a></li>
+                <li><a href="{{ path('media') }}">Presse</a></li>
+                <li><a href="{{ path('contact') }}">Contact</a></li>
+                <li><a href="#">Qui sommes-nous ?</a></li>
+                <li><a href="{{ path('sitemap') }}">Plan du site</a></li>
+                <li><a href="{{ path('admin_home') }}">Espace administrateur</a></li>
+            </ul>
+        </article>
+    </section>
+{% endblock %}

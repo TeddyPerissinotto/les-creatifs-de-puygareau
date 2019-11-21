@@ -1,41 +1,27 @@
 {% extends 'base/index.html.twig' %}
 
 {% block main %}
-
-    <div class="testnews">
-
+    <section>
         <h1 class="pageTitle">Timeline</h1>
-
         {% for lastnew in lastnews %}
-
-            <div class="{% if loop.index is odd %}info{% else %}info2{% endif %}">
-
-                <div class="imgNews">
-
-                    {% for images in lastnew.images %}
-
-                        {% if loop.first %}
-                    <div class="imgFluidNews">
-                        <img src="{{ asset('assets/img/upload') }}/{{ images.title }}" class="imgFluid">
+            <article>
+                <div class="{% if loop.index is odd %}info{% else %}info2{% endif %}">
+                    <div class="imgNews">
+                        {% for images in lastnew.images %}
+                            {% if loop.first %}
+                                <div class="imgFluidNews">
+                                    <img src="{{ asset('assets/img/upload') }}/{{ images.title }}" class="imgFluid">
+                                </div>
+                            {% endif %}
+                        {% endfor %}
                     </div>
-                        {% endif %}
-
-                    {% endfor %}
-
+                    <div class="line"></div>
+                    <div class="article">
+                        <h2 class="titleNews">{{ lastnew.title }}</h2>
+                        <p class="articleNews">{{ lastnew.article }}</p>
+                    </div>
                 </div>
-
-                <div class="line"></div>
-
-                <div class="article">
-
-                    <h2 class="titleNews">{{ lastnew.title }}</h2>
-                    <p class="articleNews">{{ lastnew.article }}</p>
-
-                </div>
-
-
-            </div>
+            </article>
         {% endfor %}
-
-    </div>
+    </section>
 {% endblock %}

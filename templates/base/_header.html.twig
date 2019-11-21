@@ -18,10 +18,12 @@
     <meta name="description" content="Site de fabrication de jouets et objes en bois artisanal" />
     <meta name="keywords" content="Jouet, bois, jeux, artisanat, artisant, les créatifs de puygareau, les-créatifs-de-puygareau">
     <meta name="google-site-verification" content="QnLr_ufl0p2zL2h0IsEuA1BCK86_TqXbvY1TA8mnEZc" />
+
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="icon" href="{{ asset('assets/img/logo/logo.png') }}">
     <title>LES CREATIFS DE PUYGAREAU</title>
 </head>
+
 <body>
 
 <header>
@@ -33,7 +35,6 @@
     </div>
 
     <div class="headbandLogo">
-
         <div class="ico">
             <img src="{{ asset('assets/img/icon/ico.horse.png') }}" alt="icone cheval à bascule" class="imgFluid">
         </div>
@@ -53,27 +54,22 @@
         <div class="ico">
             <img src="{{ asset('assets/img/icon/ico.woodHouse.png') }}" alt="icone maison en bois" class="imgFluid">
         </div>
-
     </div>
 
-    <div class="navbar">
+    <nav class="navbar">
         <ul class="ulNavbar">
 
-            <li class="linkNavbar"><a href="{{ path('index') }}" class="">Accueil</a></li>
+            <li class="linkNavbar"><a href="{{ path('index') }}">Accueil</a></li>
             <li class="linkNavbar" id="clickMenu"><a href="#none">Nos produits</a></li>
+
             <div class="slideMenu">
-
                 <div class="categoryList">
-
                     {% for categorie in categories %}
-
                         <a href="{{ path('articles_by_category', {'id': categorie.id}) }}">
                             <div class="category">
-
                                 <div class="imgCategory">
                                     <img src="{{ asset('assets/img/icon') }}/{{ categorie.imagecategorie }}" class="imgFluid" alt="">
                                 </div>
-
                                 <h3 class="linkCategory">
                                     {{ categorie.title }}
                                 </h3>
@@ -81,18 +77,16 @@
                         </a>
                     {% endfor %}
                 </div>
-
             </div>
             <li class="linkNavbar"><a href="{{ path('home_news') }}">Nos actualités</a></li>
             <li class="linkNavbar"><a href="{{ path('media') }}">Presse</a></li>
             <li class="linkNavbar"><a href="{{ path('contact') }}">Contact</a></li>
         </ul>
-    </div>
+    </nav>
 
     {% include 'base/searchBar.html.twig' %}
 
 </header>
-
 
 <main>
 

@@ -1,59 +1,48 @@
 {% extends 'base/index.html.twig' %}
 
 {% block main %}
-
-    <a href="{{ path('articles_by_category', {'id': article.categorie.id}) }}">
-
-        <div class="linkBack">
-            <p>< {{ article.categorie.title }}</p>
-        </div>
-
-    </a>
-
-    <div class="product">
-
-        {##############################################################################################################}
-        {#                              DEBUT DE LA MODAL POUR LE POPUP DES IMAGES                                    #}
-        {##############################################################################################################}
-
-        <div class="modalArticle">
-            {#####BOUTON POUR FERMER LA MODAL#####}
-            <span class="closeModal">X Fermer</span>
-            {#####IMAGE DANS LA MODAL#####}
-            <div class="imgModal" >
-                <img src="{#LA SRC DEVIENDRA CELUI DE L'IMAGE CIQUEE#}" class="imgFluid" id="imgSelected" alt="image Produit">
+    <section>
+        <a href="{{ path('articles_by_category', {'id': article.categorie.id}) }}">
+            <div class="linkBack">
+                <p>< {{ article.categorie.title }}</p>
             </div>
+        </a>
 
-        </div>
-
-        {##############################################################################################################}
-        {#                                          DEBUT DU BLOC IMAGES                                              #}
-        {##############################################################################################################}
-
-
-        <div class="allImgArticle">
-            {#####JE PENSE A RECUPERER L'ID IMAGE UNIQUE#####}
-            {% for images in article.images %}
-            <div class="imgPopUp">
-                <img src="{{ asset('assets/img/upload') }}/{{ images.title }}" class="imgFluid imgPop" id="{{ images.id }}" alt="image Produit">
+        <article>
+            <div class="product">
+                {##############################################################################################################}
+                {#                              DEBUT DE LA MODAL POUR LE POPUP DES IMAGES                                    #}
+                {##############################################################################################################}
+                <div class="modalArticle">
+                    {#####BOUTON POUR FERMER LA MODAL#####}
+                    <span class="closeModal">X Fermer</span>
+                    {#####IMAGE DANS LA MODAL#####}
+                    <div class="imgModal" >
+                        <img src="{#LA SRC DEVIENDRA CELUI DE L'IMAGE CIQUEE#}" class="imgFluid" id="imgSelected" alt="image Produit">
+                    </div>
+                </div>
+                {##############################################################################################################}
+                {#                                          DEBUT DU BLOC IMAGES                                              #}
+                {##############################################################################################################}
+                <div class="allImgArticle">
+                    {#####JE PENSE A RECUPERER L'ID IMAGE UNIQUE#####}
+                    {% for images in article.images %}
+                        <div class="imgPopUp">
+                            <img src="{{ asset('assets/img/upload') }}/{{ images.title }}" class="imgFluid imgPop" id="{{ images.id }}" alt="image Produit">
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="articleInfo">
+                    <h2>{{ article.title }}</h2>
+                    <h3>Dimensions</h3>
+                    <p>{{ article.size }}</p>
+                    <h3>Description</h3>
+                    <p class="articleDescription">{{ article.description }}</p>
+                    <div class="boxPrice">
+                        <p class="price">{{ article.price }}</p>
+                    </div>
+                </div>
             </div>
-            {% endfor %}
-
-        </div>
-
-        <div class="articleInfo">
-            <h2>{{ article.title }}</h2>
-            <h3>Dimensions</h3>
-            <p>{{ article.size }}</p>
-            <h3>Description</h3>
-            <p class="articleDescription">{{ article.description }}</p>
-            <div class="boxPrice">
-                <p class="price">{{ article.price }}</p>
-            </div>
-
-        </div>
-
-
-    </div>
-
+        </article>
+    </section>
 {% endblock %}

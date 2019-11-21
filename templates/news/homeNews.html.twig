@@ -1,36 +1,28 @@
 {% extends 'base/index.html.twig' %}
 
 {% block main %}
-
-    <h1 class="pageTitle">Nos actualites</h1>
-
-    <div class="allNews">
-
-        {% for allnew in allnews %}
-
-            <div class="homeNewsInfo">
-
-                <h2 class="titleNews">
-
+    <section>
+        <h1 class="pageTitle">Nos actualites</h1>
+        <div class="all-news">
+            {% for allnew in allnews %}
+                <article class="box-news">
                     <a href="{{ path('show_news', {'id': allnew.id}) }} ">
-                        {{ allnew.date|date("m/d/Y") }}
-                        {{ allnew.title }}</a>
-
-                </h2>
-
-                {% for image in allnew.images %}
-                    {% if loop.first %}
-                <div class="homeImgNews">
-                    <img src="{{ asset('assets/img/upload') }}/{{ image.title }}" class="imgFluid" />
-                </div>
-                    {% endif %}
-                {% endfor %}
-
-
-
-            </div>
-        {% endfor %}
-
-    </div>
-
+                        <div class="homeNewsInfo">
+                            <h2 class="titleNews">
+                                {{ allnew.date|date("m/d/Y") }}
+                                {{ allnew.title }}
+                            </h2>
+                        </div>
+                        {% for image in allnew.images %}
+                            {% if loop.first %}
+                                <div class="homeImgNews">
+                                    <img src="{{ asset('assets/img/upload') }}/{{ image.title }}" class="imgFluid" />
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </a>
+                </article>
+            {% endfor %}
+        </div>
+    </section>
 {% endblock %}

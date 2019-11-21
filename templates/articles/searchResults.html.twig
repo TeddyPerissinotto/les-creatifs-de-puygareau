@@ -1,41 +1,31 @@
 {% extends 'base/index.html.twig' %}
 
 {% block main %}
+    <section>
+        <h1>Résultats de votre recherche :</h1>
+        {% if articles == false %}
+            <p class="searchMessage">Aucun résultat pour votre recherche</p>
+        {% else %}
+            <article>
+                <div class="allarticles">
+                    {% for article in articles %}
 
-    <h1>Résultats de votre recherche :</h1>
-
-    {% if articles == false %}
-
-        <p class="searchMessage">Aucun résultat pour votre recherche</p>
-
-    {% else %}
-
-        <div class="allarticles">
-
-        {% for article in articles %}
-
-            <div class="homeArticlesInfo">
-
-                <h1>{{ article.title }}</h1>
-
-                {% for image in article.images %}
-
-                    {#Je sélectionne la première image qui passe dans la boucle uniquement#}
-                    {% if loop.first %}
-                        <div class="homeImgArticles">
-                            <img src="{{ asset('assets/img/upload') }}/{{ image.title }}" class="imgFluid" alt="">
+                        <div class="homeArticlesInfo">
+                            <h1>{{ article.title }}</h1>
+                            {% for image in article.images %}
+                                {#Je sélectionne la première image qui passe dans la boucle uniquement#}
+                                {% if loop.first %}
+                                    <div class="homeImgArticles">
+                                        <img src="{{ asset('assets/img/upload') }}/{{ image.title }}" class="imgFluid" alt="">
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                            <a href="{{ path('article_by_id', {'id': article.id}) }}">Voir ce produit</a>
                         </div>
-                    {% endif %}
 
-                {% endfor %}
-
-
-                <a href="{{ path('article_by_id', {'id': article.id}) }}">Voir ce produit</a>
-
-            </div>
-
-        {% endfor %}
-
-    {% endif %}
-
+                    {% endfor %}
+                </div>
+            </article>
+        {% endif %}
+    </section>
 {% endblock %}

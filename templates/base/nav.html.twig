@@ -1,18 +1,11 @@
 {% extends 'base/_header.html.twig' %}
 
 {% block menu %}
-
-
         <ul class="categorylist">
-
                 {% for categorie in categories %}
-
                         <li class="linkCategory">
                             <a href="{{ path('articles_by_category', {'id': categorie.id}) }}" id="aHeaderStyle">{{ categorie.titre }}</a>
                         </li>
-
                 {% endfor %}
         </ul>
-
-
 {% endblock %}

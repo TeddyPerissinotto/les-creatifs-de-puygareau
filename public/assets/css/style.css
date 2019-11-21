@@ -262,7 +262,7 @@
     height: auto;
     overflow: hidden; }
 
-  .titleNews {
+  .article .titleNews {
     text-align: center;
     margin: auto;
     font-family: "schoolScript";
@@ -295,35 +295,37 @@
   /**********************************************************************************************************************/
   /*                                             CSS DE LA PAGE homeNews                                                */
   /**********************************************************************************************************************/
-  .allNews {
+  .all-news {
     width: 100%;
     height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around; }
 
-  .homeNewsInfo {
+  .box-news {
     width: 20%;
     height: auto; }
 
-  .homeNewsInfo:hover {
+  .homeNewsInfo {
+    width: 100%;
+    height: auto; }
+
+  .box-news:hover {
     box-shadow: 10px 5px 5px black;
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 50px;
     overflow: hidden; }
-
-  .homeNewsInfo .titleNews a:hover {
-    background-color: rgba(0, 0, 0, 0); }
 
   .homeNews {
     text-align: center;
     font-family: childWriting;
     font-size: 80px; }
 
-  .homeTitleNews {
+  .titleNews {
     text-align: center;
     font-family: "schoolScript";
-    font-size: 40px; }
+    font-size: 40px;
+    color: black; }
 
   .homeImgNews {
     width: 100%;
@@ -332,7 +334,7 @@
   /**********************************************************************************************************************/
   /*                                             CSS DE LA PAGE showNews                                                */
   /**********************************************************************************************************************/
-  .boxNews {
+  .content-news {
     width: 80%;
     height: 500px;
     margin-left: 10%;
@@ -365,7 +367,7 @@
     height: 150px;
     overflow: hidden; }
 
-  .modalNews {
+  .modal-news {
     display: none;
     position: fixed;
     z-index: 2;
