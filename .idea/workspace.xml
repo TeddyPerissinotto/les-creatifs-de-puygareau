@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6293bfa1-f3b4-4fdf-91b9-f1f74bdd62d7" name="Default Changelist" comment="19/11/2019">
+    <list default="true" id="6293bfa1-f3b4-4fdf-91b9-f1f74bdd62d7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/.sass-cache/d590a6dd2fa471bf029ec319c195e8cdf8bf2606/articles.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/.sass-cache/d590a6dd2fa471bf029ec319c195e8cdf8bf2606/articles.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/.sass-cache/d590a6dd2fa471bf029ec319c195e8cdf8bf2606/media.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/.sass-cache/d590a6dd2fa471bf029ec319c195e8cdf8bf2606/media.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/articles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/articles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/media.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/media.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Media/media.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Media/media.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/aboutus/aboutus.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/aboutus/aboutus.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/articles/article.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/articles/article.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base/_footer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/_footer.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base/_header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/_header.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/news/showNews.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/news/showNews.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/sitemap/sitemap.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sitemap/sitemap.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -311,7 +324,8 @@
       <workItem from="1574174791071" duration="4350000" />
       <workItem from="1574264930166" duration="526000" />
       <workItem from="1574334786380" duration="10690000" />
-      <workItem from="1574352502911" duration="412000" />
+      <workItem from="1574352502911" duration="1670000" />
+      <workItem from="1574404086685" duration="17599000" />
     </task>
     <task id="LOCAL-00001" summary="21/08/2019">
       <created>1566403448311</created>
@@ -502,7 +516,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574187357377</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="21/11/2019">
+      <created>1574352979210</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1574352979210</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView">
@@ -546,6 +567,7 @@
     <MESSAGE value="18/09/2019" />
     <MESSAGE value="18/10/2019" />
     <MESSAGE value="19/11/2019" />
-    <option name="LAST_COMMIT_MESSAGE" value="19/11/2019" />
+    <MESSAGE value="21/11/2019" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/11/2019" />
   </component>
 </project>

@@ -50,16 +50,12 @@
     box-shadow: 8px 0 8px -10px #000000, -8px 0 8px -10px #000000;
   }
 
-  .allImgArticle {
+  .galery-box {
     width: 40%;
     height: 90%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
     overflow: scroll;
+    padding-right: 5%;
   }
-
   .boxPrice {
     margin: 0 auto;
     width: 50px;
@@ -79,43 +75,6 @@
     margin-left: 10%;
   }
 
-  /**********************************************************************************************************************/
-  /*                                           CSS DU POPUP DES IMAGES                                                  */
-  /**********************************************************************************************************************/
-
-  .imgPopUp {
-    margin: 20px;
-    width: 150px;
-    height: auto;
-  }
-
-  .modalArticle {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    width: 50%;
-    height: auto;
-    overflow: auto;
-    margin-top: 20px;
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-  }
-
-  .imgModal {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 400px;
-    max-height: 600px;
-  }
-
-  .closeModal {
-    margin-left: 20px;
-    font-size: 20px;
-    color: white;
-    cursor: pointer;
-  }
   /**********************************************************************************************************************/
   /*                                         CSS BOUTON RETOUR EN ARRIERE                                               */
   /**********************************************************************************************************************/

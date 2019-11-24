@@ -11,3 +11,13 @@
   width: 80%;
   height: auto;
 }
+
+.media-link{
+  width: 100%;
+  height: auto;
+}
+
+.media-link:hover{
+  background-color: rgba(0,0,0, 0.1);
+  cursor: pointer;
+}

@@ -74,13 +74,13 @@ class HomeController extends AbstractController
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     /**
-     * @Route("/aboutus", name="aboutus")
+     * @Route("/aboutus", name="about-us")
      */
-    public function aboutus(CategorieRepository $categorieRepository)
+    public function aboutUs(CategorieRepository $categorieRepository)
     {
         $categories = $categorieRepository->findAll();
 
-        return $this->render('sitemap/sitemap.html.twig',
+        return $this->render('aboutus/aboutus.html.twig',
             [
                 'categories' => $categories
             ]);

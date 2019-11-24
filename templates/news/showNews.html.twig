@@ -7,21 +7,25 @@
     <section>
         <article>
             <div class="content-news">
-                <div class="modal-news">
-                    {#####BOUTON POUR FERMER LA MODAL#####}
-                    <span class="closeModalNews">X Fermer</span>
-                    {#####IMAGE DANS LA MODAL#####}
-                    <div class="imgModalNews" >
-                        <img src="{#LA SRC DEVIENDRA CELUI DE L'IMAGE CLIQUEE#}" class="imgFluid" id="imgSelected" alt="image Actualité">
+                <div class="galery-box">
+
+                    <div ID="ngy2p" data-nanogallery2='{
+                    "itemsBaseURL": "{{ asset('assets/img/upload') }}/",
+                    "thumbnailWidth": "auto",
+                    "thumbnailBorderVertical": 0,
+                    "thumbnailBorderHorizontal": 0,
+                    "thumbnailLabel": {
+                    "display": false
+                    },
+                    "thumbnailHoverEffect2": "imageScale150",
+                    "thumbnailAlignment": "center"
+                 }'>
+                        {% for images in showNews.images %}
+                            <a href="{{ images.title }}" data-ngthumb="{{ images.title }}" data-ngdesc="">{{ images.title }}</a>
+                        {% endfor %}
                     </div>
                 </div>
-                <div class="allImgNews">
-                    {% for image in showNews.images %}
-                        <div class="imgPopUpNews">
-                            <img src="{{ asset('assets/img/upload') }}/{{ image.title }}" class="imgFluid imgPopNews" id="{{ image.id }}" alt="image Produit" />
-                        </div>
-                    {% endfor %}
-                </div>
+
                 <div class="newsInfo">
                     <h2>{{ showNews.title }}</h2>
                     <p>{{ showNews.article }}</p>

@@ -7,31 +7,28 @@
                 <p>< {{ article.categorie.title }}</p>
             </div>
         </a>
-
         <article>
             <div class="product">
-                {##############################################################################################################}
-                {#                              DEBUT DE LA MODAL POUR LE POPUP DES IMAGES                                    #}
-                {##############################################################################################################}
-                <div class="modalArticle">
-                    {#####BOUTON POUR FERMER LA MODAL#####}
-                    <span class="closeModal">X Fermer</span>
-                    {#####IMAGE DANS LA MODAL#####}
-                    <div class="imgModal" >
-                        <img src="{#LA SRC DEVIENDRA CELUI DE L'IMAGE CIQUEE#}" class="imgFluid" id="imgSelected" alt="image Produit">
+
+                <div class="galery-box">
+
+                    <div ID="ngy2p" data-nanogallery2='{
+                    "itemsBaseURL": "{{ asset('assets/img/upload') }}/",
+                    "thumbnailWidth": "auto",
+                    "thumbnailBorderVertical": 0,
+                    "thumbnailBorderHorizontal": 0,
+                    "thumbnailLabel": {
+                    "display": false
+                    },
+                    "thumbnailHoverEffect2": "imageScale150",
+                    "thumbnailAlignment": "center"
+                 }'>
+                        {% for images in article.images %}
+                            <a href="{{ images.title }}" data-ngthumb="{{ images.title }}" data-ngdesc="">{{ images.title }}</a>
+                        {% endfor %}
                     </div>
                 </div>
-                {##############################################################################################################}
-                {#                                          DEBUT DU BLOC IMAGES                                              #}
-                {##############################################################################################################}
-                <div class="allImgArticle">
-                    {#####JE PENSE A RECUPERER L'ID IMAGE UNIQUE#####}
-                    {% for images in article.images %}
-                        <div class="imgPopUp">
-                            <img src="{{ asset('assets/img/upload') }}/{{ images.title }}" class="imgFluid imgPop" id="{{ images.id }}" alt="image Produit">
-                        </div>
-                    {% endfor %}
-                </div>
+
                 <div class="articleInfo">
                     <h2>{{ article.title }}</h2>
                     <h3>Dimensions</h3>

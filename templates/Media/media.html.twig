@@ -7,13 +7,16 @@
         {% for media in medias %}
             <article>
                 <div class="media">
+                    <div class="media-link">
+                        <a href="{{ media.link }}" target="_blank">
                     <h2>{{ media.title }}</h2>
                     {% for images in media.images %}
                         <div class="imgMedia">
                             <img src="{{ asset('assets/img/upload') }}/{{ images.title }}" class="imgFluid" alt="">
                         </div>
                     {% endfor %}
-                    <a href="{{ media.link }}" target="_blank">Lien vers l'article</a>
+                    </a>
+                    </div>
                 </div>
             </article>
         {% endfor %}
