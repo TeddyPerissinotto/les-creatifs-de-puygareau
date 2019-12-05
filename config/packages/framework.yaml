@@ -1,5 +1,6 @@
 framework:
     disallow_search_engine_index: false
+    translator: true
     templating:
         engines: ['twig', 'php']
 

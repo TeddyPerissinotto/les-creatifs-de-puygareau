@@ -1,29 +1,24 @@
-/**********************************************************************************************************************/
-/*                                          ANIMATION DE LA NAVBAR                                                    */
-/**********************************************************************************************************************/
-
 $(document).ready(function() {
+
+    /**********************************************************************************************************************/
+    /*                                          ANIMATION DE LA NAVBAR                                                    */
+    /**********************************************************************************************************************/
 
     $('#clickMenu').click(function () {
         $('.slideMenu').slideToggle();
-    })
-});
+    });
 
-/**********************************************************************************************************************/
-/*                                        ANIMATION DE LA NAVBAR ADMIN                                                */
-/**********************************************************************************************************************/
+    /**********************************************************************************************************************/
+    /*                                        ANIMATION DE LA NAVBAR ADMIN                                                */
+    /**********************************************************************************************************************/
 
-$(document).ready(function () {
     $('#clickButtonAdmin').click(function () {
         $('.navAdmin').toggle();
-    })
-});
+    });
 
-/**********************************************************************************************************************/
-/*                                        ANIMATION BOUTON RETOUR EN HAUT                                             */
-/**********************************************************************************************************************/
-
-$(document).ready(function () {
+    /**********************************************************************************************************************/
+    /*                                        ANIMATION BOUTON RETOUR EN HAUT                                             */
+    /**********************************************************************************************************************/
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > 800) {
@@ -41,33 +36,28 @@ $(document).ready(function () {
 
     });
 
-});
-
-
-
-/**********************************************************************************************************************/
-/*                                       SECURITE FRONT BARRE DE RECHERCHE                                            */
-/**********************************************************************************************************************/
+    /**********************************************************************************************************************/
+    /*                                       SECURITE FRONT BARRE DE RECHERCHE                                            */
+    /**********************************************************************************************************************/
 
 //Je clique sur un élément avec la classe de mon bouton
-$('.searchSubmit').click(function(){
-    //Je fais mpon traitement sur mes valeurs de formulaire
-    var texte = $('.searchBar').val();
-    var characterReg = /^\s*[a-zA-Z0-9,\s]+\s*$/;
-    //Je lance ma condition qui retourne false si un caractère spécial a été soumis dans mon formulaire
-    if(!characterReg.test(texte)) {
-        alert("Caractères spéciaux interdits : " + texte);
-        return false;
-    }
-});
+    $('.searchSubmit').click(function() {
+        //Je fais mpon traitement sur mes valeurs de formulaire
+        var texte = $('.searchBar').val();
+        var characterReg = /^\s*[a-zA-Z0-9,\s]+\s*$/;
+        //Je lance ma condition qui retourne false si un caractère spécial a été soumis dans mon formulaire
+        if (!characterReg.test(texte)) {
+            alert("Caractères spéciaux interdits : " + texte);
+            return false;
+        }
+    });
 
-/**********************************************************************************************************************/
-/*                                  ANIMATION POPUP DES IMAGES DE PRODUITS                                            */
-/**********************************************************************************************************************/
+    /**********************************************************************************************************************/
+    /*                                  ANIMATION POPUP DES IMAGES DE PRODUITS                                            */
+    /**********************************************************************************************************************/
 
-$(document).ready(function(){
     //quand on clique sur une image//
-    $(".imgPop").on('click', function(){
+    $(".imgPop").on('click', function () {
         //affichage de la modal en modifiant le css de la modal
         $(".modalArticle").css("display", "block");
 
@@ -77,15 +67,13 @@ $(document).ready(function(){
     });
 
     //si on clique sur le bouton, on ferme la modal en modifiant le css
-    $(".closeModal").on("click", function(){
+    $(".closeModal").on("click", function () {
         $(".modalArticle").css("display", "none");
     });
 
-});
 
-$(document).ready(function(){
     //quand on clique sur une image//
-    $(".imgPopNews").on('click', function(){
+    $(".imgPopNews").on('click', function () {
         //affichage de la modal en modifiant le css de la modal
         $(".modalNews").css("display", "block");
 
@@ -95,54 +83,46 @@ $(document).ready(function(){
     });
 
     //si on clique sur le bouton, on ferme la modal en modifiant le css
-    $(".closeModalNews").on("click", function(){
+    $(".closeModalNews").on("click", function () {
         $(".modalNews").css("display", "none");
     });
 
-});
+    /**********************************************************************************************************************/
+    /*                                         ANIMATION MODAL SUPPRESSION                                                */
+    /**********************************************************************************************************************/
 
-/**********************************************************************************************************************/
-/*                                         ANIMATION MODAL SUPPRESSION                                                */
-/**********************************************************************************************************************/
-
-$(document).ready(function(){
-    $('.deleteSecurity').on('click', function() {
+    $('.deleteSecurity').on('click', function () {
         $('.deleteSecurityModal').fadeIn();
     });
-    $('.closeModalSecurity').on('click', function() {
+    $('.closeModalSecurity').on('click', function () {
         $('.deleteSecurityModal').fadeOut();
     });
-});
 
-/**********************************************************************************************************************/
-/*                                                 SCROLL PAGE                                                        */
-/**********************************************************************************************************************/
-$(document).ready(function(){
+    /**********************************************************************************************************************/
+    /*                                                 SCROLL PAGE                                                        */
+    /**********************************************************************************************************************/
 
-window.addEventListener('load',function() {
+    window.addEventListener('load', function () {
 
-    if(document.URL === "http://localhost/lesCreatifsDePuygareau/public/") {
+        if (document.URL === "http://localhost/lesCreatifsDePuygareau/public/") {
 
-        window.scrollTo(0, 0);
+            window.scrollTo(0, 0);
 
-    } else {
+        } else {
 
-        window.scrollTo(800, 800);
-    }
+            window.scrollTo(800, 800);
+        }
 
-}, false);
+    }, false);
 
-});
 
-/**********************************************************************************************************************/
-/*                                                 STICKY MENU                                                        */
-/**********************************************************************************************************************/
-
-$(document).ready(function() {
+    /**********************************************************************************************************************/
+    /*                                                 STICKY MENU                                                        */
+    /**********************************************************************************************************************/
 
     var stickyNavTop = $('.navbar').offset().top;
 
-    var stickyNav = function(){
+    var stickyNav = function () {
         var scrollTop = $(window).scrollTop();
 
         if (scrollTop > stickyNavTop) {
@@ -153,7 +133,8 @@ $(document).ready(function() {
     };
     stickyNav();
 
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         stickyNav();
     });
+
 });

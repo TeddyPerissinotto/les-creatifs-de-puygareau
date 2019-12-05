@@ -4,7 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Articles;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Symfony\Bridge\Doctrine\RegistryInterface;
+use Doctrine\Common\Persistence\ManagerRegistry;
 
 /**
  * @method Articles|null find($id, $lockMode = null, $lockVersion = null)
@@ -43,7 +43,7 @@ class ArticlesRepository extends ServiceEntityRepository
     //SELECT * FROM articles LEFT JOIN images ON articles.id = images.articles_id WHERE articles.title LIKE :word
 
 
-    public function __construct(RegistryInterface $registry)
+    public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Articles::class);
     }

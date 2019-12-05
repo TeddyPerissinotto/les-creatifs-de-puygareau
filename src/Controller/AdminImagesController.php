@@ -6,6 +6,7 @@ namespace App\Controller;
 
 use App\Entity\Images;
 use App\Form\ImagesType;
+use App\Repository\ArticlesRepository;
 use App\Repository\ImagesRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -19,15 +20,17 @@ class AdminImagesController extends AbstractController
     /**
      * @Route("/admin/menu/images", name="admin_menu_images")
      */
-    public function adminImagesMenu(ImagesRepository $imagesRepository)
+    public function adminImagesMenu(ImagesRepository $imagesRepository, ArticlesRepository $articlesRepository)
     {
         $this->denyAccessUnlessGranted('ROLE_ADMIN');
 
         $images = $imagesRepository->findAll();
+        $articles = $articlesRepository->findAll();
 
         return $this->render('admin/adminImagesMenu.html.twig',
             [
-                'images' => $images
+                'images' => $images,
+                'articles'=>$articles
             ]);
     }
 
@@ -65,7 +68,7 @@ class AdminImagesController extends AbstractController
                 } catch (FileException $e) {
                     // ... handle exception if something happens during file upload
                 }
-                // Met à jour l'image pour stocker le nouveau nom de la image
+                // Met à jour l'image pour stocker le nouveau nom de l'image
                 $images->setTitle($newFilename);
             }
             // Si le formulaire est envoyé et qu'il est valide (si les champs obligatoires sont remplis...)
